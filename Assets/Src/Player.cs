@@ -8,9 +8,9 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
 public class Player : MonoBehaviour {
-    public Rigidbody2D player; //change to serialise
-    public PlayerInput playerInput;
-    public float speed;
+    [SerializeField] Rigidbody2D player;
+    [SerializeField] PlayerInput playerInput;
+    [SerializeField] float speed;
 
     private Vector2 moveVal;
 

@@ -1,27 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour { //should i rename this as movement?
     [SerializeField] Rigidbody2D player;
-    [SerializeField] PlayerInput playerInput;
     [SerializeField] float speed;
-
     private Vector2 moveVal;
-
-    void Start() {
-        Debug.Log("Start");
-    }
 
     private void FixedUpdate() {
         player.AddForce(moveVal*player.drag); // player movement update
     }
-
 
     //--- PLAYER INPUT
     void OnMove(InputValue input) { // player wasd | joystick input
@@ -35,8 +22,8 @@ public class Player : MonoBehaviour {
     void OnInventory() {
         Debug.Log("Inventory button pressed");
     }
-    //---
 
+    //--- OVERWORLD TRIGGER
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("collide");
     }

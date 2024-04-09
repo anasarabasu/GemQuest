@@ -23,7 +23,10 @@ public class UserData { //user specific
 [Serializable]
 public class GamePlayData {
     public GamePlayData() { //default values
+        targetCountry = "Europe";
     }
+
+    public string targetCountry;
     
     //current chapter
     //cutscene index

@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class OrbitPhysics: MonoBehaviour {
     [SerializeField] float gravity = -46f;
-    public void Attract(Transform player) {
+    public void Orbit(Transform player) {
         Vector3 gravityUp = (player.position - this.transform.position).normalized;
-        player.rotation = Quaternion.FromToRotation(player.up, gravityUp) * player.rotation;
+        Quaternion targetUp = Quaternion.FromToRotation(player.up, gravityUp) * player.rotation;
+
+        player.rotation = Quaternion.Slerp(player.rotation, targetUp, 50f * Time.deltaTime);
         player.GetComponent<Rigidbody>().AddForce(gravityUp * gravity);
     }
 }

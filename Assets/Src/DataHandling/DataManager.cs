@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class DataManager: MonoBehaviour {
@@ -10,17 +9,19 @@ public class DataManager: MonoBehaviour {
     private DataRoot data;
     private List<ISaveLoad> ISaveLoadList;
     private string dataPath;
-
     private void Awake() {
         instance = this;
+
         data = new DataRoot() {
-            userData = new UserData()
+            gameData = new GameData()
         };
+
         ISaveLoadList = FindSaveLoadDataList();
+        
         dataPath =  Application.persistentDataPath + Path.AltDirectorySeparatorChar + "GameData.json";
 
         if(File.Exists(dataPath)) {
-            LoadFile();
+            LoadGame();
         }
         else {
             string createJSON = JsonUtility.ToJson(data, true); //create default json file
@@ -36,7 +37,7 @@ public class DataManager: MonoBehaviour {
         return new List<ISaveLoad>(obj);
     }
 
-    public void SaveFile() {
+    public void SaveGame() {
         foreach(ISaveLoad gameObject in ISaveLoadList) 
             gameObject.Save(ref data);
 
@@ -44,10 +45,10 @@ public class DataManager: MonoBehaviour {
         using (StreamWriter streamWriter = new StreamWriter(dataPath))
             streamWriter.Write(saveJSON);
 
-        Debug.Log("File saved");
+        Debug.Log("Game data saved");
     }
 
-    public void LoadFile() {
+    public void LoadGame() {
         string loadJSON;
         using (StreamReader streamReader = new StreamReader(dataPath))
             loadJSON = streamReader.ReadToEnd();
@@ -57,13 +58,13 @@ public class DataManager: MonoBehaviour {
         foreach(ISaveLoad gameObject in ISaveLoadList) 
             gameObject.Load(data);
 
-        Debug.Log("Save file loaded");
+        Debug.Log("Game data loaded");
     }
 
     public void DeleteFile() {
         if(File.Exists(dataPath)) {
             File.Delete(dataPath);
-            SceneManager.LoadScene("MainMenu");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
             Debug.Log("Save file deleted... Game Reloaded");
         }
         else {

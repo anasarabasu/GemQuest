@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour {
-    public static SceneLoader instance;
+public class SceneManager : MonoBehaviour {
+    public static SceneManager instance;
 
-    private void Start() {
+    private void Awake() {
         instance = this;
     }
 
-    public void SwitchTo(string sceneName) {
-        SceneManager.LoadSceneAsync(sceneName);
+    public void LoadScene(string sceneName) {
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
 
         Debug.Log("Loaded " +sceneName);
     }
 
     public void ReloadScene(InputAction.CallbackContext context) {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 
         Debug.Log("Scene reloaded");
     }

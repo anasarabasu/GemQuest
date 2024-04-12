@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Cutscene : MonoBehaviour, ISaveLoad {
     [SerializeField] TextMeshProUGUI screenText;
+    
     private bool newGame;
     private string[] dialogueList = {
         "introductory cutscene/ dialogue",
@@ -29,17 +30,17 @@ public class Cutscene : MonoBehaviour, ISaveLoad {
 
     public void _FinishCutscene() { //toggles newgame to false TEMP
         newGame = false;
-        DataManager.instance.SaveFile();
-        SceneLoader.instance.SwitchTo("Overworld");
+        DataManager.instance.SaveGame();
+        SceneManager.instance.LoadScene("Overworld");
     }
 
     public void Save(ref DataRoot data) {
-        data.userData.newGame = newGame;
-        data.userData.dialogueIndex = dialogueIndex;
+        data.gameData.newGame = newGame;
+        data.gameData.dialogueIndex = dialogueIndex;
     }
 
     public void Load(DataRoot data) {
-        newGame = data.userData.newGame;
-        dialogueIndex = data.userData.dialogueIndex;
+        newGame = data.gameData.newGame;
+        dialogueIndex = data.gameData.dialogueIndex;
     }
 }

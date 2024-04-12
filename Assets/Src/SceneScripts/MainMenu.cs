@@ -8,25 +8,17 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
 
     private void Start() {
         if(newGame) {
-            startText.text = "* Begin Story *";
+            startText.SetText("* Begin Story *");
             nextScene = "Cutscene";
         }
         else {
-            startText.text = "* Continue Story *";
+            startText.SetText("* Continue Story *");
             nextScene = "Overworld";
         }
     }
 
-    public void Save(ref DataRoot data) {
-        // data.userData.newgame = newgame;
-    }
-
-    public void Load(DataRoot data) {
-        newGame = data.userData.newGame;
-    }
-
     public void _StartGame() {
-        SceneLoader.instance.SwitchTo(nextScene);
+        SceneManager.instance.LoadScene(nextScene);
     }
 
     public void _Options() {}
@@ -35,5 +27,11 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
 
     //TODO: prettify main menu
 
+    public void Save(ref DataRoot data) {
+        // data.userData.newgame = newgame;
+    }
 
+    public void Load(DataRoot data) {
+        newGame = data.gameData.newGame;
+    }
 }

@@ -110,10 +110,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _gridReveal: 0
+  _gridReveal: 0.45
   _gridDiscrete: 1
   _crisp: 1
-  _roundnessDefault: 0
+  _roundnessDefault: 1
   _palette:
     enabled: 0
     value: {fileID: 0}

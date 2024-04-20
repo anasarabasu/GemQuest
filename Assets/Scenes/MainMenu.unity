@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &172948524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -243,34 +243,6 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 66b31a9a-e39b-4d86-a1de-852d927770c3
-    m_ActionName: OverView/Interact[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3f8eb5ed-f0d8-4a52-8d33-ef5996b92661
-    m_ActionName: OverView/Guide[/Keyboard/f]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f84b3fba-bd24-4e27-ace7-268109c2ce6e
-    m_ActionName: OverView/MoveHorizontal[/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c2257ce1-6a06-4649-a6e7-db347cd25761
-    m_ActionName: OverView/MoveVertical[/Keyboard/w,/Keyboard/s]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bacd6231-4118-425e-b550-536828f4c07b
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 971da889-e8df-4050-a9c0-e00148aad7f1
-    m_ActionName: Player/Interact[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4b346b69-c667-4ddf-a634-e77f297120f0
-    m_ActionName: Player/Switch[/Keyboard/f]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 475354574}
         m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
@@ -308,16 +280,8 @@ MonoBehaviour:
     m_ActionName: Player (Overworld)/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b1e576b7-6b53-4f2f-8e03-8f7f726d441f
-    m_ActionName: Player (Overworld)/Confirm
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 2084f3c4-a78b-4547-ad68-e21a78a43eb6
     m_ActionName: Player (Overworld)/ShowRiddle
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 698eaecf-3a34-4898-ad0d-b6ab4f8b5d7e
-    m_ActionName: Player (Level)/New action
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 475354574}
@@ -363,7 +327,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1341174581}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &475354574
@@ -423,11 +388,11 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9150943, g: 0.09927912, b: 0.09927912, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.5283019, g: 0, b: 0, a: 1}
+  m_Intensity: 3.49
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -465,12 +430,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823631403}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2012511587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341174578
 GameObject:
@@ -533,12 +498,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341174578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 475354573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1405677893
 GameObject:
@@ -716,12 +681,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818254275}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2012511587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1851891114
 GameObject:
@@ -751,8 +716,8 @@ RectTransform:
   m_GameObject: {fileID: 1851891114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.74, y: 1.74, z: 1.74}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1405677894}
   m_Father: {fileID: 1852355240}
@@ -1109,7 +1074,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 823631405}
+  - {fileID: 1818254277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2012511588
@@ -1135,6 +1102,7 @@ GameObject:
   - component: {fileID: 2066351850}
   - component: {fileID: 2066351852}
   - component: {fileID: 2066351851}
+  - component: {fileID: 2066351853}
   m_Layer: 5
   m_Name: Character
   m_TagString: Untagged
@@ -1181,7 +1149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5a10233d6fc504e4a91ac82b8866e489, type: 3}
+  m_Sprite: {fileID: 1416391282, guid: 788f4cea8802b134b800cda1b4113786, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1199,13 +1167,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066351849}
   m_CullTransparentMesh: 1
+--- !u!95 &2066351853
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066351849}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5962962052bdb2149a5819e78a2c47e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2012511587}
-  - {fileID: 823631405}
-  - {fileID: 1818254277}
-  - {fileID: 1341174581}
   - {fileID: 475354573}
   - {fileID: 1852355240}

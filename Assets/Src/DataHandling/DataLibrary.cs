@@ -11,6 +11,7 @@ using UnityEngine;
         dialogueIndex = 0;
         chapter = 1;
         penaltyWrongCountry = 0;
+    overworldCoordinates = new Vector3(0, 0, -6.88f);
     }
     
     public bool newGame; // titletext

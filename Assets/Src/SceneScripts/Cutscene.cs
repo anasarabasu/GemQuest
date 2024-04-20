@@ -7,9 +7,10 @@ public class Cutscene : MonoBehaviour, ISaveLoad {
     private bool newGame;
     private string[] dialogueList = {
         "introductory cutscene/ dialogue",
-        "bla bla bla",
-        "tba",
-        "to overworld :)"
+        "Hey",
+        "Go collect some stones or minerals or gems",
+        "or whatever",
+        "I don't know where they are so you have to find it yourself hehe :D"
     };
     private int dialogueIndex;
 

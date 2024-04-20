@@ -31,7 +31,7 @@ public class CountryRoulette : MonoBehaviour, ISaveLoad {
     }
 
     private void CorrectCountry(string sceneName) {
-        SceneManager.instance.LoadScene(sceneName); 
+        SceneManager.instance.LoadScene(sceneName +"1"); 
         // chapter ++;
     }
 

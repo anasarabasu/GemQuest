@@ -149,7 +149,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ShowRiddle",
+                    "name": "Mine",
                     "type": "Button",
                     "id": "2084f3c4-a78b-4547-ad68-e21a78a43eb6",
                     "expectedControlType": "Button",
@@ -255,11 +255,11 @@
                 {
                     "name": "",
                     "id": "cb58b713-f94e-4e77-85b9-ce305f1e3373",
-                    "path": "",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ShowRiddle",
+                    "action": "Mine",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   color:
     m_OverrideState: 1
     m_Value: {r: 0.0180103, g: 0, b: 0.066037714, a: 1}
@@ -41,7 +41,6 @@ MonoBehaviour:
   m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 6924946989332157659}
   - {fileID: -8231853160427465976}
 --- !u!114 &6924946989332157659
 MonoBehaviour:

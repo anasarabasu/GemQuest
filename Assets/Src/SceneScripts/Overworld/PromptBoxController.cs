@@ -9,6 +9,7 @@ public class PromptBoxController : MonoBehaviour {
     [SerializeField] TextMeshProUGUI travelText;
     [SerializeField] GameObject countrySelection;
     [SerializeField] PointClickMovement playerMovement;
+    [SerializeField] GameObject cluePanel;
 
     private GameObject[] countryLabels;
     private void Awake() {
@@ -83,4 +84,8 @@ public class PromptBoxController : MonoBehaviour {
         travelPrompt.SetActive(true);
         playerMovement.SetActive(true);
     } 
+
+    public void _ShowRiddle() {
+        // cluePanel.transform.position = 
+    }
 }

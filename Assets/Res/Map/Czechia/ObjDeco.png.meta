@@ -1,0 +1,971 @@
+fileFormatVersion: 2
+guid: 7359850a00dc42b4fa1498d150b7672d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Deco_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 25, y: -57}
+        - {x: 25, y: 0}
+        - {x: -26, y: 1}
+        - {x: -29, y: -53}
+        - {x: -37, y: -53}
+        - {x: -35, y: 64}
+        - {x: 36, y: 64}
+        - {x: 34, y: -55}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1ed4339427ecb4b913dea4e54804c8
+      internalID: -740749843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deco_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: 15}
+        - {x: -32, y: 6}
+        - {x: -32, y: 4}
+        - {x: -32, y: -16}
+        - {x: -32, y: -16}
+        - {x: -32, y: -16}
+        - {x: 32, y: -16}
+        - {x: 32, y: -16}
+        - {x: 32, y: 16}
+      - - {x: -25, y: -16}
+        - {x: -24, y: -16}
+        - {x: -16, y: -15}
+        - {x: -16, y: -14}
+        - {x: -21, y: -16}
+        - {x: -21, y: -16}
+        - {x: -18, y: -16}
+        - {x: -17, y: -16}
+        - {x: -13, y: -16}
+        - {x: -12, y: -16}
+        - {x: -17, y: -16}
+        - {x: -17, y: -16}
+        - {x: -20, y: -16}
+        - {x: -22, y: -16}
+        - {x: -25, y: -16}
+        - {x: -27, y: -16}
+        - {x: -24, y: -16}
+        - {x: -25, y: -16}
+      - - {x: 6, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: -14}
+        - {x: 5, y: -9}
+        - {x: 2, y: -12}
+        - {x: 2, y: -16}
+      - - {x: 15, y: -4}
+        - {x: 19, y: -6}
+        - {x: 20, y: -6}
+        - {x: 20, y: -9}
+        - {x: 22, y: -11}
+        - {x: 22, y: -10}
+      - - {x: 1, y: 16}
+        - {x: -2, y: 16}
+        - {x: -2, y: 16}
+        - {x: 0, y: 14}
+        - {x: 8, y: 14}
+        - {x: 8, y: 16}
+      - - {x: 32, y: 16}
+        - {x: 32, y: 16}
+      - - {x: 5, y: 16}
+        - {x: 2, y: 16}
+        - {x: 2, y: 16}
+        - {x: 10, y: 16}
+        - {x: 12, y: 16}
+        - {x: 12, y: 16}
+        - {x: 10, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e40365148129d2488eee6c35d6098e5
+      internalID: -380679188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deco_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 15}
+        - {x: -16, y: 6}
+        - {x: -16, y: 4}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      - - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -15}
+        - {x: -16, y: -14}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -13, y: -16}
+        - {x: -12, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+        - {x: -16, y: -16}
+      - - {x: 6, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: -14}
+        - {x: 5, y: -9}
+        - {x: 2, y: -12}
+        - {x: 2, y: -16}
+      - - {x: 15, y: -4}
+        - {x: 16, y: -6}
+        - {x: 16, y: -6}
+        - {x: 16, y: -9}
+        - {x: 16, y: -11}
+        - {x: 16, y: -10}
+      - - {x: 1, y: 16}
+        - {x: -2, y: 16}
+        - {x: -2, y: 16}
+        - {x: 0, y: 14}
+        - {x: 8, y: 14}
+        - {x: 8, y: 16}
+      - - {x: 16, y: 16}
+        - {x: 16, y: 16}
+      - - {x: 5, y: 16}
+        - {x: 2, y: 16}
+        - {x: 2, y: 16}
+        - {x: 10, y: 16}
+        - {x: 12, y: 16}
+        - {x: 12, y: 16}
+        - {x: 10, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0532ed2ff467a940843a46c327bfa33
+      internalID: 1869126802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 6
+        width: 20
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: -56}
+        - {x: -5, y: -41}
+        - {x: 5, y: -41}
+        - {x: 5, y: -56}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7bdafe5fb85e24ab5795810afd37bd
+      internalID: -1720214871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 6
+        width: 20
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: -57}
+        - {x: -6, y: -42}
+        - {x: 7, y: -42}
+        - {x: 7, y: -57}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8ae310ab123714d804f5cd2806219a
+      internalID: -410622105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 105
+        width: 124
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -48, y: 11}
+        - {x: -48, y: 11}
+        - {x: -46, y: 11}
+        - {x: -44, y: 11}
+        - {x: -39, y: 11}
+        - {x: -41, y: 11}
+        - {x: -44, y: 11}
+        - {x: -48, y: 11}
+        - {x: -48, y: 11}
+        - {x: -45, y: 11}
+        - {x: -38, y: 11}
+        - {x: -38, y: 11}
+        - {x: -38, y: 11}
+        - {x: -39, y: 11}
+        - {x: -43, y: 6}
+        - {x: -43, y: 4}
+        - {x: -48, y: -11}
+        - {x: -48, y: -11}
+        - {x: -41, y: -11}
+        - {x: 37, y: -11}
+        - {x: 43, y: -11}
+        - {x: 43, y: 11}
+      - - {x: -25, y: -11}
+        - {x: -24, y: -11}
+        - {x: -16, y: -11}
+        - {x: -16, y: -11}
+        - {x: -21, y: -11}
+        - {x: -21, y: -11}
+        - {x: -18, y: -11}
+        - {x: -17, y: -11}
+        - {x: -13, y: -11}
+        - {x: -12, y: -11}
+        - {x: -17, y: -11}
+        - {x: -17, y: -11}
+        - {x: -20, y: -11}
+        - {x: -22, y: -11}
+        - {x: -25, y: -11}
+        - {x: -27, y: -11}
+        - {x: -24, y: -11}
+        - {x: -25, y: -11}
+      - - {x: 6, y: -11}
+        - {x: 11, y: -11}
+        - {x: 11, y: -11}
+        - {x: 5, y: -9}
+        - {x: 2, y: -11}
+        - {x: 2, y: -11}
+      - - {x: 15, y: -4}
+        - {x: 19, y: -6}
+        - {x: 20, y: -6}
+        - {x: 20, y: -9}
+        - {x: 22, y: -11}
+        - {x: 22, y: -10}
+      - - {x: 1, y: 11}
+        - {x: -2, y: 11}
+        - {x: -2, y: 11}
+        - {x: 0, y: 11}
+        - {x: 8, y: 11}
+        - {x: 8, y: 11}
+      - - {x: 37, y: 11}
+        - {x: 37, y: 11}
+      - - {x: 5, y: 11}
+        - {x: 2, y: 11}
+        - {x: 2, y: 11}
+        - {x: 10, y: 11}
+        - {x: 12, y: 11}
+        - {x: 12, y: 11}
+        - {x: 10, y: 11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88cd2b3e2efbb74ab0cc213e64ba202
+      internalID: -1914463472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 68
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -48, y: 19}
+        - {x: -48, y: 19}
+        - {x: -46, y: 19}
+        - {x: -44, y: 19}
+        - {x: -39, y: 19}
+        - {x: -41, y: 19}
+        - {x: -44, y: 19}
+        - {x: -48, y: 19}
+        - {x: -48, y: 19}
+        - {x: -45, y: 19}
+        - {x: -38, y: 19}
+        - {x: -38, y: 19}
+        - {x: -38, y: 19}
+        - {x: -39, y: 15}
+        - {x: -43, y: 6}
+        - {x: -43, y: 4}
+        - {x: -48, y: -19}
+        - {x: -48, y: -19}
+        - {x: -41, y: -19}
+        - {x: 37, y: -19}
+        - {x: 43, y: -19}
+        - {x: 43, y: 19}
+      - - {x: -25, y: -19}
+        - {x: -24, y: -19}
+        - {x: -16, y: -15}
+        - {x: -16, y: -14}
+        - {x: -21, y: -19}
+        - {x: -21, y: -19}
+        - {x: -18, y: -19}
+        - {x: -17, y: -19}
+        - {x: -13, y: -19}
+        - {x: -12, y: -19}
+        - {x: -17, y: -19}
+        - {x: -17, y: -19}
+        - {x: -20, y: -19}
+        - {x: -22, y: -19}
+        - {x: -25, y: -19}
+        - {x: -27, y: -19}
+        - {x: -24, y: -19}
+        - {x: -25, y: -19}
+      - - {x: 6, y: -19}
+        - {x: 11, y: -17}
+        - {x: 11, y: -14}
+        - {x: 5, y: -9}
+        - {x: 2, y: -12}
+        - {x: 2, y: -19}
+      - - {x: 15, y: -4}
+        - {x: 19, y: -6}
+        - {x: 20, y: -6}
+        - {x: 20, y: -9}
+        - {x: 22, y: -11}
+        - {x: 22, y: -10}
+      - - {x: 1, y: 19}
+        - {x: -2, y: 19}
+        - {x: -2, y: 16}
+        - {x: 0, y: 14}
+        - {x: 8, y: 14}
+        - {x: 8, y: 19}
+      - - {x: 37, y: 19}
+        - {x: 37, y: 19}
+      - - {x: 5, y: 19}
+        - {x: 2, y: 19}
+        - {x: 2, y: 19}
+        - {x: 10, y: 19}
+        - {x: 12, y: 19}
+        - {x: 12, y: 19}
+        - {x: 10, y: 19}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1279c0272ab129046bc8143bfcca6958
+      internalID: 837868172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 43
+        width: 125
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -48, y: 11.5}
+        - {x: -48, y: 11.5}
+        - {x: -46, y: 11.5}
+        - {x: -44, y: 11.5}
+        - {x: -39, y: 11.5}
+        - {x: -41, y: 11.5}
+        - {x: -44, y: 11.5}
+        - {x: -48, y: 11.5}
+        - {x: -48, y: 11.5}
+        - {x: -45, y: 11.5}
+        - {x: -38, y: 11.5}
+        - {x: -38, y: 11.5}
+        - {x: -38, y: 11.5}
+        - {x: -39, y: 11.5}
+        - {x: -43, y: 6}
+        - {x: -43, y: 4}
+        - {x: -48, y: -11.5}
+        - {x: -48, y: -11.5}
+        - {x: -41, y: -11.5}
+        - {x: 37, y: -11.5}
+        - {x: 43, y: -11.5}
+        - {x: 43, y: 11.5}
+      - - {x: -25, y: -11.5}
+        - {x: -24, y: -11.5}
+        - {x: -16, y: -11.5}
+        - {x: -16, y: -11.5}
+        - {x: -21, y: -11.5}
+        - {x: -21, y: -11.5}
+        - {x: -18, y: -11.5}
+        - {x: -17, y: -11.5}
+        - {x: -13, y: -11.5}
+        - {x: -12, y: -11.5}
+        - {x: -17, y: -11.5}
+        - {x: -17, y: -11.5}
+        - {x: -20, y: -11.5}
+        - {x: -22, y: -11.5}
+        - {x: -25, y: -11.5}
+        - {x: -27, y: -11.5}
+        - {x: -24, y: -11.5}
+        - {x: -25, y: -11.5}
+      - - {x: 6, y: -11.5}
+        - {x: 11, y: -11.5}
+        - {x: 11, y: -11.5}
+        - {x: 5, y: -9}
+        - {x: 2, y: -11.5}
+        - {x: 2, y: -11.5}
+      - - {x: 15, y: -4}
+        - {x: 19, y: -6}
+        - {x: 20, y: -6}
+        - {x: 20, y: -9}
+        - {x: 22, y: -11}
+        - {x: 22, y: -10}
+      - - {x: 1, y: 11.5}
+        - {x: -2, y: 11.5}
+        - {x: -2, y: 11.5}
+        - {x: 0, y: 11.5}
+        - {x: 8, y: 11.5}
+        - {x: 8, y: 11.5}
+      - - {x: 37, y: 11.5}
+        - {x: 37, y: 11.5}
+      - - {x: 5, y: 11.5}
+        - {x: 2, y: 11.5}
+        - {x: 2, y: 11.5}
+        - {x: 10, y: 11.5}
+        - {x: 12, y: 11.5}
+        - {x: 12, y: 11.5}
+        - {x: 10, y: 11.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82996e6f2ac8ef84da1c3fba12ece77a
+      internalID: 422796551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2
+        width: 126
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -48, y: 20}
+        - {x: -48, y: 20}
+        - {x: -46, y: 20}
+        - {x: -44, y: 20}
+        - {x: -39, y: 20}
+        - {x: -41, y: 20}
+        - {x: -44, y: 20}
+        - {x: -48, y: 20}
+        - {x: -48, y: 20}
+        - {x: -45, y: 20}
+        - {x: -38, y: 20}
+        - {x: -38, y: 20}
+        - {x: -38, y: 19}
+        - {x: -39, y: 15}
+        - {x: -43, y: 6}
+        - {x: -43, y: 4}
+        - {x: -48, y: -20}
+        - {x: -48, y: -20}
+        - {x: -41, y: -20}
+        - {x: 37, y: -20}
+        - {x: 43, y: -20}
+        - {x: 43, y: 20}
+      - - {x: -25, y: -20}
+        - {x: -24, y: -20}
+        - {x: -16, y: -15}
+        - {x: -16, y: -14}
+        - {x: -21, y: -19}
+        - {x: -21, y: -20}
+        - {x: -18, y: -20}
+        - {x: -17, y: -20}
+        - {x: -13, y: -20}
+        - {x: -12, y: -20}
+        - {x: -17, y: -20}
+        - {x: -17, y: -20}
+        - {x: -20, y: -20}
+        - {x: -22, y: -20}
+        - {x: -25, y: -20}
+        - {x: -27, y: -20}
+        - {x: -24, y: -20}
+        - {x: -25, y: -20}
+      - - {x: 6, y: -20}
+        - {x: 11, y: -17}
+        - {x: 11, y: -14}
+        - {x: 5, y: -9}
+        - {x: 2, y: -12}
+        - {x: 2, y: -20}
+      - - {x: 15, y: -4}
+        - {x: 19, y: -6}
+        - {x: 20, y: -6}
+        - {x: 20, y: -9}
+        - {x: 22, y: -11}
+        - {x: 22, y: -10}
+      - - {x: 1, y: 20}
+        - {x: -2, y: 20}
+        - {x: -2, y: 16}
+        - {x: 0, y: 14}
+        - {x: 8, y: 14}
+        - {x: 8, y: 20}
+      - - {x: 37, y: 20}
+        - {x: 37, y: 20}
+      - - {x: 5, y: 20}
+        - {x: 2, y: 20}
+        - {x: 2, y: 20}
+        - {x: 10, y: 20}
+        - {x: 12, y: 20}
+        - {x: 12, y: 20}
+        - {x: 10, y: 20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b83c1d1dde1204b81050f33cee7d65
+      internalID: 1456556453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 71
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 9}
+        - {x: -3, y: 6}
+        - {x: -3, y: 4}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: 3, y: -9}
+        - {x: 3, y: -9}
+        - {x: 3, y: 9}
+      - - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: -9}
+      - - {x: 3, y: -9}
+        - {x: 3, y: -9}
+        - {x: 3, y: -9}
+        - {x: 3, y: -9}
+        - {x: 2, y: -9}
+        - {x: 2, y: -9}
+      - - {x: 3, y: -4}
+        - {x: 3, y: -6}
+        - {x: 3, y: -6}
+        - {x: 3, y: -9}
+        - {x: 3, y: -9}
+        - {x: 3, y: -9}
+      - - {x: 1, y: 9}
+        - {x: -2, y: 9}
+        - {x: -2, y: 9}
+        - {x: 0, y: 9}
+        - {x: 3, y: 9}
+        - {x: 3, y: 9}
+      - - {x: 3, y: 9}
+        - {x: 3, y: 9}
+      - - {x: 3, y: 9}
+        - {x: 2, y: 9}
+        - {x: 2, y: 9}
+        - {x: 3, y: 9}
+        - {x: 3, y: 9}
+        - {x: 3, y: 9}
+        - {x: 3, y: 9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8aebd153ba92c34ab9061bc8b64bccc
+      internalID: 892532066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 4
+        width: 62
+        height: 54
+      alignment: 9
+      pivot: {x: 0.50978297, y: 0.31085595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -21.5}
+        - {x: -22, y: -18.5}
+        - {x: -27, y: -11.5}
+        - {x: -15, y: -7.5}
+        - {x: 18, y: -7.5}
+        - {x: 25, y: -12.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93757a747dd59445b9cc84d18f0248a
+      internalID: -1923729550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_8
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 88
+        width: 45
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4999993, y: 0.414949}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 13.5, y: -9.5}
+        - {x: -14.5, y: -9.5}
+        - {x: -12.5, y: 0.5}
+        - {x: 9.5, y: -1.5}
+        - {x: 19.5, y: -4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eef95934b4ff034e98a15fe5ac9a4c5
+      internalID: -1856572913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_9
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 69
+        width: 34
+        height: 50
+      alignment: 9
+      pivot: {x: 0.49294955, y: 0.31783617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -21}
+        - {x: -13, y: -16}
+        - {x: -5, y: -10}
+        - {x: 5, y: -10}
+        - {x: 10, y: -14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a4d0419fbde764f8322ff265744303
+      internalID: -1482056843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 46
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8d3eed8fc64f444b5a8ba64fca88c8
+      internalID: -328581097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObjDeco_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 8
+        width: 63
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c45051b48e3a5445924d00f3fcaf78c
+      internalID: -965647533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Deco_0: -740749843
+      Deco_1: -380679188
+      Deco_2: 1869126802
+      ObjDeco_0: -1720214871
+      ObjDeco_1: -410622105
+      ObjDeco_10: -328581097
+      ObjDeco_11: -965647533
+      ObjDeco_2: -1914463472
+      ObjDeco_3: 837868172
+      ObjDeco_4: 422796551
+      ObjDeco_5: 1456556453
+      ObjDeco_6: 892532066
+      ObjDeco_7: -1923729550
+      ObjDeco_8: -1856572913
+      ObjDeco_9: -1482056843
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

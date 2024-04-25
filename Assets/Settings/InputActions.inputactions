@@ -264,6 +264,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "c83c3ffb-c0a2-478b-81d0-dd2d04209bda",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mine",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Delete",
                     "id": "fb52992f-7c6c-4def-af22-22cb25fa8ecc",
                     "path": "OneModifier",

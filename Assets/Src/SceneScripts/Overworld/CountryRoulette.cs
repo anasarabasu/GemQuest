@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class CountryRoulette : MonoBehaviour, ISaveLoad {
-    public static CountryRoulette instance;
+    public static CountryRoulette instance; //might remove this
     private void Awake() {
         instance = this;
     }
@@ -35,7 +35,7 @@ public class CountryRoulette : MonoBehaviour, ISaveLoad {
         // chapter ++;
     }
 
-    private int penaltyWrongCountry;
+    private int penaltyWrongCountry; //might move this or something
     public void  WrongCountry() {
         SceneManager.instance.LoadScene("WrongChoice");
         penaltyWrongCountry ++;

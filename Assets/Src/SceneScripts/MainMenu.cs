@@ -32,6 +32,6 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
     }
 
     public void Load(DataRoot data) {
-        newGame = data.gameData.newGame;
+        this.newGame = data.gameData.newGame;
     }
 }

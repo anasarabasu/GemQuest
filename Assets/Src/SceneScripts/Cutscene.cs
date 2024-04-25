@@ -36,12 +36,12 @@ public class Cutscene : MonoBehaviour, ISaveLoad {
     }
 
     public void Save(ref DataRoot data) {
-        data.gameData.newGame = newGame;
-        data.gameData.dialogueIndex = dialogueIndex;
+        data.gameData.newGame = this.newGame;
+        data.gameData.dialogueIndex = this.dialogueIndex;
     }
 
     public void Load(DataRoot data) {
-        newGame = data.gameData.newGame;
-        dialogueIndex = data.gameData.dialogueIndex;
+        this.newGame = data.gameData.newGame;
+        this.dialogueIndex = data.gameData.dialogueIndex;
     }
 }

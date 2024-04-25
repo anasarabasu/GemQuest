@@ -8,7 +8,7 @@ public class PromptBoxController : MonoBehaviour {
     [SerializeField] GameObject travelPrompt;
     [SerializeField] TextMeshProUGUI travelText;
     [SerializeField] GameObject countrySelection;
-    [SerializeField] PointClickMovement playerMovement;
+    [SerializeField] PointClick playerMovement;
     [SerializeField] GameObject cluePanel;
 
     private GameObject[] countryLabels;

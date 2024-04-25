@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: '#RootSwitch'
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: ff1cfcb7ea8f98348afbf73566580f66, type: 2}
+  - {fileID: 11400000, guid: 74d2ea87c94704444b244049e91b164c, type: 2}
+  - {fileID: 11400000, guid: 0bf553102ec0e184085dfd29c18db124, type: 2}
+  controlDriver:
+    name: AnimationState
+    autoIncrement: 0
+    percentageBased: 0
+    guid: b14e73a0-1796-4d23-b3eb-5d27e9c5ae49
+  drivers:
+    keys: []
+    values: 

@@ -32,16 +32,16 @@ public class Cutscene : MonoBehaviour, ISaveLoad {
     public void _FinishCutscene() { //toggles newgame to false TEMP
         newGame = false;
         DataManager.instance.SaveGame();
-        SceneManager.instance.LoadScene("Overworld");
+        SceneHandler.instance.LoadScene("Overworld");
     }
 
-    public void Save(ref DataRoot data) {
-        data.gameData.newGame = this.newGame;
-        data.gameData.dialogueIndex = this.dialogueIndex;
+    public void Save(DataRoot data) {
+        data.gameData.newGame = newGame;
+        data.gameData.dialogueIndex = dialogueIndex;
     }
 
     public void Load(DataRoot data) {
-        this.newGame = data.gameData.newGame;
-        this.dialogueIndex = data.gameData.dialogueIndex;
+        newGame = data.gameData.newGame;
+        dialogueIndex = data.gameData.dialogueIndex;
     }
 }

@@ -38,7 +38,7 @@ public class DataManager: MonoBehaviour {
 
     public void SaveGame() {
         foreach(ISaveLoad item in ISaveLoadList) 
-            item.Save(ref data);
+            item.Save(data);
 
         string saveJSON = JsonUtility.ToJson(data, true); //write data to json
         using (StreamWriter streamWriter = new StreamWriter(dataPath))

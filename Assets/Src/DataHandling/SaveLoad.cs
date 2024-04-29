@@ -1,4 +1,4 @@
 public interface ISaveLoad {
-   void Save(ref DataRoot data);
+   void Save(DataRoot data);
    void Load(DataRoot data);
 }

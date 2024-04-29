@@ -9,13 +9,13 @@ public class PointClick : MonoBehaviour, ISaveLoad {
 
     private bool active;
     public void SetActive(bool value) {
-        this.active = value;
+        active = value;
     }
 
     private Vector3 targetPosition;
     private void Update() {  
         if(active) {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, targetPosition, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
             if(Input.GetMouseButtonDown(0)) {
                 Ray mouse = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -25,12 +25,12 @@ public class PointClick : MonoBehaviour, ISaveLoad {
         }
     }
 
-    public void Save(ref DataRoot data) {
-        data.gameData.overworldCoordinates = this.transform.position;
+    public void Save(DataRoot data) {
+        data.overworldData.overworldCoordinates = transform.position;
     }
 
     public void Load(DataRoot data) {
-        this.transform.position = data.gameData.overworldCoordinates;
-        targetPosition = data.gameData.overworldCoordinates;
+        transform.position = data.overworldData.overworldCoordinates;
+        targetPosition = data.overworldData.overworldCoordinates;
     }
 }

@@ -6,7 +6,12 @@ TagManager:
   tags:
   - CountryRoulette
   - TargetCountry
-  - Breakables
+  - InventorySlots
+  - Loot
+  - Pik
+  - Hels
+  - Pom
+  - Iska
   layers:
   - Default
   - TransparentFX
@@ -14,8 +19,8 @@ TagManager:
   - UseRaycast
   - Water
   - UI
-  - 
-  - 
+  - Map
+  - Destroyable
   - 
   - 
   - 

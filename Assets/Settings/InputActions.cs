@@ -24,327 +24,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     ""name"": ""InputActions"",
     ""maps"": [
         {
-            ""name"": ""OverView"",
-            ""id"": ""69a2c05a-2dee-479b-a69b-6162808a31da"",
-            ""actions"": [
-                {
-                    ""name"": ""Interact"",
-                    ""type"": ""Button"",
-                    ""id"": ""66b31a9a-e39b-4d86-a1de-852d927770c3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Guide"",
-                    ""type"": ""Button"",
-                    ""id"": ""3f8eb5ed-f0d8-4a52-8d33-ef5996b92661"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""MoveHorizontal"",
-                    ""type"": ""Value"",
-                    ""id"": ""f84b3fba-bd24-4e27-ace7-268109c2ce6e"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""MoveVertical"",
-                    ""type"": ""Value"",
-                    ""id"": ""c2257ce1-6a06-4649-a6e7-db347cd25761"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""9fea45f7-189e-43db-828a-1e69752c5234"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5d1d4963-95ac-4508-a51e-5b3815984a4c"",
-                    ""path"": ""<Gamepad>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d8f9b70c-712d-4c8d-979f-91f36910e7aa"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Guide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""adc57e32-1667-4d3a-9f9f-f8bf1ace0cea"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Guide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""9e24e396-b384-4694-b16d-c4b9528c6d6b"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveHorizontal"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Left"",
-                    ""id"": ""06d8f5ab-3a23-4a82-abcd-bc84eb32f0a6"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""MoveHorizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Right"",
-                    ""id"": ""09add7c5-69c2-4b2a-a8a9-fd354644e13b"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""MoveHorizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b9017b6d-70ab-4785-a18f-e0d1b2cc4e95"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""MoveHorizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""8e0956e3-cafc-4a84-a6a5-aa054df2d6cf"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveVertical"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Up"",
-                    ""id"": ""07954121-0f97-40af-b06f-491e5a371f25"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""MoveVertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Down"",
-                    ""id"": ""4c0be848-b7ff-4a39-b613-e5fadd3c5941"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""MoveVertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""18fd67c6-5724-44d8-88e7-c1a06ebc9c07"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""MoveVertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Player"",
-            ""id"": ""f8b6bfe9-73e4-49c5-88cd-9478c7ebc598"",
-            ""actions"": [
-                {
-                    ""name"": ""Move"",
-                    ""type"": ""Value"",
-                    ""id"": ""bacd6231-4118-425e-b550-536828f4c07b"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Interact"",
-                    ""type"": ""Button"",
-                    ""id"": ""971da889-e8df-4050-a9c0-e00148aad7f1"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Switch"",
-                    ""type"": ""Button"",
-                    ""id"": ""4b346b69-c667-4ddf-a634-e77f297120f0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": ""WASD"",
-                    ""id"": ""5d2c5c3b-9f64-4dd7-8100-4ba1f97df558"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""4107c1c8-9266-4545-be81-956780a23c2a"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""d21153a8-2cb8-40e7-ae0d-61e160c21bf1"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""3b88eab1-18ac-40bd-9feb-3ae10800f856"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""c687bdff-17c3-4d33-ab0f-920c2563b26c"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""611f16e9-01a5-4e78-a778-dcba2921a2ee"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3532a801-9d3e-4940-9fc4-297819f14054"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8db2bda2-1227-4487-a3a5-671b900085e4"",
-                    ""path"": ""<Gamepad>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c420d923-0ac9-4771-ab63-645dd0846f85"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Switch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8ca79922-873e-45f8-8a69-0505cc74f296"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Switch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
             ""name"": ""Dev"",
             ""id"": ""5c8f0cf9-0ed0-4d89-91d6-8750c78b1f2d"",
             ""actions"": [
@@ -479,7 +158,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Player (Overworld)"",
+            ""name"": ""Player"",
             ""id"": ""0c2bc594-1b4d-4fbf-844a-84f6b6afeeaa"",
             ""actions"": [
                 {
@@ -492,18 +171,18 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Confirm"",
+                    ""name"": ""Mine"",
                     ""type"": ""Button"",
-                    ""id"": ""b1e576b7-6b53-4f2f-8e03-8f7f726d441f"",
+                    ""id"": ""2084f3c4-a78b-4547-ad68-e21a78a43eb6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ShowRiddle"",
+                    ""name"": ""Inventory"",
                     ""type"": ""Button"",
-                    ""id"": ""2084f3c4-a78b-4547-ad68-e21a78a43eb6"",
+                    ""id"": ""f9d0a8e0-af9d-4314-b8c6-07ed12d1fac7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -531,15 +210,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""ReloadScene"",
                     ""type"": ""Button"",
                     ""id"": ""56e84fd9-6cf8-48a4-8b0a-6e8478f1148c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Touch"",
-                    ""type"": ""Button"",
-                    ""id"": ""d985d038-4882-4a7b-ad95-0377c75a9596"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -615,23 +285,23 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1b004123-6c66-4399-9cf0-b94f931d017d"",
-                    ""path"": """",
+                    ""id"": ""cb58b713-f94e-4e77-85b9-ce305f1e3373"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Confirm"",
+                    ""action"": ""Mine"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cb58b713-f94e-4e77-85b9-ce305f1e3373"",
-                    ""path"": """",
+                    ""id"": ""c83c3ffb-c0a2-478b-81d0-dd2d04209bda"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ShowRiddle"",
+                    ""action"": ""Mine"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -736,40 +406,23 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""77bd75d2-89a2-49a1-bda8-4dabe5f319ba"",
-                    ""path"": ""<Touchscreen>/Press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Touch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Player (Level)"",
-            ""id"": ""4e764faa-5497-4c52-ab7d-ceba655f5475"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""698eaecf-3a34-4898-ad0d-b6ab4f8b5d7e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""a392bea8-8dbb-4775-93f7-f5538d2ca47a"",
-                    ""path"": """",
+                    ""id"": ""d8ac219f-c9dc-46e8-b457-ab571e320cea"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6165cec-baec-43c6-bc6b-ede2682f004e"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -801,34 +454,19 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // OverView
-        m_OverView = asset.FindActionMap("OverView", throwIfNotFound: true);
-        m_OverView_Interact = m_OverView.FindAction("Interact", throwIfNotFound: true);
-        m_OverView_Guide = m_OverView.FindAction("Guide", throwIfNotFound: true);
-        m_OverView_MoveHorizontal = m_OverView.FindAction("MoveHorizontal", throwIfNotFound: true);
-        m_OverView_MoveVertical = m_OverView.FindAction("MoveVertical", throwIfNotFound: true);
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
-        m_Player_Switch = m_Player.FindAction("Switch", throwIfNotFound: true);
         // Dev
         m_Dev = asset.FindActionMap("Dev", throwIfNotFound: true);
         m_Dev_DeleteJSON = m_Dev.FindAction("DeleteJSON", throwIfNotFound: true);
         m_Dev_DisplayJSON = m_Dev.FindAction("DisplayJSON", throwIfNotFound: true);
         m_Dev_ReloadScene = m_Dev.FindAction("ReloadScene", throwIfNotFound: true);
-        // Player (Overworld)
-        m_PlayerOverworld = asset.FindActionMap("Player (Overworld)", throwIfNotFound: true);
-        m_PlayerOverworld_Move = m_PlayerOverworld.FindAction("Move", throwIfNotFound: true);
-        m_PlayerOverworld_Confirm = m_PlayerOverworld.FindAction("Confirm", throwIfNotFound: true);
-        m_PlayerOverworld_ShowRiddle = m_PlayerOverworld.FindAction("ShowRiddle", throwIfNotFound: true);
-        m_PlayerOverworld_DeleteJSON = m_PlayerOverworld.FindAction("DeleteJSON", throwIfNotFound: true);
-        m_PlayerOverworld_DisplayJSON = m_PlayerOverworld.FindAction("DisplayJSON", throwIfNotFound: true);
-        m_PlayerOverworld_ReloadScene = m_PlayerOverworld.FindAction("ReloadScene", throwIfNotFound: true);
-        m_PlayerOverworld_Touch = m_PlayerOverworld.FindAction("Touch", throwIfNotFound: true);
-        // Player (Level)
-        m_PlayerLevel = asset.FindActionMap("Player (Level)", throwIfNotFound: true);
-        m_PlayerLevel_Newaction = m_PlayerLevel.FindAction("New action", throwIfNotFound: true);
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Mine = m_Player.FindAction("Mine", throwIfNotFound: true);
+        m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
+        m_Player_DeleteJSON = m_Player.FindAction("DeleteJSON", throwIfNotFound: true);
+        m_Player_DisplayJSON = m_Player.FindAction("DisplayJSON", throwIfNotFound: true);
+        m_Player_ReloadScene = m_Player.FindAction("ReloadScene", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -886,138 +524,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     {
         return asset.FindBinding(bindingMask, out action);
     }
-
-    // OverView
-    private readonly InputActionMap m_OverView;
-    private List<IOverViewActions> m_OverViewActionsCallbackInterfaces = new List<IOverViewActions>();
-    private readonly InputAction m_OverView_Interact;
-    private readonly InputAction m_OverView_Guide;
-    private readonly InputAction m_OverView_MoveHorizontal;
-    private readonly InputAction m_OverView_MoveVertical;
-    public struct OverViewActions
-    {
-        private @InputActions m_Wrapper;
-        public OverViewActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Interact => m_Wrapper.m_OverView_Interact;
-        public InputAction @Guide => m_Wrapper.m_OverView_Guide;
-        public InputAction @MoveHorizontal => m_Wrapper.m_OverView_MoveHorizontal;
-        public InputAction @MoveVertical => m_Wrapper.m_OverView_MoveVertical;
-        public InputActionMap Get() { return m_Wrapper.m_OverView; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(OverViewActions set) { return set.Get(); }
-        public void AddCallbacks(IOverViewActions instance)
-        {
-            if (instance == null || m_Wrapper.m_OverViewActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_OverViewActionsCallbackInterfaces.Add(instance);
-            @Interact.started += instance.OnInteract;
-            @Interact.performed += instance.OnInteract;
-            @Interact.canceled += instance.OnInteract;
-            @Guide.started += instance.OnGuide;
-            @Guide.performed += instance.OnGuide;
-            @Guide.canceled += instance.OnGuide;
-            @MoveHorizontal.started += instance.OnMoveHorizontal;
-            @MoveHorizontal.performed += instance.OnMoveHorizontal;
-            @MoveHorizontal.canceled += instance.OnMoveHorizontal;
-            @MoveVertical.started += instance.OnMoveVertical;
-            @MoveVertical.performed += instance.OnMoveVertical;
-            @MoveVertical.canceled += instance.OnMoveVertical;
-        }
-
-        private void UnregisterCallbacks(IOverViewActions instance)
-        {
-            @Interact.started -= instance.OnInteract;
-            @Interact.performed -= instance.OnInteract;
-            @Interact.canceled -= instance.OnInteract;
-            @Guide.started -= instance.OnGuide;
-            @Guide.performed -= instance.OnGuide;
-            @Guide.canceled -= instance.OnGuide;
-            @MoveHorizontal.started -= instance.OnMoveHorizontal;
-            @MoveHorizontal.performed -= instance.OnMoveHorizontal;
-            @MoveHorizontal.canceled -= instance.OnMoveHorizontal;
-            @MoveVertical.started -= instance.OnMoveVertical;
-            @MoveVertical.performed -= instance.OnMoveVertical;
-            @MoveVertical.canceled -= instance.OnMoveVertical;
-        }
-
-        public void RemoveCallbacks(IOverViewActions instance)
-        {
-            if (m_Wrapper.m_OverViewActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IOverViewActions instance)
-        {
-            foreach (var item in m_Wrapper.m_OverViewActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_OverViewActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public OverViewActions @OverView => new OverViewActions(this);
-
-    // Player
-    private readonly InputActionMap m_Player;
-    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Interact;
-    private readonly InputAction m_Player_Switch;
-    public struct PlayerActions
-    {
-        private @InputActions m_Wrapper;
-        public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @Interact => m_Wrapper.m_Player_Interact;
-        public InputAction @Switch => m_Wrapper.m_Player_Switch;
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerActions instance)
-        {
-            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
-            @Interact.started += instance.OnInteract;
-            @Interact.performed += instance.OnInteract;
-            @Interact.canceled += instance.OnInteract;
-            @Switch.started += instance.OnSwitch;
-            @Switch.performed += instance.OnSwitch;
-            @Switch.canceled += instance.OnSwitch;
-        }
-
-        private void UnregisterCallbacks(IPlayerActions instance)
-        {
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
-            @Interact.started -= instance.OnInteract;
-            @Interact.performed -= instance.OnInteract;
-            @Interact.canceled -= instance.OnInteract;
-            @Switch.started -= instance.OnSwitch;
-            @Switch.performed -= instance.OnSwitch;
-            @Switch.canceled -= instance.OnSwitch;
-        }
-
-        public void RemoveCallbacks(IPlayerActions instance)
-        {
-            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IPlayerActions instance)
-        {
-            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public PlayerActions @Player => new PlayerActions(this);
 
     // Dev
     private readonly InputActionMap m_Dev;
@@ -1081,45 +587,43 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     }
     public DevActions @Dev => new DevActions(this);
 
-    // Player (Overworld)
-    private readonly InputActionMap m_PlayerOverworld;
-    private List<IPlayerOverworldActions> m_PlayerOverworldActionsCallbackInterfaces = new List<IPlayerOverworldActions>();
-    private readonly InputAction m_PlayerOverworld_Move;
-    private readonly InputAction m_PlayerOverworld_Confirm;
-    private readonly InputAction m_PlayerOverworld_ShowRiddle;
-    private readonly InputAction m_PlayerOverworld_DeleteJSON;
-    private readonly InputAction m_PlayerOverworld_DisplayJSON;
-    private readonly InputAction m_PlayerOverworld_ReloadScene;
-    private readonly InputAction m_PlayerOverworld_Touch;
-    public struct PlayerOverworldActions
+    // Player
+    private readonly InputActionMap m_Player;
+    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Mine;
+    private readonly InputAction m_Player_Inventory;
+    private readonly InputAction m_Player_DeleteJSON;
+    private readonly InputAction m_Player_DisplayJSON;
+    private readonly InputAction m_Player_ReloadScene;
+    public struct PlayerActions
     {
         private @InputActions m_Wrapper;
-        public PlayerOverworldActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_PlayerOverworld_Move;
-        public InputAction @Confirm => m_Wrapper.m_PlayerOverworld_Confirm;
-        public InputAction @ShowRiddle => m_Wrapper.m_PlayerOverworld_ShowRiddle;
-        public InputAction @DeleteJSON => m_Wrapper.m_PlayerOverworld_DeleteJSON;
-        public InputAction @DisplayJSON => m_Wrapper.m_PlayerOverworld_DisplayJSON;
-        public InputAction @ReloadScene => m_Wrapper.m_PlayerOverworld_ReloadScene;
-        public InputAction @Touch => m_Wrapper.m_PlayerOverworld_Touch;
-        public InputActionMap Get() { return m_Wrapper.m_PlayerOverworld; }
+        public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Mine => m_Wrapper.m_Player_Mine;
+        public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+        public InputAction @DeleteJSON => m_Wrapper.m_Player_DeleteJSON;
+        public InputAction @DisplayJSON => m_Wrapper.m_Player_DisplayJSON;
+        public InputAction @ReloadScene => m_Wrapper.m_Player_ReloadScene;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerOverworldActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerOverworldActions instance)
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void AddCallbacks(IPlayerActions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerOverworldActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerOverworldActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Confirm.started += instance.OnConfirm;
-            @Confirm.performed += instance.OnConfirm;
-            @Confirm.canceled += instance.OnConfirm;
-            @ShowRiddle.started += instance.OnShowRiddle;
-            @ShowRiddle.performed += instance.OnShowRiddle;
-            @ShowRiddle.canceled += instance.OnShowRiddle;
+            @Mine.started += instance.OnMine;
+            @Mine.performed += instance.OnMine;
+            @Mine.canceled += instance.OnMine;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
             @DeleteJSON.started += instance.OnDeleteJSON;
             @DeleteJSON.performed += instance.OnDeleteJSON;
             @DeleteJSON.canceled += instance.OnDeleteJSON;
@@ -1129,22 +633,19 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @ReloadScene.started += instance.OnReloadScene;
             @ReloadScene.performed += instance.OnReloadScene;
             @ReloadScene.canceled += instance.OnReloadScene;
-            @Touch.started += instance.OnTouch;
-            @Touch.performed += instance.OnTouch;
-            @Touch.canceled += instance.OnTouch;
         }
 
-        private void UnregisterCallbacks(IPlayerOverworldActions instance)
+        private void UnregisterCallbacks(IPlayerActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Confirm.started -= instance.OnConfirm;
-            @Confirm.performed -= instance.OnConfirm;
-            @Confirm.canceled -= instance.OnConfirm;
-            @ShowRiddle.started -= instance.OnShowRiddle;
-            @ShowRiddle.performed -= instance.OnShowRiddle;
-            @ShowRiddle.canceled -= instance.OnShowRiddle;
+            @Mine.started -= instance.OnMine;
+            @Mine.performed -= instance.OnMine;
+            @Mine.canceled -= instance.OnMine;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
             @DeleteJSON.started -= instance.OnDeleteJSON;
             @DeleteJSON.performed -= instance.OnDeleteJSON;
             @DeleteJSON.canceled -= instance.OnDeleteJSON;
@@ -1154,72 +655,23 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @ReloadScene.started -= instance.OnReloadScene;
             @ReloadScene.performed -= instance.OnReloadScene;
             @ReloadScene.canceled -= instance.OnReloadScene;
-            @Touch.started -= instance.OnTouch;
-            @Touch.performed -= instance.OnTouch;
-            @Touch.canceled -= instance.OnTouch;
         }
 
-        public void RemoveCallbacks(IPlayerOverworldActions instance)
+        public void RemoveCallbacks(IPlayerActions instance)
         {
-            if (m_Wrapper.m_PlayerOverworldActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IPlayerOverworldActions instance)
+        public void SetCallbacks(IPlayerActions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerOverworldActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerOverworldActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public PlayerOverworldActions @PlayerOverworld => new PlayerOverworldActions(this);
-
-    // Player (Level)
-    private readonly InputActionMap m_PlayerLevel;
-    private List<IPlayerLevelActions> m_PlayerLevelActionsCallbackInterfaces = new List<IPlayerLevelActions>();
-    private readonly InputAction m_PlayerLevel_Newaction;
-    public struct PlayerLevelActions
-    {
-        private @InputActions m_Wrapper;
-        public PlayerLevelActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_PlayerLevel_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_PlayerLevel; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerLevelActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerLevelActions instance)
-        {
-            if (instance == null || m_Wrapper.m_PlayerLevelActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerLevelActionsCallbackInterfaces.Add(instance);
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
-        }
-
-        private void UnregisterCallbacks(IPlayerLevelActions instance)
-        {
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
-        }
-
-        public void RemoveCallbacks(IPlayerLevelActions instance)
-        {
-            if (m_Wrapper.m_PlayerLevelActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IPlayerLevelActions instance)
-        {
-            foreach (var item in m_Wrapper.m_PlayerLevelActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerLevelActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public PlayerLevelActions @PlayerLevel => new PlayerLevelActions(this);
+    public PlayerActions @Player => new PlayerActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -1238,37 +690,19 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_TouchSchemeIndex];
         }
     }
-    public interface IOverViewActions
-    {
-        void OnInteract(InputAction.CallbackContext context);
-        void OnGuide(InputAction.CallbackContext context);
-        void OnMoveHorizontal(InputAction.CallbackContext context);
-        void OnMoveVertical(InputAction.CallbackContext context);
-    }
-    public interface IPlayerActions
-    {
-        void OnMove(InputAction.CallbackContext context);
-        void OnInteract(InputAction.CallbackContext context);
-        void OnSwitch(InputAction.CallbackContext context);
-    }
     public interface IDevActions
     {
         void OnDeleteJSON(InputAction.CallbackContext context);
         void OnDisplayJSON(InputAction.CallbackContext context);
         void OnReloadScene(InputAction.CallbackContext context);
     }
-    public interface IPlayerOverworldActions
+    public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnConfirm(InputAction.CallbackContext context);
-        void OnShowRiddle(InputAction.CallbackContext context);
+        void OnMine(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
         void OnDeleteJSON(InputAction.CallbackContext context);
         void OnDisplayJSON(InputAction.CallbackContext context);
         void OnReloadScene(InputAction.CallbackContext context);
-        void OnTouch(InputAction.CallbackContext context);
-    }
-    public interface IPlayerLevelActions
-    {
-        void OnNewaction(InputAction.CallbackContext context);
     }
 }

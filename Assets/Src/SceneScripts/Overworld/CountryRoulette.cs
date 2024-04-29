@@ -31,23 +31,23 @@ public class CountryRoulette : MonoBehaviour, ISaveLoad {
     }
 
     private void CorrectCountry(string sceneName) {
-        SceneManager.instance.LoadScene(sceneName +"1"); 
+        SceneHandler.instance.LoadScene(sceneName +"1"); 
         // chapter ++;
     }
 
     private int penaltyWrongCountry; //might move this or something
     public void  WrongCountry() {
-        SceneManager.instance.LoadScene("WrongChoice");
+        SceneHandler.instance.LoadScene("WrongChoice");
         penaltyWrongCountry ++;
     }
 
-    public void Save(ref DataRoot data) {
+    public void Save(DataRoot data) {
         // data.gameData.chapter = this.chapter;
-        data.gameData.penaltyWrongCountry = this.penaltyWrongCountry;
+        data.overworldData.penaltyWrongCountry = penaltyWrongCountry;
     }
 
     public void Load(DataRoot data) {
-        this.chapter = data.gameData.chapter;
-        this.penaltyWrongCountry = data.gameData.penaltyWrongCountry;
+        chapter = data.gameData.chapter;
+        penaltyWrongCountry = data.overworldData.penaltyWrongCountry;
     }
 }

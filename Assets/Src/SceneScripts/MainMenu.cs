@@ -11,14 +11,12 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
             startText.SetText("* Begin Story *");
             nextScene = "Cutscene";
         }
-        else {
+        else 
             startText.SetText("* Continue Story *");
-            nextScene = "Overworld";
-        }
     }
 
     public void _StartGame() {
-        SceneManager.instance.LoadScene(nextScene);
+        SceneHandler.instance.LoadScene(nextScene);
     }
 
     public void _Options() {}
@@ -27,11 +25,12 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
 
     //TODO: prettify main menu
 
-    public void Save(ref DataRoot data) {
+    public void Save(DataRoot data) {
         // data.userData.newgame = newgame;
     }
 
     public void Load(DataRoot data) {
-        this.newGame = data.gameData.newGame;
+        newGame = data.gameData.newGame;
+        nextScene = data.gameData.lastScene;
     }
 }

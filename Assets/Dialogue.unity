@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 984, y: -1010}
+  m_AnchoredPosition: {x: 960, y: -310}
   m_SizeDelta: {x: 1455, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39632372
@@ -216,8 +216,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1757dae9f9ce66e4c984694ebd602bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 250
   moveSpeed: 1000
-  textMeshProText: {fileID: 972387215}
+  panels:
+  - {fileID: 2066533118}
+  - {fileID: 39632371}
+  - {fileID: 725725525}
+  - {fileID: 1263405979}
 --- !u!114 &39632375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,8 +455,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "KHFSKDAFASKDLFKHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-    Blah vlhdfhaskjdfhskajdfhkasjdhf \n"
+  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
   m_sharedMaterial: {fileID: 3566578599408741677, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
@@ -514,7 +520,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 38.945312, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -566,7 +572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 984, y: -1723}
+  m_AnchoredPosition: {x: 960, y: -310}
   m_SizeDelta: {x: 1455, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725725526
@@ -621,8 +627,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1757dae9f9ce66e4c984694ebd602bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 250
   moveSpeed: 1000
-  textMeshProText: {fileID: 670107154}
+  panels:
+  - {fileID: 2066533118}
+  - {fileID: 39632371}
+  - {fileID: 725725525}
+  - {fileID: 1263405979}
 --- !u!114 &725725529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +663,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.88
+  m_PixelsPerUnitMultiplier: 3.44
 --- !u!222 &725725530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -823,8 +834,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "KHFSKDAFASKDLFKHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-    Blah vlhdfhaskjdfhskajdfhkasjdhf \n"
+  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
   m_sharedMaterial: {fileID: 3566578599408741677, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
@@ -939,7 +951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 984, y: -2345}
+  m_AnchoredPosition: {x: 960, y: -310}
   m_SizeDelta: {x: 1455, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263405980
@@ -994,8 +1006,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1757dae9f9ce66e4c984694ebd602bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 250
   moveSpeed: 1000
-  textMeshProText: {fileID: 1437131218}
+  panels:
+  - {fileID: 2066533118}
+  - {fileID: 39632371}
+  - {fileID: 725725525}
+  - {fileID: 1263405979}
 --- !u!114 &1263405983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +1042,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.88
+  m_PixelsPerUnitMultiplier: 3.44
 --- !u!222 &1263405984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1091,8 +1108,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "KHFSKDAFASKDLFKHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-    Blah vlhdfhaskjdfhskajdfhkasjdhf \n"
+  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
   m_sharedMaterial: {fileID: 3566578599408741677, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
@@ -1294,8 +1312,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KHFSKDAFASKDLFKHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-    Blah vlhdfhaskjdfhskajdfhkasjdhf
+  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
   m_sharedMaterial: {fileID: 3566578599408741677, guid: 8445d8fe377912f4aae330287f83ba81, type: 2}
@@ -1410,7 +1429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: -364}
+  m_AnchoredPosition: {x: 960.00006, y: -310}
   m_SizeDelta: {x: 1455, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066533119
@@ -1425,8 +1444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1757dae9f9ce66e4c984694ebd602bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 250
   moveSpeed: 1000
-  textMeshProText: {fileID: 1798596181}
+  panels:
+  - {fileID: 2066533118}
+  - {fileID: 39632371}
+  - {fileID: 725725525}
+  - {fileID: 1263405979}
 --- !u!114 &2066533120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,7 +1480,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.88
+  m_PixelsPerUnitMultiplier: 3.44
 --- !u!222 &2066533121
 CanvasRenderer:
   m_ObjectHideFlags: 0

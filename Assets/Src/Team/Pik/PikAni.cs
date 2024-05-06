@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PikAni : AnimateBase {
+public class PikAni : AnimateRoam {
     [SerializeField] Joystick controller;
     [SerializeField] Mine interactor;  //make instance
 

@@ -1,7 +1,7 @@
 using Pathfinding;
 using UnityEngine;
 
-public class HelsAI : AIWander, ISaveLoad {
+public class HelsAI : AIWander {
     protected override void UpdateTargets() {
         //pickup items AI
         if(GameObject.FindGameObjectWithTag("Loot") != null) {
@@ -17,12 +17,4 @@ public class HelsAI : AIWander, ISaveLoad {
                 targets[1] = wanderAround;
             }       
     }
-
-    public void Save(DataRoot data) {
-        data.levelData.HELS_levelCoordinates = transform.position;
-    }
-    public void Load(DataRoot data) {
-        transform.position = data.levelData.HELS_levelCoordinates;
-    }
-
 }

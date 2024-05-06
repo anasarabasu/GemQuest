@@ -5,11 +5,11 @@ namespace Pathfinding {
 	[UniqueComponent(tag = "ai.destination")]
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_a_i_destination_setter.php")]
 
-	public class AIWander : VersionedMonoBehaviour {
+	public class AIWander : VersionedMonoBehaviour, ISaveLoad {
 		[SerializeField] protected Transform leader;
         [SerializeField] float delay = 0.5f;
         
-        [SerializeField] protected List<Vector3> targets = new List<Vector3>();
+        [SerializeField] protected List<Vector3> targets = new();
 
 		private IAstarAI agent;
         protected AIPath path;
@@ -56,5 +56,13 @@ namespace Pathfinding {
             targets[0] = leader.position;
             targets[1] = wanderAround;
         }
-	}
+
+        public void Save(DataRoot data) {
+            
+        }
+
+        public void Load(DataRoot data) {
+            transform.position = data.levelData.levelCoordinates;
+        }
+    }
 }

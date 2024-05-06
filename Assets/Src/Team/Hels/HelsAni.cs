@@ -1,7 +1,7 @@
 using Pathfinding;
 using UnityEngine;
 
-public class HelsAni : AnimateBase {
+public class HelsAni : AnimateRoam {
 
     [SerializeField]AIPath AIPath;
 

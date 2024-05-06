@@ -1,6 +1,5 @@
 using System;
 using DG.Tweening;
-using Pathfinding;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour { //should make this an inherit or interface

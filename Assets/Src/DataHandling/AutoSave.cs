@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class AutoSave : MonoBehaviour {
 
-    private int autosaveInterval = 30;
     private float timer;
+    private int autosaveInterval = 30;
 
     private void Update() {
         timer -= Time.deltaTime;

@@ -33,7 +33,8 @@ public class PromptBoxController : MonoBehaviour {
         travelPrompt.SetActive(false);
     }
 
-    private Dictionary<string, string[]> countryDictionary = new Dictionary<string, string[]> {
+    private Dictionary<string, string[]> countryDictionary = new()
+    {
         {"Africa", new string[6] {"Egypt", "Liberia", "Uganda", "Ghana", "Burundi", "Chad"}},
         {"Europe", new string[6] {"Italy", "Czechia", "Ukraine", "Hungary", "Montenegro", "Greece"}},
         {"Asia", new string[6] {"Turkey", "Myanmar", "Iran", "Afghanistan", "Japan", "Laos"}},
@@ -45,7 +46,7 @@ public class PromptBoxController : MonoBehaviour {
     private string[] ShuffleCountries(string[] list) {
         string[] shuffledList = new string[list.Length];
         List<string> unshuffledList = list.Cast<string>().ToList();
-        Random random = new Random();
+        Random random = new();
 
         for (int i = 0; i < shuffledList.Length; i++) {
             int index = random.Next(0, unshuffledList.Count);

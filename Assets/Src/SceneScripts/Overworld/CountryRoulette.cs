@@ -31,13 +31,13 @@ public class CountryRoulette : MonoBehaviour, ISaveLoad {
     }
 
     private void CorrectCountry(string sceneName) {
-        SceneHandler.instance.LoadScene(sceneName +"1"); 
+        SceneHandler.LoadScene(sceneName +"1"); 
         // chapter ++;
     }
 
     private int penaltyWrongCountry; //might move this or something
     public void  WrongCountry() {
-        SceneHandler.instance.LoadScene("WrongChoice");
+        SceneHandler.LoadScene("WrongChoice");
         penaltyWrongCountry ++;
     }
 

@@ -1,8 +1,7 @@
-using System;
 using Aarthificial.Reanimation;
 using UnityEngine;
 
-public class AnimateBase : MonoBehaviour {
+public class AnimateRoam : MonoBehaviour {
     protected Reanimator reanimator;
     [SerializeField] Rigidbody2D body;
 

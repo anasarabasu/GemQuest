@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
     }
 
     public void _StartGame() {
-        SceneHandler.instance.LoadScene(nextScene);
+        SceneHandler.LoadScene(nextScene);
     }
 
     public void _Options() {}

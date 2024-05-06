@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: b20536781118a054e9956fb7066e9d2b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 213
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffbe7425577c234881c41cc5cd264ef
+      internalID: 1161124396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 213
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e658c64c34c6547870981fa05d1f17
+      internalID: 2002654575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 213
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e264d24064dc94daa3d68104ccc0c1
+      internalID: -853780602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 213
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd23782d29ad7d48a93dcf00030b7c1
+      internalID: -412866207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 213
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1fb5216cb8bdb43af3a031ce37319d
+      internalID: 419086157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1b64a9cdc3c694a90a898c2d03c2aa
+      internalID: -1214006328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 142
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3d6251a8b495745b85ca435a99387c
+      internalID: 1240409997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 142
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1e8e2e193b04040be21de625c42f62
+      internalID: 1957366885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 142
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50e2f86005d24541a2e6e70a1c8f7c0
+      internalID: 263306361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 142
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e9db390a04a96449f1b8d97f318024
+      internalID: -228969497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a961c0a021a819d47bac1c89e05421b6
+      internalID: 1552422021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 71
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b96e9817a97a5439e7a028dda4bdd1
+      internalID: 207657234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 71
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacae61247627044e8c2fd4fa75ef9b5
+      internalID: 920968615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 71
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138b0b6a445b5ef46b15d2ad1626319c
+      internalID: -358290474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 71
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b77854c2da9434cbae5a25352d6f19
+      internalID: -905460579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28e6ffaba128db45ad6430d1f87b0c4
+      internalID: 1797834593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Whip Attack) Sprite-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 129
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77f8deea5065e348a2195d4c085693d
+      internalID: -451061454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pik (Whip Attack) Sprite-Sheet_0: 1161124396
+      Pik (Whip Attack) Sprite-Sheet_1: 2002654575
+      Pik (Whip Attack) Sprite-Sheet_10: 1552422021
+      Pik (Whip Attack) Sprite-Sheet_11: 207657234
+      Pik (Whip Attack) Sprite-Sheet_12: 920968615
+      Pik (Whip Attack) Sprite-Sheet_13: -358290474
+      Pik (Whip Attack) Sprite-Sheet_14: -905460579
+      Pik (Whip Attack) Sprite-Sheet_15: 1797834593
+      Pik (Whip Attack) Sprite-Sheet_16: -451061454
+      Pik (Whip Attack) Sprite-Sheet_2: -853780602
+      Pik (Whip Attack) Sprite-Sheet_3: -412866207
+      Pik (Whip Attack) Sprite-Sheet_4: 419086157
+      Pik (Whip Attack) Sprite-Sheet_5: -1214006328
+      Pik (Whip Attack) Sprite-Sheet_6: 1240409997
+      Pik (Whip Attack) Sprite-Sheet_7: 1957366885
+      Pik (Whip Attack) Sprite-Sheet_8: 263306361
+      Pik (Whip Attack) Sprite-Sheet_9: -228969497
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

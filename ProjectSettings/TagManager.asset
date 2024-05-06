@@ -12,6 +12,8 @@ TagManager:
   - Hels
   - Pom
   - Iska
+  - Hero
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -54,4 +56,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2099761495
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 717102289
     locked: 0

@@ -24,7 +24,7 @@ public class DataManager: MonoBehaviour {
             LoadGame();
         else {
             string createJSON = JsonUtility.ToJson(data, true); //create default json file
-            using (StreamWriter streamWriter = new StreamWriter(dataPath))
+            using (StreamWriter streamWriter = new(dataPath))
                 streamWriter.Write(createJSON);
             
             Debug.Log("Save file created");
@@ -41,7 +41,7 @@ public class DataManager: MonoBehaviour {
             item.Save(data);
 
         string saveJSON = JsonUtility.ToJson(data, true); //write data to json
-        using (StreamWriter streamWriter = new StreamWriter(dataPath))
+        using (StreamWriter streamWriter = new(dataPath))
             streamWriter.Write(saveJSON);
 
         Debug.Log("Game data saved");
@@ -49,7 +49,7 @@ public class DataManager: MonoBehaviour {
 
     public void LoadGame() {
         string loadJSON;
-        using (StreamReader streamReader = new StreamReader(dataPath))
+        using (StreamReader streamReader = new(dataPath))
             loadJSON = streamReader.ReadToEnd();
         DataRoot loadData = JsonUtility.FromJson<DataRoot>(loadJSON); //create data from json
         data = loadData;

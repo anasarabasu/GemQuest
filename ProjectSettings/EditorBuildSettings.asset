@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: f0b629d6651a0384f9e1b87492408c7d
   - enabled: 1
     path: Assets/Scenes/Czechia1.unity
-    guid: 00247f7de9fd21a4f82ad3f71943692d
+    guid: f9776952640597949a20082fcc058c50
   - enabled: 1
     path: Assets/Scenes/Czechia2.unity
     guid: 28381167a428a7f4fbd6b3440694e22b
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WrongChoice.unity
     guid: e7d4b138158209847b7249da698f5c42
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Combat.unity
     guid: 8be60b3646724e6429867a9ecbb3fcd2
   m_configObjects:

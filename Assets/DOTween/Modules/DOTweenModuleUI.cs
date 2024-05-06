@@ -3,7 +3,6 @@
 
 #if true // MODULE_MARKER
 
-using System;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +16,7 @@ using Text = UnityEngine.UI.Text;
 #pragma warning disable 1591
 namespace DG.Tweening
 {
-	public static class DOTweenModuleUI
+    public static class DOTweenModuleUI
     {
         #region Shortcuts
 
@@ -556,7 +555,7 @@ namespace DG.Tweening
         public static Tweener DOBlendableColor(this Graphic target, Color endValue, float duration)
         {
             endValue = endValue - target.color;
-            Color to = new Color(0, 0, 0, 0);
+            Color to = new(0, 0, 0, 0);
             return DOTween.To(() => to, x => {
                 Color diff = x - to;
                 to = x;
@@ -577,7 +576,7 @@ namespace DG.Tweening
         public static Tweener DOBlendableColor(this Image target, Color endValue, float duration)
         {
             endValue = endValue - target.color;
-            Color to = new Color(0, 0, 0, 0);
+            Color to = new(0, 0, 0, 0);
             return DOTween.To(() => to, x => {
                 Color diff = x - to;
                 to = x;
@@ -598,7 +597,7 @@ namespace DG.Tweening
         public static Tweener DOBlendableColor(this Text target, Color endValue, float duration)
         {
             endValue = endValue - target.color;
-            Color to = new Color(0, 0, 0, 0);
+            Color to = new(0, 0, 0, 0);
             return DOTween.To(() => to, x => {
                 Color diff = x - to;
                 to = x;
@@ -649,11 +648,11 @@ namespace DG.Tweening
             public static Vector2 SwitchToRectTransform(RectTransform from, RectTransform to)
             {
                 Vector2 localPoint;
-                Vector2 fromPivotDerivedOffset = new Vector2(from.rect.width * 0.5f + from.rect.xMin, from.rect.height * 0.5f + from.rect.yMin);
+                Vector2 fromPivotDerivedOffset = new(from.rect.width * 0.5f + from.rect.xMin, from.rect.height * 0.5f + from.rect.yMin);
                 Vector2 screenP = RectTransformUtility.WorldToScreenPoint(null, from.position);
                 screenP += fromPivotDerivedOffset;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(to, screenP, null, out localPoint);
-                Vector2 pivotDerivedOffset = new Vector2(to.rect.width * 0.5f + to.rect.xMin, to.rect.height * 0.5f + to.rect.yMin);
+                Vector2 pivotDerivedOffset = new(to.rect.width * 0.5f + to.rect.xMin, to.rect.height * 0.5f + to.rect.yMin);
                 return to.anchoredPosition + localPoint - pivotDerivedOffset;
             }
         }

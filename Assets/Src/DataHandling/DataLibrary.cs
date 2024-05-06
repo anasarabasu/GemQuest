@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable] public class DataRoot {
@@ -13,12 +14,14 @@ using UnityEngine;
         newGame = true;
         dialogueIndex = 0;
         chapter = 1;
+        teamComposition = new List<string> {"Pik", "Hels"};
     }
     
     public bool newGame;
     public int dialogueIndex;
     public int chapter;
     public string lastScene;
+    public List<string> teamComposition;
 }
 
 [Serializable] public class OverworldData {
@@ -33,17 +36,11 @@ using UnityEngine;
 
 [Serializable] public class LevelData {
     public LevelData() {
-        PIK_levelCoordinates = new Vector2(0, -1);
-        HELS_levelCoordinates = new Vector2(0, -1);
-        ISKA_levelCoordinates = new Vector2(0, -1);
-        POM_levelCoordinates = new Vector2(0, -1);
+        levelCoordinates = new Vector2(0, -1);
     }
     // public ??? levelObstacleChanges;
 
-    public Vector2 PIK_levelCoordinates;
-    public Vector2 HELS_levelCoordinates;
-    public Vector2 ISKA_levelCoordinates;
-    public Vector2 POM_levelCoordinates;
+    public Vector2 levelCoordinates;
 }
 
 [SerializeField] public class CharacterStats {

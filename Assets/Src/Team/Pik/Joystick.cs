@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -71,11 +69,11 @@ public class Joystick : MonoBehaviour, ISaveLoad {
     }
 
     public void Save(DataRoot data) {
-        data.levelData.PIK_levelCoordinates = transform.position;
+        data.levelData.levelCoordinates = transform.position;
     }
 
     public void Load(DataRoot data) {
-        transform.position = data.levelData.PIK_levelCoordinates;
+        transform.position = data.levelData.levelCoordinates;
     }
 
 }

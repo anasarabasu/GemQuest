@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PointClick : MonoBehaviour, ISaveLoad {
@@ -18,8 +19,8 @@ public class PointClick : MonoBehaviour, ISaveLoad {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
             if(Input.GetMouseButtonDown(0)) {
-                Ray mouse = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if(Physics.Raycast(mouse, out RaycastHit hitInfo, 10, LayerMask.GetMask("UseRaycast")))
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if(Physics.Raycast(ray, out RaycastHit hitInfo, math.INFINITY, LayerMask.GetMask("UseRaycast")))
                     targetPosition = hitInfo.point;   
             }
         }

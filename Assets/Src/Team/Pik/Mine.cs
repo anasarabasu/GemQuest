@@ -22,7 +22,7 @@ public class Mine : MonoBehaviour {
     private RaycastHit2D hit;
     private Interactable objInRange;
     private void UpdateObjectInRange() {
-        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y -1);
+        Vector2 rayOrigin = new(transform.position.x, transform.position.y -1);
         hit = Physics2D.Raycast(rayOrigin, controller.UpdateRay(), 3, LayerMask.GetMask("Destroyable"));
         
         Debug.DrawRay(rayOrigin, controller.UpdateRay());

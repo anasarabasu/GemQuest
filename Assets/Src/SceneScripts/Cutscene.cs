@@ -32,7 +32,7 @@ public class Cutscene : MonoBehaviour, ISaveLoad {
     public void _FinishCutscene() { //toggles newgame to false TEMP
         newGame = false;
         DataManager.instance.SaveGame();
-        SceneHandler.instance.LoadScene("Overworld");
+        SceneHandler.LoadScene("Overworld");
     }
 
     public void Save(DataRoot data) {

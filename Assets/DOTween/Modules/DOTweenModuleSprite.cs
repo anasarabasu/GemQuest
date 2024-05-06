@@ -2,7 +2,6 @@
 // Created: 2018/07/13
 
 #if true // MODULE_MARKER
-using System;
 using UnityEngine;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
@@ -10,7 +9,7 @@ using DG.Tweening.Plugins.Options;
 #pragma warning disable 1591
 namespace DG.Tweening
 {
-	public static class DOTweenModuleSprite
+    public static class DOTweenModuleSprite
     {
         #region Shortcuts
 
@@ -74,7 +73,7 @@ namespace DG.Tweening
         public static Tweener DOBlendableColor(this SpriteRenderer target, Color endValue, float duration)
         {
             endValue = endValue - target.color;
-            Color to = new Color(0, 0, 0, 0);
+            Color to = new(0, 0, 0, 0);
             return DOTween.To(() => to, x => {
                     Color diff = x - to;
                     to = x;

@@ -3,19 +3,13 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour, ISaveLoad {
-    public static SceneHandler instance;
-
-    private void Awake() {
-        instance = this;
-    }
-
-    public void LoadScene(string sceneName) {
+    public static void LoadScene(string sceneName) {
         SceneManager.LoadSceneAsync(sceneName);
 
         Debug.Log("Loaded " +sceneName);
     }
 
-    public void ReloadScene(InputAction.CallbackContext context) {
+    public static void ReloadScene(InputAction.CallbackContext context) {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         Debug.Log("Scene reloaded");

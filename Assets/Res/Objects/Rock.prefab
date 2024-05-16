@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2009608797322778058}
   - component: {fileID: -1791625636794157793}
   - component: {fileID: 2357716465600821188}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.1875}
+    oldSize: {x: 1.8333334, y: 1.5833334}
     newSize: {x: 0.6875, y: 0.59375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 2
-  ItemDropPrefab: {fileID: 403857066209228780, guid: 31eb2037d2dbb364688eb58308ee1efb, type: 3}
+  ItemDropPrefab: {fileID: 403857066209228780, guid: 73d3065e4e0ebf241b20ff55f252bbf8, type: 3}

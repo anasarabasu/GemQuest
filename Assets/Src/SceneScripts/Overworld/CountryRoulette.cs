@@ -3,15 +3,13 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CountryRoulette : MonoBehaviour, ISaveLoad {
+public class CountryRoulette : MonoBehaviour, ISaveable {
     public static CountryRoulette instance; //might remove this
-    private void Awake() {
-        instance = this;
-    }
 
     private string[] targetCountries = {"Czechia", "Mexico", "Egypt", "Italy", "Turkey"};
     private int chapter;
     public void _CountryChecker(GameObject country) {
+        Time.timeScale = 1;
 
         string name = country.GetComponent<TextMeshProUGUI>().text;
         if(targetCountries.Contains(name)) {
@@ -25,13 +23,14 @@ public class CountryRoulette : MonoBehaviour, ISaveLoad {
                 WrongCountry();
         }
         else
-            WrongCountry();     
-        DataManager.instance.SaveGame();
-           
+            WrongCountry();    
+
+        DataManager.instance.WriteSaveFile();
+    
     }
 
     private void CorrectCountry(string sceneName) {
-        SceneHandler.LoadScene(sceneName +"1"); 
+        SceneHandler.LoadScene(sceneName); 
         // chapter ++;
     }
 

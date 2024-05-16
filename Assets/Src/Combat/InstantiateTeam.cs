@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstantiateTeam : MonoBehaviour, ISaveLoad {
+public class InstantiateTeam : MonoBehaviour, ISaveable {
     public List<string> teamComposition = new();
     [SerializeField] List<GameObject> teamPrefabs;
 
@@ -9,7 +9,6 @@ public class InstantiateTeam : MonoBehaviour, ISaveLoad {
 
     private void Awake() {
         Instantiate(teamComposition.Count);
-        
     }
 
     private void Instantiate(int teamAmount) {

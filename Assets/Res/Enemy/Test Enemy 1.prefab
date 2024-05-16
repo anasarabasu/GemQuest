@@ -123,7 +123,7 @@ MonoBehaviour:
   attackTypes:
   - name: Hit
     type: 0
-    damage: 1
+    damage: 50
 --- !u!58 &6594333378945053136
 CircleCollider2D:
   m_ObjectHideFlags: 0

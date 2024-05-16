@@ -5,7 +5,7 @@ using Aarthificial.Reanimation;
 using DG.Tweening;
 using UnityEngine;
 
-public class CombatSequence : MonoBehaviour {
+public class CombatSystem : MonoBehaviour {
     public bool battleOver = false;
     public enum Turn {Hero, Enemy};
     public Turn turn = Turn.Enemy;
@@ -74,7 +74,7 @@ public class CombatSequence : MonoBehaviour {
     private Vector3 stepForwardOffset = new(1.5f, 0);
     private Vector3 targetOffset = new(1.5f, 0);
     private float dashSpeed = 0.17f;
-    private bool waitingForPlayerInput;
+    internal bool waitingForPlayerInput;
 
     IEnumerator CombatLoop() {
         int i = 0;
@@ -139,6 +139,7 @@ public class CombatSequence : MonoBehaviour {
                 yield return new WaitForSeconds(0.14f); 
                 entity.PerformAttack(target, entity.attackTypes[0]);
 
+                yield return new WaitUntil(() => entity.isActionFinished);
                 yield return new WaitForSeconds(0.5f); //wait for ani finish
 
                 entity.transform.DOMove(returnPos, 0.5f);  
@@ -159,13 +160,13 @@ public class CombatSequence : MonoBehaviour {
     private void CheckBattleOutcome() {
         if(remainingHeroes.Count == 0) {
             StopAllCoroutines();
-            SceneHandler.LoadScene("Overworld");
+            SceneHandler.LoadScene("Overworld"); //cutscene -> overworld -> first level
 
             Debug.Log("battle lose");
         }
         if(remainingEnemies.Count == 0) {
             StopAllCoroutines();
-            SceneHandler.LoadScene("Czechia1"); //load previous scene
+            SceneHandler.LoadScene("Czechia"); //load previous scene
 
             Debug.Log("battle win");
         }

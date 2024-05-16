@@ -2,43 +2,43 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Mine : MonoBehaviour {
-    [SerializeField] Joystick controller;
 
     private void Update() {
         UpdateObjectInRange();
-
     }
-    private bool mineRequest;
-    [HideInInspector] public bool StartMining;
+
+    private static bool mineRequest = false;
+    [HideInInspector] public static bool StartMining;
+    
     public void OnMine(InputAction.CallbackContext context) {
         mineRequest = context.performed;
 
         if(mineRequest) {
-            controller.canMove = false;
+            Joystick.MovementState(false);
             StartMining = true;
         }
     }
 
     private RaycastHit2D hit;
-    private Interactable objInRange;
+    private static Destroyable objInRange;
     private void UpdateObjectInRange() {
         Vector2 rayOrigin = new(transform.position.x, transform.position.y -1);
-        hit = Physics2D.Raycast(rayOrigin, controller.UpdateRay(), 3, LayerMask.GetMask("Destroyable"));
+        hit = Physics2D.Raycast(rayOrigin, Joystick.UpdateRay(), 3, LayerMask.GetMask("Destroyable"));
         
-        Debug.DrawRay(rayOrigin, controller.UpdateRay());
+        Debug.DrawRay(rayOrigin, Joystick.UpdateRay());
         
         if(hit.collider != null)
-            objInRange = hit.collider.gameObject.GetComponent<Interactable>();
+            objInRange = hit.collider.gameObject.GetComponent<Destroyable>();
         else
             objInRange = null;
     }
 
-    public void FinishMining() {
+    public static void FinishMining() {
         if(objInRange != null)
             objInRange.GetMined();
 
         if(!mineRequest) {
-            controller.canMove = true;
+            Joystick.MovementState(true);
             StartMining = false;
         }
     }    

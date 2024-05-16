@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Penalty : MonoBehaviour, ISaveLoad {
+public class Penalty : MonoBehaviour, ISaveable {
     [SerializeField] TextMeshProUGUI text;
     int penalty;
 

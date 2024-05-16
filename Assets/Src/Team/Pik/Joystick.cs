@@ -1,15 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Joystick : MonoBehaviour, ISaveLoad {
+public class Joystick : MonoBehaviour, ISaveable {
     [SerializeField] Rigidbody2D body;
     [SerializeField] float speed = 4f;
-
-    // public static JoystickButtons instance;
-
-    private void Awake() {
-        canMove = true;
-    }
 
     private void Start() {
         GameObject[] teamMates = {GameObject.FindGameObjectWithTag("Hels"), GameObject.FindGameObjectWithTag("Pom"), GameObject.FindGameObjectWithTag("Iska")};
@@ -20,16 +14,19 @@ public class Joystick : MonoBehaviour, ISaveLoad {
         }
     }
 
-    internal bool canMove;
+    internal static bool canMove = true;
+    internal static void MovementState(bool state) {
+        canMove = state;
+    }
+
     private void FixedUpdate() {
         if(canMove && direction != Vector2.zero) 
             body.AddForce(direction * speed * body.drag); 
     }
 
     private enum Facing {FRONT = 0, BACK = 1, LEFT = 2, RIGHT = 3}
-    private int facingDirection;
-
-    internal int UpdateDirection() {
+    private static int facingDirection;
+    internal static int UpdateDirection() {
         if(direction.y < 0) 
             facingDirection = (int)Facing.FRONT;
         else if(direction.y > 0) 
@@ -43,9 +40,9 @@ public class Joystick : MonoBehaviour, ISaveLoad {
         return facingDirection;
     }
 
-    private Vector3 rayDirection;
-    private float offset = 1.75f;
-    internal Vector2 UpdateRay() {
+    private static Vector3 rayDirection;
+    private static float offset = 1.75f;
+    internal static Vector2 UpdateRay() {
          switch (UpdateDirection()) {
             case (int)Facing.FRONT: 
                 rayDirection = new Vector3(0, 0 + -offset);
@@ -63,7 +60,10 @@ public class Joystick : MonoBehaviour, ISaveLoad {
         return rayDirection;
     }
 
-    public Vector2 direction;
+    public static Vector2 direction;
+    internal static Vector2 GetDirection() {
+        return direction;
+    }
     public void OnMove(InputAction.CallbackContext context) {
         direction = context.ReadValue<Vector2>();
     }

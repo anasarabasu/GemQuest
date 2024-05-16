@@ -102,7 +102,9 @@ MonoBehaviour:
   renderer: {fileID: 0}
   fps: 8
   temporaryDrivers:
+  - Down
   - Attack
+  - Skill
 --- !u!114 &1141758929960846176
 MonoBehaviour:
   m_ObjectHideFlags: 0

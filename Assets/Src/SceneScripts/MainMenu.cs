@@ -1,8 +1,11 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour, ISaveLoad {
+public class MainMenu : MonoBehaviour, ISaveable {
     [SerializeField] TextMeshProUGUI startText;
+    [SerializeField] Transform settingsPanel;
+
     private bool newGame;
     private string nextScene;
 
@@ -12,18 +15,27 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
             nextScene = "Cutscene";
         }
         else 
-            startText.SetText("* Continue Story *");
+            startText.SetText("* Continue *");
     }
 
     public void _StartGame() {
         SceneHandler.LoadScene(nextScene);
     }
 
-    public void _Options() {}
+    private bool settingsToggle = false;
+    public void _ToggleSettings() {
+        if(!settingsToggle) {
+            settingsPanel.DOLocalMoveY(-28.9f, 1);
+            settingsToggle = true;
+        }
+        else {
+            settingsPanel.DOLocalMoveY(-156.4f, 1);
+            settingsToggle = false;
+        }            
+    }
 
-    public void _Credits() {}
-
-    //TODO: prettify main menu
+    public void _ShowCredits() {
+    }
 
     public void Save(DataRoot data) {
         // data.userData.newgame = newgame;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2009608797322778058}
   - component: {fileID: -1791625636794157793}
   - component: {fileID: 2357716465600821188}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Sulfur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.1875}
+    oldSize: {x: 1.8333334, y: 1.5833334}
     newSize: {x: 0.6875, y: 0.59375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 1
-  ItemDropPrefab: {fileID: 403857066209228780, guid: 31eb2037d2dbb364688eb58308ee1efb, type: 3}
+  ItemDropPrefab: {fileID: 403857066209228780, guid: db21dd94e5e2c6541afe4317619b42b1, type: 3}

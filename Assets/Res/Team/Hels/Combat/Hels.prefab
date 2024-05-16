@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1793221037, guid: 76ba6d42f4a6f1342940ff0a1dda542a, type: 3}
+  m_Sprite: {fileID: 84266671, guid: 2e8193425794e7d48b819c09d5408db3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,11 +98,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 11400000, guid: 80051da320598a145af4b470c4f861fe, type: 2}
-  renderer: {fileID: 0}
+  root: {fileID: 11400000, guid: fad4cb5b6e144004e8cda1a17f4d3910, type: 2}
+  renderer: {fileID: 6538825382506390319}
   fps: 8
   temporaryDrivers:
+  - Down
   - Attack
+  - Skill
 --- !u!114 &1141758929960846176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,11 +117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fa88a1c852f1a49b418058e5333eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAlive: 1
   level: 1
   health: 37
   energy: 24
   speed: 4
   attackTypes:
-  - name: Hit
-    type: 0
+  - name: Shovel
+    type: 1
+    damage: 1
+  - name: Projectile
+    type: 1
     damage: 1

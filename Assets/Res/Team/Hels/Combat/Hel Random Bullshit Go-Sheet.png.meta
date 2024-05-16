@@ -1,0 +1,1394 @@
+fileFormatVersion: 2
+guid: 3127a207a5fb5544a92c003b9531c875
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 7
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0873c338e6c6dfc40adaad754a3ed62f
+      internalID: 1894692506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edabde75db347240937b59b53e3e8a7
+      internalID: -144983097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc30c46558e2d224ba4d86f01c21be5e
+      internalID: -290602345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201c4264449d82742b59d94ffb67bdb0
+      internalID: -1320756133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76202b3796b5d0a42bb1fbd3e24f5e8b
+      internalID: 1807453462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdc34e9fedb2f24e85142d6e0326412
+      internalID: -22179476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b341cff8fbbff024fad8aa4581655230
+      internalID: -1174631877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01a8a03d1dda2543ad5571ec4ba12e5
+      internalID: -1814635716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f79d664c3bacff41844e202d9af6877
+      internalID: -898785938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcb55d49bead084a8ef8b2a37896494
+      internalID: -1300178102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2695036f14501b94d9469a4eac07ac76
+      internalID: 1951252784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eed4729f0de0144b9ae4fde95e16d5e
+      internalID: -27605840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f346783ac8395374aa28e42220530710
+      internalID: 1795488455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4926f2febd33a7f449ee7bbe15875973
+      internalID: 132569546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c880f57c7c87af84bb839e5daa3bba1b
+      internalID: -469040002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85fdca097bd945419f336badda98962
+      internalID: 805604407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642a5985853a64d48ab09f783128e8b1
+      internalID: -1038412819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438e4aab31ae8f140a719793ead56f7d
+      internalID: 959722049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbdfc8d1815d3446ae416e51a250b29
+      internalID: -1510429946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18e62c538c6d8d42981529ce8ff3fc7
+      internalID: -703785900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a7c3f3617a6c146b4cf47a4af07bd3
+      internalID: 160403903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8a3a7948a432a4385e7f5d517c00b9
+      internalID: 426440223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6655077a1078be94b877c27f1d8db04d
+      internalID: -733969255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6b8cd0d7277e24fb5ba0fdaa37783b
+      internalID: -452263547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db447a3ee69ad9e4ba4c5d4570fb5ff5
+      internalID: 718901927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1db69b5c3d7e9c4bb8bd9046d136610
+      internalID: -2042544135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d07b7f2407ee244be883e23b0ed8a2
+      internalID: 1138744256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef89fe59259e3d4195079e8e6e0f29e
+      internalID: 1808853376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9917bf58e568049b693c24c3585dbd
+      internalID: -1762699607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48190850ad5fa634b9268e87471ccd39
+      internalID: -57509539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375c934a1f728584b93ba3e9bb32770d
+      internalID: 597137994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52689101d27d6664a9642add9fa3d7f8
+      internalID: -1329763977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cebe3c880761734ea9099b507cf96fa
+      internalID: 1918383376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7d294fb0c7f064e9f7e822049126d1
+      internalID: 1005018305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78700b57560ef1247beb2ffb1ae37a77
+      internalID: 147145852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23831571b2e4a6a44a42fcf6d5ba7eef
+      internalID: -467352920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af1265e3e93bff4a906b8bd97d1307c
+      internalID: -1252616893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e768cbe13bfb045879bada15a5bf47
+      internalID: -1326341520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa22f3b16bda93f4c89474a2bf8752c5
+      internalID: -1892779710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1295337dfd48184d9cbf3c39fa18006
+      internalID: -306261693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a9b6e93e205f24585fe13f62570452
+      internalID: -123552204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f588aaa100097547af610c63c511bc3
+      internalID: -1280435354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e842b99ad48bc34db517e16e44f015a
+      internalID: -385597602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8f34b853fa1ef41beff8347c8ab16e
+      internalID: 237756113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c55215a926c7f4cbc8c6650d89ef78
+      internalID: -1622444653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aefa09376cb1564197bfcd957425584
+      internalID: -884519171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019ea9c9e868bc64eb5b5267f7ebee3a
+      internalID: -1197484697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a135fd012036e7840a5cdf2cbeb0d1e4
+      internalID: -99356133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc94070779b2bb34690469eb274d3a96
+      internalID: -1890094473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4b6ea068898d249b30febab7ddef22
+      internalID: 54230885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ca0185f32d2d64c97888ace74cd2a4
+      internalID: -1349294492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab5348548560034cb257e32facc2830
+      internalID: -1336272251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc71b5057c7f5b24795016ae9eed3e2f
+      internalID: 116505754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b5117a54c4d76498cad1c08e551c8c
+      internalID: 618896340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60fd19e9e9dea84a8663776091e4308
+      internalID: 1775621201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a05a37e821c4ef498ff1bc2574d04ef
+      internalID: 1554277806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Random Bullshit Go-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08d1afa4a4253c42bcadd3f0b9452e5
+      internalID: -1378422587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hel Random Bullshit Go-Sheet_0: 1894692506
+      Hel Random Bullshit Go-Sheet_1: -144983097
+      Hel Random Bullshit Go-Sheet_10: 1951252784
+      Hel Random Bullshit Go-Sheet_11: -27605840
+      Hel Random Bullshit Go-Sheet_12: 1795488455
+      Hel Random Bullshit Go-Sheet_13: 132569546
+      Hel Random Bullshit Go-Sheet_14: -469040002
+      Hel Random Bullshit Go-Sheet_15: 805604407
+      Hel Random Bullshit Go-Sheet_16: -1038412819
+      Hel Random Bullshit Go-Sheet_17: 959722049
+      Hel Random Bullshit Go-Sheet_18: -1510429946
+      Hel Random Bullshit Go-Sheet_19: -703785900
+      Hel Random Bullshit Go-Sheet_2: -290602345
+      Hel Random Bullshit Go-Sheet_20: 160403903
+      Hel Random Bullshit Go-Sheet_21: 426440223
+      Hel Random Bullshit Go-Sheet_22: -733969255
+      Hel Random Bullshit Go-Sheet_23: -452263547
+      Hel Random Bullshit Go-Sheet_24: 718901927
+      Hel Random Bullshit Go-Sheet_25: -2042544135
+      Hel Random Bullshit Go-Sheet_26: 1138744256
+      Hel Random Bullshit Go-Sheet_27: 1808853376
+      Hel Random Bullshit Go-Sheet_28: -1762699607
+      Hel Random Bullshit Go-Sheet_29: -57509539
+      Hel Random Bullshit Go-Sheet_3: -1320756133
+      Hel Random Bullshit Go-Sheet_30: 597137994
+      Hel Random Bullshit Go-Sheet_31: -1329763977
+      Hel Random Bullshit Go-Sheet_32: 1918383376
+      Hel Random Bullshit Go-Sheet_33: 1005018305
+      Hel Random Bullshit Go-Sheet_34: 147145852
+      Hel Random Bullshit Go-Sheet_35: -467352920
+      Hel Random Bullshit Go-Sheet_36: -1252616893
+      Hel Random Bullshit Go-Sheet_37: -1326341520
+      Hel Random Bullshit Go-Sheet_38: -1892779710
+      Hel Random Bullshit Go-Sheet_39: -306261693
+      Hel Random Bullshit Go-Sheet_4: 1807453462
+      Hel Random Bullshit Go-Sheet_40: -123552204
+      Hel Random Bullshit Go-Sheet_41: -1280435354
+      Hel Random Bullshit Go-Sheet_42: -385597602
+      Hel Random Bullshit Go-Sheet_43: 237756113
+      Hel Random Bullshit Go-Sheet_44: -1622444653
+      Hel Random Bullshit Go-Sheet_45: -884519171
+      Hel Random Bullshit Go-Sheet_46: -1197484697
+      Hel Random Bullshit Go-Sheet_47: -99356133
+      Hel Random Bullshit Go-Sheet_48: -1890094473
+      Hel Random Bullshit Go-Sheet_49: 54230885
+      Hel Random Bullshit Go-Sheet_5: -22179476
+      Hel Random Bullshit Go-Sheet_50: -1349294492
+      Hel Random Bullshit Go-Sheet_51: -1336272251
+      Hel Random Bullshit Go-Sheet_52: 116505754
+      Hel Random Bullshit Go-Sheet_53: 618896340
+      Hel Random Bullshit Go-Sheet_54: 1775621201
+      Hel Random Bullshit Go-Sheet_55: 1554277806
+      Hel Random Bullshit Go-Sheet_56: -1378422587
+      Hel Random Bullshit Go-Sheet_6: -1174631877
+      Hel Random Bullshit Go-Sheet_7: -1814635716
+      Hel Random Bullshit Go-Sheet_8: -898785938
+      Hel Random Bullshit Go-Sheet_9: -1300178102
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

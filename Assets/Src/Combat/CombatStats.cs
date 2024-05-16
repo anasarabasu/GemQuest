@@ -24,6 +24,8 @@ public class CombatStats : MonoBehaviour {
     private void Awake() {
         reanimator = GetComponent<Reanimator>();
         reanimator.AddListener("ActionFinished", ActionFinished);
+
+
     }
     internal bool isActionFinished;
     private void ActionFinished(){
@@ -32,7 +34,7 @@ public class CombatStats : MonoBehaviour {
 
     public void PerformAttack(GameObject target, AttackTypes attackTypes) {
         if(gameObject.CompareTag("Hero"))
-            reanimator.Set("Action", 1);
+            reanimator.Set("Action", 2);
 
         CombatStats _target = target.GetComponent<CombatStats>();
         StartCoroutine(_target.IsAttacked(attackTypes.damage));
@@ -46,13 +48,15 @@ public class CombatStats : MonoBehaviour {
         
         yield return null;
         reanimator.Renderer.color = Color.white;
+        isActionFinished = false;
         CheckHealth();
     }
 
     private void CheckHealth() {
         if(health <= 0) {
-            reanimator.Renderer.color = Color.black;
+            reanimator.Set("Action", 1);
             isAlive = false;
+            // reanimator.Renderer.color = Color.black;
         }
     }
 

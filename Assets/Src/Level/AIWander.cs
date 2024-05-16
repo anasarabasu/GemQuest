@@ -5,7 +5,7 @@ namespace Pathfinding {
 	[UniqueComponent(tag = "ai.destination")]
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_a_i_destination_setter.php")]
 
-	public class AIWander : VersionedMonoBehaviour, ISaveLoad {
+	public class AIWander : VersionedMonoBehaviour, ISaveable {
 		[SerializeField] protected Transform leader;
         [SerializeField] float delay = 0.5f;
         

@@ -6,28 +6,34 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/TitleMenu.unity
     guid: d0f422cb7eda1e34b981f32f29242f56
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: 2202b43d978f94b4ead5d502cb89152c
+  - enabled: 1
+    path: Assets/Scenes/Doctor.unity
+    guid: 75d6e47c20631fe4eb6d6087eb02c2a2
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
     guid: f0b629d6651a0384f9e1b87492408c7d
   - enabled: 1
-    path: Assets/Scenes/Czechia1.unity
-    guid: f9776952640597949a20082fcc058c50
-  - enabled: 1
-    path: Assets/Scenes/Czechia2.unity
-    guid: 28381167a428a7f4fbd6b3440694e22b
-  - enabled: 1
-    path: Assets/Scenes/Cutscene.unity
-    guid: 2202b43d978f94b4ead5d502cb89152c
-  - enabled: 0
-    path: Assets/Scenes/Dialogue.unity
-    guid: e2f402fdecdef454a90e61cc7e9cbbad
-  - enabled: 1
     path: Assets/Scenes/WrongChoice.unity
     guid: e7d4b138158209847b7249da698f5c42
   - enabled: 1
+    path: Assets/Scenes/Czechia.unity
+    guid: f9776952640597949a20082fcc058c50
+  - enabled: 1
+    path: Assets/Scenes/Czechia2.unity
+    guid: 885dfff1911d4cd4b97b16c8e4bbe811
+  - enabled: 1
     path: Assets/Scenes/Combat.unity
     guid: 8be60b3646724e6429867a9ecbb3fcd2
+  - enabled: 0
+    path: Assets/Scenes/Dialogue.unity
+    guid: e2f402fdecdef454a90e61cc7e9cbbad
+  - enabled: 0
+    path: Assets/Scenes/##BuildTest CPU 20ave GPU 10ave.unity
+    guid: 8847f8cf0f2533c4e828dfd521eabe57
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 37e0496a70df3d645889dacc9e201d67, type: 2}

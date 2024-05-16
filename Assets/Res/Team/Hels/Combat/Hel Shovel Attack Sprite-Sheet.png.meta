@@ -1,0 +1,1416 @@
+fileFormatVersion: 2
+guid: 33a9cfa0bd9c13a44a7f026f5e8d7741
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 7
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caee782c09f503f4fab8c31241ec1f01
+      internalID: -1573936669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd7a9c7c85f02d44a28e5de747446f6
+      internalID: -1014985598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02406bd2df278a4f88130b52d6d3db8
+      internalID: -679542665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d4ce9e752ce5a41af0b167373e9fee
+      internalID: 1908418764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789fed8bc62b6ae4abe436c9104719b0
+      internalID: -198204228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808d0724bba6e184b8a813cd4d90901b
+      internalID: 1653868376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9068aa0659fe4bc47bdb75e466b01e93
+      internalID: -1477522291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 560
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02a07248585edb43bf43b54ae245ee2
+      internalID: -281082218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8825cfc2372bb3347849429eb0182252
+      internalID: -1963353613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c74d6066e5e3843ad78e28c2f3ca89
+      internalID: 1050302344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d79dda2268ad2748b3557c7105c7d0c
+      internalID: 1549523299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce7e2ac3b7e90a41b97319a36e915d8
+      internalID: -1758042194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fb3558333d23e4d8a3c5a37b4f5e7e
+      internalID: -2024437054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc8481bcbc81344dbc850ccca606991
+      internalID: 610735182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9606202fcef5944b78c48c0f88665b
+      internalID: 1089693833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 480
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26001d12514268419100737cd90aa15
+      internalID: 632513287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1752ad28651bb1745bf72e849780d14c
+      internalID: 893148395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e971d8ba247458429343fb45aadbe36
+      internalID: 294011501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27eaa58da9583514d9602d547b484317
+      internalID: -792412386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d2ec52b48215b44a24d14e61d4cbba
+      internalID: 1768513148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffda0b84bdd13eb4f9991727aa795b73
+      internalID: 1736528897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f4ff4b97f5a57489c19ff14b334a71
+      internalID: -1841106240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb6809cd93c8ba489074dd726a9e098
+      internalID: 41704041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 400
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad78882bb1698b4dbe386d14ec5d88b
+      internalID: 1352819207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6e833bc797ea8428bd10bb69972360
+      internalID: 1407079738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03af1fe8455bf294ea86543f823e1758
+      internalID: 1582436890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34993d1d9a21ab40a490035c2329731
+      internalID: 1736926197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b9b752c0c19914fb4f58bdc1d773f4
+      internalID: -31878966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd5b72ba42e99147bc33937199130dc
+      internalID: 310532489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8418f282c09bbea438abc81b49ec467f
+      internalID: 578552063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8a91ef49acec84c8f2fd2250df091e
+      internalID: 1662449014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 320
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243f755bf72f3e641b7c45f94febe48a
+      internalID: 1642086244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2909127a73fd14d8fdcb603aaeddfb
+      internalID: -978533174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32735a5f063229144a65b8520483e9e7
+      internalID: 213434771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1ca1d34407ee147bcd002fea8e4c69
+      internalID: 2112884372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be98aeaca45dda544a66194904af5ba8
+      internalID: -292566335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0064d369f6471f4aba7b3d1e410728a
+      internalID: -638936431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc9e95b2020ef9439cd5a39bd9b1da4
+      internalID: -1349074176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbec3aa886404c4b83bd97cbca3a4e2
+      internalID: 1480751633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 240
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce4936ed00685c49ae55e74cf141983
+      internalID: -134367249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd2fc7456460284c8f97a469a4f4fe9
+      internalID: 2074199463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cede74fcf3193438c9bb44a98bdea1
+      internalID: -288266341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacf176612f45854a8796977bee853d9
+      internalID: 1274159778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6342fb178c98d34ea353c25964c9337
+      internalID: -1414014265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076336dda7b85174190ca56d16135e3b
+      internalID: 496401750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334dee0e6b68ddb4cab528881d2394ca
+      internalID: -147542948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2acb457dfd055a449ac2ec7cd79daa4
+      internalID: -1666476199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 160
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b253cd05fa02e468a7e504144ec3c9
+      internalID: -1412632818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dec508855df9dd48a80f125e9b470ce
+      internalID: 268392872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5497a6c3174bf55449726444ffe8f785
+      internalID: 658680619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67812be671c0e874a9a0a9b839c571b4
+      internalID: 1713359504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2735a573492dc4dad5c1386f51c251
+      internalID: 1280756700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486ff561293e062499052be1e6fda899
+      internalID: 480711909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace96f94f93fe294ca1099e0f5251071
+      internalID: -512563762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff1cdb47a8db7c40af713cbfbadee04
+      internalID: 135326512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 80
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac30676cee5e5944f9ddc2f12b4f1177
+      internalID: -818568971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe0939788bf29448936f1af72381429
+      internalID: 1189975866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hel Shovel Attack Sprite-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 360
+        height: 80
+      alignment: 9
+      pivot: {x: 0.1, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ee1293809e6b849bacdcd447e6e3db
+      internalID: 1119668035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hel Shovel Attack Sprite-Sheet_0: -1573936669
+      Hel Shovel Attack Sprite-Sheet_1: -1014985598
+      Hel Shovel Attack Sprite-Sheet_10: 1549523299
+      Hel Shovel Attack Sprite-Sheet_11: -1758042194
+      Hel Shovel Attack Sprite-Sheet_12: -2024437054
+      Hel Shovel Attack Sprite-Sheet_13: 610735182
+      Hel Shovel Attack Sprite-Sheet_14: 1089693833
+      Hel Shovel Attack Sprite-Sheet_15: 632513287
+      Hel Shovel Attack Sprite-Sheet_16: 893148395
+      Hel Shovel Attack Sprite-Sheet_17: 294011501
+      Hel Shovel Attack Sprite-Sheet_18: -792412386
+      Hel Shovel Attack Sprite-Sheet_19: 1768513148
+      Hel Shovel Attack Sprite-Sheet_2: -679542665
+      Hel Shovel Attack Sprite-Sheet_20: 1736528897
+      Hel Shovel Attack Sprite-Sheet_21: -1841106240
+      Hel Shovel Attack Sprite-Sheet_22: 41704041
+      Hel Shovel Attack Sprite-Sheet_23: 1352819207
+      Hel Shovel Attack Sprite-Sheet_24: 1407079738
+      Hel Shovel Attack Sprite-Sheet_25: 1582436890
+      Hel Shovel Attack Sprite-Sheet_26: 1736926197
+      Hel Shovel Attack Sprite-Sheet_27: -31878966
+      Hel Shovel Attack Sprite-Sheet_28: 310532489
+      Hel Shovel Attack Sprite-Sheet_29: 578552063
+      Hel Shovel Attack Sprite-Sheet_3: 1908418764
+      Hel Shovel Attack Sprite-Sheet_30: 1662449014
+      Hel Shovel Attack Sprite-Sheet_31: 1642086244
+      Hel Shovel Attack Sprite-Sheet_32: -978533174
+      Hel Shovel Attack Sprite-Sheet_33: 213434771
+      Hel Shovel Attack Sprite-Sheet_34: 2112884372
+      Hel Shovel Attack Sprite-Sheet_35: -292566335
+      Hel Shovel Attack Sprite-Sheet_36: -638936431
+      Hel Shovel Attack Sprite-Sheet_37: -1349074176
+      Hel Shovel Attack Sprite-Sheet_38: 1480751633
+      Hel Shovel Attack Sprite-Sheet_39: -134367249
+      Hel Shovel Attack Sprite-Sheet_4: -198204228
+      Hel Shovel Attack Sprite-Sheet_40: 2074199463
+      Hel Shovel Attack Sprite-Sheet_41: -288266341
+      Hel Shovel Attack Sprite-Sheet_42: 1274159778
+      Hel Shovel Attack Sprite-Sheet_43: -1414014265
+      Hel Shovel Attack Sprite-Sheet_44: 496401750
+      Hel Shovel Attack Sprite-Sheet_45: -147542948
+      Hel Shovel Attack Sprite-Sheet_46: -1666476199
+      Hel Shovel Attack Sprite-Sheet_47: -1412632818
+      Hel Shovel Attack Sprite-Sheet_48: 268392872
+      Hel Shovel Attack Sprite-Sheet_49: 658680619
+      Hel Shovel Attack Sprite-Sheet_5: 1653868376
+      Hel Shovel Attack Sprite-Sheet_50: 1713359504
+      Hel Shovel Attack Sprite-Sheet_51: 1280756700
+      Hel Shovel Attack Sprite-Sheet_52: 480711909
+      Hel Shovel Attack Sprite-Sheet_53: -512563762
+      Hel Shovel Attack Sprite-Sheet_54: 135326512
+      Hel Shovel Attack Sprite-Sheet_55: -818568971
+      Hel Shovel Attack Sprite-Sheet_56: 1189975866
+      Hel Shovel Attack Sprite-Sheet_57: 1119668035
+      Hel Shovel Attack Sprite-Sheet_6: -1477522291
+      Hel Shovel Attack Sprite-Sheet_7: -281082218
+      Hel Shovel Attack Sprite-Sheet_8: -1963353613
+      Hel Shovel Attack Sprite-Sheet_9: 1050302344
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstantiateEnemies : MonoBehaviour, ISaveLoad {
+public class InstantiateEnemies : MonoBehaviour, ISaveable {
 
     private int chapter;
     public List<string> enemyTypes = new();

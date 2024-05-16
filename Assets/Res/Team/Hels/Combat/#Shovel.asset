@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: '#Shovel'
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -1573936669, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1014985598, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -679542665, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1908418764, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -198204228, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1653868376, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1477522291, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -281082218, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1963353613, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1050302344, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1549523299, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1758042194, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2024437054, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 610735182, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1089693833, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 632513287, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 893148395, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 294011501, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -792412386, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1768513148, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1736528897, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1841106240, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 41704041, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1352819207, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1407079738, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1582436890, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1736926197, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -31878966, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 310532489, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 578552063, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1662449014, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1642086244, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -978533174, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 213434771, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2112884372, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -292566335, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -638936431, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1349074176, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1480751633, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -134367249, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2074199463, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -288266341, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1274159778, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1414014265, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 496401750, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -147542948, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1666476199, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1412632818, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 268392872, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 658680619, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1713359504, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1280756700, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 480711909, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -512563762, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 135326512, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -818568971, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1189975866, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1119668035, guid: 33a9cfa0bd9c13a44a7f026f5e8d7741, type: 3}
+    drivers:
+      keys:
+      - ActionFinished
+      - Action
+      values: 0000000000000000
+  controlDriver:
+    name: Attack
+    autoIncrement: 1
+    percentageBased: 0
+    guid: de4fcb4b-a1ca-49c7-97d2-7f0ff4fa0fca
+  drivers:
+    keys: []
+    values: 

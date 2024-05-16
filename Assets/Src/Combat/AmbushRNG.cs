@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AmbushRNG : MonoBehaviour{
     public float timer;
 
     private void Awake() {
-        timer =  Random.Range(5, 20);
+        timer =  Random.Range(10, 45);
     }
 
     private void Update() {
@@ -14,7 +15,7 @@ public class AmbushRNG : MonoBehaviour{
             int randomInterval = Random.Range(1, 20);
             timer = randomInterval;
 
-            DataManager.instance.SaveGame();
+            DataManager.instance.WriteSaveFile();
             SceneHandler.LoadScene("Combat");
 
             Debug.Log("Enemy Ambush!");

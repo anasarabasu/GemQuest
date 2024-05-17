@@ -16,7 +16,7 @@ MonoBehaviour:
   settings:
     renderPassEvent: 550
     pixelatingSpeed: 0.2
-    screenHeight: 162
+    screenHeight: 164
     startingRange: 160
     rangeAmount: 5
     screenHeightRange: a0000000a1000000a2000000a3000000a4000000

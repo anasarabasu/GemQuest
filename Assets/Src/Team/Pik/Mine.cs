@@ -20,7 +20,7 @@ public class Mine : MonoBehaviour {
     }
 
     private RaycastHit2D hit;
-    private static Destroyable objInRange;
+    private static LevelObject objInRange;
     private void UpdateObjectInRange() {
         Vector2 rayOrigin = new(transform.position.x, transform.position.y -1);
         hit = Physics2D.Raycast(rayOrigin, Joystick.UpdateRay(), 3, LayerMask.GetMask("Destroyable"));
@@ -28,7 +28,7 @@ public class Mine : MonoBehaviour {
         Debug.DrawRay(rayOrigin, Joystick.UpdateRay());
         
         if(hit.collider != null)
-            objInRange = hit.collider.gameObject.GetComponent<Destroyable>();
+            objInRange = hit.collider.gameObject.GetComponent<LevelObject>();
         else
             objInRange = null;
     }

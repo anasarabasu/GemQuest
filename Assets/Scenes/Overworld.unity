@@ -2148,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5311199483174570961, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5311199483174570961, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2582,11 +2582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812369998316198162, guid: d95053a1030328843ad79810798de768, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8812369998316198162, guid: d95053a1030328843ad79810798de768, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8812369998316198162, guid: d95053a1030328843ad79810798de768, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2618,11 +2618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812369998316198162, guid: d95053a1030328843ad79810798de768, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8812369998316198162, guid: d95053a1030328843ad79810798de768, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8812369998316198162, guid: d95053a1030328843ad79810798de768, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4182,9 +4182,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "* CLUE * \n\nWhere East and West come in hand to hand\r\n\nMinarets stand
-    tall in a timeless land\r\n\nFrom Aegean shores to Anatolian plains,\n\nIn my
-    embrace, history remains\r\n\nI'm known as a bird to see"
+  m_text: "* CLUE * \n\nI'm where castles rise tall, old, and grand  \n\nBohemian
+    crown and historic sights across my land.  \n\nMy capital, Prague, with its red
+    rooftops,  \n\nIn me, culture and beauty never stop."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64364caf56aedb4da80832faa50ac27, type: 2}
   m_sharedMaterial: {fileID: 2968974004059995294, guid: a64364caf56aedb4da80832faa50ac27, type: 2}
@@ -4773,8 +4773,8 @@ RectTransform:
   m_Children:
   - {fileID: 1929107041}
   - {fileID: 969422869}
-  - {fileID: 924109833}
   - {fileID: 2097516678}
+  - {fileID: 924109833}
   - {fileID: 1028027811}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -4.715, y: -27.41, z: 2.441}
@@ -5308,7 +5308,7 @@ RectTransform:
   m_GameObject: {fileID: 1929107040}
   m_LocalRotation: {x: 0.000000007450579, y: 0.008539017, z: -0.09190533, w: 0.9957312}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1221434735}

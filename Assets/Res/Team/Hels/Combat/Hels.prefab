@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fa88a1c852f1a49b418058e5333eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Hels
   isAlive: 1
   level: 1
   health: 37
@@ -127,5 +128,8 @@ MonoBehaviour:
     type: 1
     damage: 1
   - name: Projectile
+    type: 1
+    damage: 1
+  - name: Heal
     type: 1
     damage: 1

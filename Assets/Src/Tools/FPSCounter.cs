@@ -9,11 +9,11 @@ public class FPSCounter : MonoBehaviour {
     public void ShowFPS(bool showFPS) => this.showFPS = showFPS;
 
     private void Update() {
-        int frameRate = (int)(Time.frameCount / Time.time);
+		float fps = (int)(1 / Time.unscaledDeltaTime);;
 
         if(!showFPS)
             text.SetText("");
         else
-            text.SetText(frameRate.ToString());
+            text.SetText((fps).ToString());
     }
 }

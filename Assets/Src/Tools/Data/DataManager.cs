@@ -3,6 +3,7 @@ using System.IO;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class DataManager: MonoBehaviour {
     public static DataManager instance;
@@ -57,6 +58,8 @@ public class DataManager: MonoBehaviour {
 
     public void DeleteSaveFile() {
         if(File.Exists(dataPath)) {
+            ResetInventoryData();
+
             File.Delete(dataPath);
             SceneHandler.LoadScene(SceneHandler.Scene.TitleMenu);
             SceneHandler.LoadScene(SceneHandler.Scene.TitleMenu);
@@ -64,6 +67,11 @@ public class DataManager: MonoBehaviour {
         }
         else 
             Debug.Log("No save file to delete");
+    }
+
+    private void ResetInventoryData () {
+        foreach (var item in data.inventoryData)
+            item.inventory.amount = 1;
     }
 
     private void OnApplicationQuit() => WriteSaveFile();

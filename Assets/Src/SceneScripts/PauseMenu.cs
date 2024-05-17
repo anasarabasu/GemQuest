@@ -11,18 +11,21 @@ public class PauseMenu : MonoBehaviour {
         darken.enabled = false;
     }
 
+    bool isPaused;
+    private void Update() => Time.timeScale = isPaused ? 0 : 1;
+
     private bool menuToggle = false;
     public void _ToggleMenu() {
         if(!menuToggle) {
-            Time.timeScale = 0;
+            isPaused = true;
             darken.enabled = true;
             menuPanel.DOLocalMoveX(113, 0.5f).SetUpdate(true);
             menuToggle = true;
         }
         else {
+            isPaused = false;
             if(settingsToggle)
                 _ToggleSettings();
-            Time.timeScale = 1;
             darken.enabled = false;
             menuPanel.DOLocalMoveX(274, 0.5f).SetUpdate(true);
             menuToggle = false;

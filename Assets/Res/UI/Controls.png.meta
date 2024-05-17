@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Circle
+      name: Mine
       rect:
         serializedVersion: 2
         x: 144
@@ -240,6 +240,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Circle
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25addb6b879e0e741910232b38cda17f
+      internalID: -5086340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -252,10 +273,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Arrow: -2074347855
-      Circle: -2091655303
+      Circle: -5086340
       CircleFilled: -1229994247
       Interact: 1497908496
       Menu: -2114021854
+      Mine: -2091655303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

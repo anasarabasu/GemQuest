@@ -6,6 +6,9 @@ using DG.Tweening;
 using UnityEngine;
 
 public class CombatSystem : MonoBehaviour {
+    public static CombatSystem instance;
+    private void Awake() => instance = this;
+
     public bool battleOver = false;
     public enum Turn {Hero, Enemy};
     public Turn turn = Turn.Enemy;
@@ -14,6 +17,7 @@ public class CombatSystem : MonoBehaviour {
     public List<GameObject> remainingHeroes = new();
     private List<GameObject> enemies = new();
     public List<GameObject> remainingEnemies = new();
+
 
     private void Start() {
         heroes = GameObject.FindGameObjectsWithTag("Hero").ToList();
@@ -45,7 +49,6 @@ public class CombatSystem : MonoBehaviour {
     }
 
     private void SelectTarget() {
-        Debug.Log("waiting");
         if(target == null) {
             foreach(GameObject entity in enemies) {
                 if(entity.GetComponent<CombatStats>().isAlive) {
@@ -74,11 +77,10 @@ public class CombatSystem : MonoBehaviour {
     private Vector3 stepForwardOffset = new(1.5f, 0);
     private Vector3 targetOffset = new(1.5f, 0);
     private float dashSpeed = 0.17f;
-    internal bool waitingForPlayerInput;
+    internal static bool waitingForPlayerInput;
 
     IEnumerator CombatLoop() {
         int i = 0;
-        //play ambush cutscene
         
         yield return new WaitForSeconds(1);
 
@@ -97,66 +99,98 @@ public class CombatSystem : MonoBehaviour {
 
                     SelectRandomTarget();
                     targetPos = target.transform.position + targetOffset;
+
+                    attackType = 0;
+                    attack = true;
                 }
                 
                 if(entity.CompareTag("Hero")) {
-                    turn = Turn.Hero;
+                    CombatUI.instance.ToggleChoicePanel();
+                    CombatUI.instance.UpdateSkillLabels(entity);
 
+                    turn = Turn.Hero;
                     waitingForPlayerInput = true;
 
                     Vector3 stepForward = entity.transform.position + stepForwardOffset;
                     entity.transform.DOMoveX(stepForward.x, dashSpeed);
-                    yield return null;
-
-                    while(waitingForPlayerInput) {
-                        //show buttons v
-                        
-                        //skill v
-                        //action v
-                        //attack v
-                        SelectTarget();
-                        //etc...
-
-                        //item v
-                        //consumeitem
-
-                        //flee v
-                        //apply penalty
-
-                        yield return null;
-                    }
-                    targetPos = target.transform.position - targetOffset;
-
-                    waitingForPlayerInput = false;
+                    
+                    yield return new WaitWhile(WaitForPlayerInput);
+                    attackType--;
                 }
 
-                if(entity.attackTypes[0].type == AttackTypes.Type.Melee) //change attack
-                    entity.transform.DOMove(targetPos, dashSpeed); 
+                if(attack) {
+                    targetPos = target.transform.position - targetOffset;
 
-                if(entity.attackTypes[0].type == AttackTypes.Type.Ranged) 
-                    entity.transform.DOMoveY(targetPos.y, dashSpeed);    
+                    if(entity.attackTypes[attackType].type == AttackTypes.Type.Melee) //change attack
+                        entity.transform.DOMove(targetPos, dashSpeed); 
 
-                yield return new WaitForSeconds(0.14f); 
-                entity.PerformAttack(target, entity.attackTypes[0]);
+                    if(entity.attackTypes[attackType].type == AttackTypes.Type.Ranged) 
+                        entity.transform.DOMoveY(targetPos.y, dashSpeed);    
 
-                yield return new WaitUntil(() => entity.isActionFinished);
-                yield return new WaitForSeconds(0.5f); //wait for ani finish
-
-                entity.transform.DOMove(returnPos, 0.5f);  
+                    yield return new WaitForSeconds(0.5f); 
+                    entity.PerformAttack(target, attackType);
+                    yield return new WaitUntil(() => entity.isActionFinished);
+                    yield return new WaitForSeconds(0.5f); //wait for ani finish
+                    entity.transform.DOMove(returnPos, 0.5f);  
+                }
                 yield return new WaitForSeconds(1);
+
             }            
             i++;
             if(i == turnOrder.Count)
                 i = 0;
-
+ 
             yield return null;
         }
     }
 
-    private void Update() {
-        CheckBattleOutcome();
+    public enum MoveType {Mone, Skill, Item, Flee};
+    private MoveType moveType;
+    public void SetMoveType(MoveType type) {
+        moveType = type;
     }
 
+    bool attack;
+    private bool WaitForPlayerInput() {
+        if(waitingForPlayerInput) {
+            if(moveType == MoveType.Skill) {
+                SelectTarget();
+                attack = true;
+            }
+            if(moveType == MoveType.Item) {
+                attack = false;
+            }
+            if(moveType == MoveType.Flee) {}
+            
+            return true;
+        }
+        else 
+            return false;;
+    }
+
+    int attackType = 0;
+    public void _SkillButton(int attackKey) {
+        attackType = attackKey;
+        CombatUI.instance._ToggleSkillPanel();
+        waitingForPlayerInput = false;
+    }
+
+    ItemData selectedItem;
+    internal void SelectItem(ItemData itemData) {
+        selectedItem = itemData;
+        CombatUI.instance.ToggleUseItemButton();
+    }
+
+    public void _UseItemButton() {
+        selectedItem.inventory.amount--;
+        InventorySystem.instance.UpdateInventoryUI();  
+        CombatUI.instance._ToggleItemPanel();
+        waitingForPlayerInput = false;
+    }
+
+    public void _Flee() {}
+
+    private void Update() => CheckBattleOutcome();
     private void CheckBattleOutcome() {
         if(remainingHeroes.Count == 0) {
             StopAllCoroutines();
@@ -172,12 +206,5 @@ public class CombatSystem : MonoBehaviour {
         }
     }
 
-    public void attackbutton() {
-        waitingForPlayerInput = false;
-    }
-
-    public void Item() {}
-
-    public void Flee() {}
-
+   
 }

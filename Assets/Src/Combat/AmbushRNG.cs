@@ -3,10 +3,7 @@ using UnityEngine.Rendering;
 
 public class AmbushRNG : MonoBehaviour{
     public float timer;
-
-    private void Awake() {
-        timer =  Random.Range(10, 45);
-    }
+    private void Awake() => timer = Random.Range(10, 45);
 
     private void Update() {
         timer -= Time.deltaTime;

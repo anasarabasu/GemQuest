@@ -17,7 +17,7 @@ public class LoadInteractables : MonoBehaviour, ISaveable {
     }
 
     private void Awake() {
-        StatePersistence.Add(GameObject.FindGameObjectWithTag("Destroyable"), GameObject.FindGameObjectWithTag("Destroyable").GetComponent<Destroyable>().isDestroyedPersistent);
+        // StatePersistence.Add(GameObject.FindGameObjectWithTag("Destroyable"), GameObject.FindGameObjectWithTag("Destroyable").GetComponent<LevelObject>().isDestroyedPersistent);
 
         // gameObject.GetInstanceID
         

@@ -3,7 +3,10 @@ using UnityEngine;
 public class Settings : MonoBehaviour, ISaveable{
     FPSCounter fps;
     bool showFPS;
-    private void Awake() => fps = GameObject.FindGameObjectWithTag("FPS").GetComponent<FPSCounter>();
+    private void Awake() {
+        fps = GameObject.FindGameObjectWithTag("FPS").GetComponent<FPSCounter>();
+        fps.ShowFPS(fps);
+    }
 
     public void _DeleteSave() => DataManager.instance.DeleteSaveFile();
 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
+  m_Name: Sulfur
+  m_EditorClassIdentifier: 
+  description: 'The stinky mineral superstar, known for its fiery personality, is
+    a reliable source of spark, as long as you don''t mind the smell.
+
+'
+  level:
+    sprite: {fileID: 21300000, guid: c62a296e89d9f5641803d409291778db, type: 3}
+    hitPoints: 1
+  inventory:
+    sprite: {fileID: 1522941221, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+    amount: 3

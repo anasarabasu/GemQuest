@@ -58,7 +58,7 @@ public class DataManager: MonoBehaviour {
 
     public void DeleteSaveFile() {
         if(File.Exists(dataPath)) {
-            ResetInventoryData();
+            // ResetInventoryData();
 
             File.Delete(dataPath);
             SceneHandler.LoadScene(SceneHandler.Scene.TitleMenu);

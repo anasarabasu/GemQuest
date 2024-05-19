@@ -7,11 +7,8 @@ public class SpawnItemDrop : MonoBehaviour{
     internal ItemData itemData;
 
     private void Start() {
-        tag = "Loot";
-
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = itemData.inventory.sprite;
-        spriteRenderer.color = itemData.color;
         
         Vector3 dropDirection = new Vector2(Random.Range(-1, 1), Random.Range(0, 1));
         transform.DOJump(transform.position + dropDirection, 1, 2, 1f);

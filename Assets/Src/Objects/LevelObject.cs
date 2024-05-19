@@ -13,10 +13,6 @@ public class LevelObject : MonoBehaviour { //should make this an inherit or inte
     private double halfHP;
     
     private void Awake() {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = itemData.level.sprite;
-        spriteRenderer.color = itemData.color;
-
         hitPoints = itemData.level.hitPoints;
         halfHP = hitPoints / 2;
     }

@@ -35,8 +35,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: -1340940202, guid: 2e8193425794e7d48b819c09d5408db3, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - State
+      values: 00000000
   controlDriver:
     name: Idle
     autoIncrement: 1

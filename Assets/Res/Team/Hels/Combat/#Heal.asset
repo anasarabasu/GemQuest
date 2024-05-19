@@ -193,10 +193,10 @@ MonoBehaviour:
     drivers:
       keys:
       - ActionFinished
-      - Action
+      - State
       values: 0000000000000000
   controlDriver:
-    name: Skill
+    name: Action
     autoIncrement: 1
     percentageBased: 0
     guid: 9a89209c-80e9-42ea-a16a-dd8df50ac9e0

@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
-    [SerializeField] Transform menuPanel;
-    [SerializeField] Transform settingsPanel;
     Image darken;
     private void Awake() {
         darken = GetComponent<Image>();
@@ -14,12 +12,13 @@ public class PauseMenu : MonoBehaviour {
     bool isPaused;
     private void Update() => Time.timeScale = isPaused ? 0 : 1;
 
+    [SerializeField] RectTransform menuPanel;
     private bool menuToggle = false;
     public void _ToggleMenu() {
         if(!menuToggle) {
             isPaused = true;
             darken.enabled = true;
-            menuPanel.DOLocalMoveX(113, 0.5f).SetUpdate(true);
+            menuPanel.DOAnchorPosX(-55.661f, 0.5f).SetUpdate(true);
             menuToggle = true;
         }
         else {
@@ -27,19 +26,20 @@ public class PauseMenu : MonoBehaviour {
             if(settingsToggle)
                 _ToggleSettings();
             darken.enabled = false;
-            menuPanel.DOLocalMoveX(274, 0.5f).SetUpdate(true);
+            menuPanel.DOAnchorPosX(81.61897f, 0.5f).SetUpdate(true);
             menuToggle = false;
         }
     }
 
+    [SerializeField] RectTransform settingsPanel;
     private bool settingsToggle = false;
     public void _ToggleSettings() {
         if(!settingsToggle) {
-            settingsPanel.DOLocalMoveX(-74.2f, 0.5f).SetUpdate(true);
+            settingsPanel.DOAnchorPosY(-26.722f, 0.25f).SetUpdate(true);
             settingsToggle = true;
         }
         else {
-            settingsPanel.DOLocalMoveX(-266f, 0.5f).SetUpdate(true);
+            settingsPanel.DOAnchorPosY(-176, 0.25f).SetUpdate(true);
             settingsToggle = false;
         }
     }

@@ -21,7 +21,7 @@ public class Joystick : MonoBehaviour, ISaveable {
 
     private void FixedUpdate() {
         if(canMove && direction != Vector2.zero) 
-            body.AddForce(direction * speed * body.drag); 
+            body.AddForce(direction * speed); 
     }
 
     private enum Facing {FRONT = 0, BACK = 1, LEFT = 2, RIGHT = 3}

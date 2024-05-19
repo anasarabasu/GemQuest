@@ -5,7 +5,6 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class ItemData : ScriptableObject {
     [TextArea] public string description = "description";
-    public Color color = Color.white;
     public Level level;
     public Inventory inventory;
 

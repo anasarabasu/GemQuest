@@ -16,10 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47d81f4868bbc6d4a96e4117823966ce, type: 2}
   - {fileID: 11400000, guid: 679fecbf30d538549a4514ed03bfa9dd, type: 2}
   - {fileID: 11400000, guid: 761a4fc7c30a1b2458a5ad87c718f48b, type: 2}
-  - {fileID: 11400000, guid: 523742e349b242f41b519324b632d4b1, type: 2}
-  - {fileID: 11400000, guid: 47d81f4868bbc6d4a96e4117823966ce, type: 2}
+  - {fileID: 11400000, guid: bbf8f67de7265594482393d6c67a5a05, type: 2}
+  - {fileID: 11400000, guid: 05bad4e0255953041be7d1e4d1be3a40, type: 2}
   controlDriver:
-    name: Action
+    name: State
     autoIncrement: 0
     percentageBased: 0
     guid: 9c370b68-1d7a-4e29-a770-d2a5ffaa7158

@@ -31,8 +31,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 2069769493, guid: a956fdcc9ae5ca34bac33732a54d4737, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - AttackHit
+      values: 00000000
   - sprite: {fileID: 1752775395, guid: a956fdcc9ae5ca34bac33732a54d4737, type: 3}
     drivers:
       keys: []
@@ -49,10 +50,10 @@ MonoBehaviour:
     drivers:
       keys:
       - ActionFinished
-      - Action
+      - State
       values: 0000000000000000
   controlDriver:
-    name: Attack
+    name: Action
     autoIncrement: 1
     percentageBased: 0
     guid: 930555d7-d837-4705-bba9-1364f02de54c

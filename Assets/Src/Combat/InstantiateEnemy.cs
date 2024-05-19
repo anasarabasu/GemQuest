@@ -1,24 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstantiateEnemies : MonoBehaviour, ISaveable {
+public class InstantiateEnemies : MonoBehaviour {
 
-    private int chapter;
-    public List<string> enemyTypes = new();
-    
     [SerializeField] List<GameObject> enemyPrefabs;
+    [SerializeField] int amountToSpawn;
 
+    float radius = 2;
     private void Awake() {
-        switch (chapter) {
-            case 1:
-                enemyTypes = new List<string>{"Rock", "Shadow"};
-                break;
-            default :
-                
-                break;
-        }
+        Vector3[] spawn = {
+            Random.insideUnitSphere * radius + transform.position + new Vector3(0, 4),
+            Random.insideUnitSphere * radius + transform.position + new Vector3(0, -4),
+            Random.insideUnitSphere * radius + transform.position + new Vector3(4, 0),
+            Random.insideUnitSphere * radius + transform.position + new Vector3(-4, 0)
+        };
 
-        Instantiate(3);
+        Instantiate(amountToSpawn);
     }
 
     private int EnemyRNG() {
@@ -46,12 +43,5 @@ public class InstantiateEnemies : MonoBehaviour, ISaveable {
                 
                 break;
         }
-    }
-
-    public void Save(DataRoot data) {
-    }
-
-    public void Load(DataRoot data) {
-        chapter = data.gameData.chapter;
     }
 }

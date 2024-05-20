@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Cutscene : MonoBehaviour, ISaveLoad {
+public class Cutscene : MonoBehaviour {
     [SerializeField] TextMeshProUGUI screenText;
     
     private bool newGame;
@@ -31,17 +31,7 @@ public class Cutscene : MonoBehaviour, ISaveLoad {
 
     public void _FinishCutscene() { //toggles newgame to false TEMP
         newGame = false;
-        DataManager.instance.SaveGame();
-        SceneManager.instance.LoadScene("Overworld");
-    }
-
-    public void Save(ref DataRoot data) {
-        data.gameData.newGame = this.newGame;
-        data.gameData.dialogueIndex = this.dialogueIndex;
-    }
-
-    public void Load(DataRoot data) {
-        this.newGame = data.gameData.newGame;
-        this.dialogueIndex = data.gameData.dialogueIndex;
+        DataManager.instance.WriteSaveFile();
+        SceneHandler.LoadScene("Overworld");
     }
 }

@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: '#Boomerang'
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 1810690489, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2019773596, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2045419842, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1018865170, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -40331590, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 350802774, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1214784929, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 926789569, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1256029191, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2064021403, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1063817633, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -681427837, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1111483920, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2085502438, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1875619404, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1059699597, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1859900025, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 882320035, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 558596853, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -327196811, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2112055204, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -604195178, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1397068386, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -669379020, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -244498888, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1825333684, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1287086455, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 972414200, guid: b424f4daf347c4442a64e50668a7057b, type: 3}
+    drivers:
+      keys:
+      - ActionFinished
+      - State
+      values: 0000000000000000
+  controlDriver:
+    name: Action
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 8f4feee9-4b4a-41b7-b7e7-d1f1ad81a2ee
+  drivers:
+    keys: []
+    values: 

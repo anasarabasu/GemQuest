@@ -1,8 +1,11 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour, ISaveLoad {
+public class MainMenu : MonoBehaviour, ISaveable {
     [SerializeField] TextMeshProUGUI startText;
+    [SerializeField] Transform settingsPanel;
+
     private bool newGame;
     private string nextScene;
 
@@ -11,27 +14,35 @@ public class MainMenu : MonoBehaviour, ISaveLoad {
             startText.SetText("* Begin Story *");
             nextScene = "Cutscene";
         }
-        else {
-            startText.SetText("* Continue Story *");
-            nextScene = "Overworld";
-        }
+        else 
+            startText.SetText("* Continue *");
     }
 
     public void _StartGame() {
-        SceneManager.instance.LoadScene(nextScene);
+        SceneHandler.LoadScene(nextScene);
     }
 
-    public void _Options() {}
+    private bool settingsToggle = false;
+    public void _ToggleSettings() {
+        if(!settingsToggle) {
+            settingsPanel.DOLocalMoveY(-28.9f, 1);
+            settingsToggle = true;
+        }
+        else {
+            settingsPanel.DOLocalMoveY(-156.4f, 1);
+            settingsToggle = false;
+        }            
+    }
 
-    public void _Credits() {}
+    public void _ShowCredits() {
+    }
 
-    //TODO: prettify main menu
-
-    public void Save(ref DataRoot data) {
+    public void Save(DataRoot data) {
         // data.userData.newgame = newgame;
     }
 
     public void Load(DataRoot data) {
-        this.newGame = data.gameData.newGame;
+        newGame = data.gameData.newGame;
+        nextScene = data.gameData.lastScene;
     }
 }

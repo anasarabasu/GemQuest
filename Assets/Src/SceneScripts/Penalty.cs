@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Penalty : MonoBehaviour, ISaveLoad {
+public class Penalty : MonoBehaviour, ISaveable {
     [SerializeField] TextMeshProUGUI text;
     int penalty;
 
@@ -11,9 +11,9 @@ public class Penalty : MonoBehaviour, ISaveLoad {
 
 
 
-    public void Save(ref DataRoot data) {
+    public void Save(DataRoot data) {
     }
     public void Load(DataRoot data) {
-        this.penalty = data.gameData.penaltyWrongCountry;
+        penalty = data.overworldData.penaltyWrongCountry;
     }
 }

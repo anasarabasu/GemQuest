@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: IdlingState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 0e292ba0a8f19e643a06dd5b4d33d388, type: 2}
+  - {fileID: 11400000, guid: d4d172fe82f54614ea31773ea4747603, type: 2}
+  - {fileID: 11400000, guid: 5e0e82138a6c22f42a2df8cd1c9384c4, type: 2}
+  - {fileID: 11400000, guid: 308ec940387cce3458fca743ae9747a1, type: 2}
+  controlDriver:
+    name: Direction
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 896679e0-1398-4b68-bba3-89e3996c52d9
+  drivers:
+    keys: []
+    values: 

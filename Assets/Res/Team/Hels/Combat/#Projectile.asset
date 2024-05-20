@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: '#Projectile'
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 1894692506, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -144983097, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 718901927, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2042544135, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1138744256, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1808853376, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1762699607, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -57509539, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 597137994, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -1329763977, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1918383376, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1005018305, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 147145852, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -467352920, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1252616893, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -1326341520, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1892779710, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -306261693, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -123552204, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -1280435354, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -385597602, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 237756113, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1622444653, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -884519171, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1197484697, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -99356133, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: -1890094473, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: 54230885, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1349294492, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1336272251, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 116505754, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - AttackHit
+      values: 00000000
+  - sprite: {fileID: 618896340, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1775621201, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1554277806, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1378422587, guid: 3127a207a5fb5544a92c003b9531c875, type: 3}
+    drivers:
+      keys:
+      - ActionFinished
+      - State
+      values: 0000000000000000
+  controlDriver:
+    name: Action
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 157a834b-28ec-45bc-8080-62d8ae202e93
+  drivers:
+    keys: []
+    values: 

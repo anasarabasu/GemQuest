@@ -1,0 +1,756 @@
+fileFormatVersion: 2
+guid: b424f4daf347c4442a64e50668a7057b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09340575451cbb547b8fccc4e916ca21
+      internalID: 1810690489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 350
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abc33aaca03dfb4985d22dd73ae8914
+      internalID: 2019773596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 350
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eb15fc44d22fb4d9306428774735ee
+      internalID: -2045419842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 350
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3575eb3fa89827541a8bdcb863f64ab3
+      internalID: -1018865170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 350
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7f75c3c92ce514db71265838b721a8
+      internalID: -40331590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d311140dcf3cb3049a13a454e3e92630
+      internalID: 350802774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 280
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2dd1e70a79ee047aeb6180c4ffc05d
+      internalID: 1214784929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 280
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efe0891b2594a64ca4fb83238aa4c81
+      internalID: 926789569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 280
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a8e8c1756c5184eb4f27e10c3aa51a
+      internalID: -1256029191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 280
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc07a71b44473fc448b2b55f80dd55ff
+      internalID: 2064021403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3aec62f4c4a9204e8052e69fc31b14c
+      internalID: 1063817633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 210
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d9e551721134c48bc13e9c361bda45
+      internalID: -681427837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 210
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8bc26aa0a2da654b9c8a83dd526e19d
+      internalID: -1111483920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 210
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db47dbd31617e64409f97b2fe060fcd5
+      internalID: 2085502438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 210
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c2d7a4a0ceaaa41a89ed0fd3012ab4
+      internalID: 1875619404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fe88d464a2d5f4985ecf5fbf6cb079
+      internalID: 1059699597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 140
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974f899e0ac8134fb0607555515cbd3
+      internalID: -1859900025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 140
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1b7477374e1c04683de6a62559b586
+      internalID: 882320035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 140
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f99c1ff1e3e3d349a22ed72d3d50d16
+      internalID: 558596853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 140
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3397aa7fc7710d4aac5635dc9d80f9b
+      internalID: -327196811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5c9c689fb0c0f46b1e11ecc3493456
+      internalID: 2112055204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 70
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a071454ada22d4e94d932c8cd742aa
+      internalID: -604195178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 70
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d13eb988cf705498ae04c6de02cb01
+      internalID: 1397068386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 70
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c45b262119328b4297ba4cc2196a5df
+      internalID: -669379020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 70
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567e2f84c8c23b344bc349011e72b166
+      internalID: -244498888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078139c1c9f1ecc4bba4895afec391b5
+      internalID: 1825333684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8db4bbfa8f8807498bede3acd42c8a7
+      internalID: 1287086455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pik (Boomerang Attack)-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 360
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2693bd108d82d46a7be61653d0f974
+      internalID: 972414200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pik (Boomerang Attack)-Sheet_0: 1810690489
+      Pik (Boomerang Attack)-Sheet_1: 2019773596
+      Pik (Boomerang Attack)-Sheet_10: 1063817633
+      Pik (Boomerang Attack)-Sheet_11: -681427837
+      Pik (Boomerang Attack)-Sheet_12: -1111483920
+      Pik (Boomerang Attack)-Sheet_13: 2085502438
+      Pik (Boomerang Attack)-Sheet_14: 1875619404
+      Pik (Boomerang Attack)-Sheet_15: 1059699597
+      Pik (Boomerang Attack)-Sheet_16: -1859900025
+      Pik (Boomerang Attack)-Sheet_17: 882320035
+      Pik (Boomerang Attack)-Sheet_18: 558596853
+      Pik (Boomerang Attack)-Sheet_19: -327196811
+      Pik (Boomerang Attack)-Sheet_2: -2045419842
+      Pik (Boomerang Attack)-Sheet_20: 2112055204
+      Pik (Boomerang Attack)-Sheet_21: -604195178
+      Pik (Boomerang Attack)-Sheet_22: 1397068386
+      Pik (Boomerang Attack)-Sheet_23: -669379020
+      Pik (Boomerang Attack)-Sheet_24: -244498888
+      Pik (Boomerang Attack)-Sheet_25: 1825333684
+      Pik (Boomerang Attack)-Sheet_26: 1287086455
+      Pik (Boomerang Attack)-Sheet_27: 972414200
+      Pik (Boomerang Attack)-Sheet_3: -1018865170
+      Pik (Boomerang Attack)-Sheet_4: -40331590
+      Pik (Boomerang Attack)-Sheet_5: 350802774
+      Pik (Boomerang Attack)-Sheet_6: 1214784929
+      Pik (Boomerang Attack)-Sheet_7: 926789569
+      Pik (Boomerang Attack)-Sheet_8: -1256029191
+      Pik (Boomerang Attack)-Sheet_9: 2064021403
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

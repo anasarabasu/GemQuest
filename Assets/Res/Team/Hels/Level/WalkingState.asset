@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: WalkingState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 4be6a2685e83aa741a5ca1f6c6a45cf0, type: 2}
+  - {fileID: 11400000, guid: 613e143a5db18bb49bb5c0bd21a4edc3, type: 2}
+  - {fileID: 11400000, guid: 9a1eddf1299224f4aa54c4c200d24c3c, type: 2}
+  - {fileID: 11400000, guid: d94aa1831b57a0c459a840ee110b9de1, type: 2}
+  controlDriver:
+    name: Direction
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 896679e0-1398-4b68-bba3-89e3996c52d9
+  drivers:
+    keys: []
+    values: 

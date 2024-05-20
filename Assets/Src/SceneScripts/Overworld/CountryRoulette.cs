@@ -7,20 +7,13 @@ public class CountryRoulette : MonoBehaviour, ISaveable {
     public static CountryRoulette instance; //might remove this
 
     private string[] targetCountries = {"Czechia", "Mexico", "Egypt", "Italy", "Turkey"};
-    private int chapter;
     public void _CountryChecker(GameObject country) {
         Time.timeScale = 1;
 
         string name = country.GetComponent<TextMeshProUGUI>().text;
         if(targetCountries.Contains(name)) {
-            if(chapter == 1 & name == "Czechia")
+            if(name == "Czechia")
                 CorrectCountry(name);
-            else if(chapter == 2 & name == "Turkey")
-                CorrectCountry(name);
-            else if(chapter > 2)
-                CorrectCountry(name) ;
-            else
-                WrongCountry();
         }
         else
             WrongCountry();    
@@ -46,7 +39,6 @@ public class CountryRoulette : MonoBehaviour, ISaveable {
     }
 
     public void Load(DataRoot data) {
-        chapter = data.gameData.chapter;
         penaltyWrongCountry = data.overworldData.penaltyWrongCountry;
     }
 }

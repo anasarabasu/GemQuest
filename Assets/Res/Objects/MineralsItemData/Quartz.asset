@@ -17,9 +17,12 @@ MonoBehaviour:
     that extra sparkle wherever it goes.
 
 '
-  level:
-    sprite: {fileID: 761893830, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    hitPoints: 7
-  inventory:
-    sprite: {fileID: -983497734, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    amount: 6
+  sprite: {fileID: -983497734, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+  hitPoints: 1
+  inventoryAmount: 50
+  itemType: 0
+  healAmount: 0
+  energyAmount: 0
+  stunDuration: 0
+  electricDuration: 0
+  damageAmount: 7

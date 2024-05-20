@@ -2,14 +2,10 @@ using System;
 using System.Collections.Generic;
 
 public class DialogueLibrary {
-    public static (string, string)[] GetDialogue (int chapter, int dialogueContext) {
+    public static (string, string)[] GetDialogue (int dialogueContext) {
         (string, string)[] dialogueKey = null;
-
-        switch (chapter) {
-            case 1:
-                if(Chap1.TryGetValue(dialogueContext, out dialogueKey));
-                break;
-        }
+        Chap1.TryGetValue(dialogueContext, out dialogueKey);
+        
         return dialogueKey;
     }
 

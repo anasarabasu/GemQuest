@@ -16,9 +16,12 @@ MonoBehaviour:
     wires, keeping the world running smoothly with its conductivity.
 
 '
-  level:
-    sprite: {fileID: 21300000, guid: fbe9cfdaa506f56488bde7fcfd636a07, type: 3}
-    hitPoints: 3
-  inventory:
-    sprite: {fileID: 1503549457, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    amount: 1
+  sprite: {fileID: 1503549457, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+  hitPoints: 1
+  inventoryAmount: 50
+  itemType: 0
+  healAmount: 0
+  energyAmount: 0
+  stunDuration: 0
+  electricDuration: 0
+  damageAmount: 7

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HelsStats
   m_EditorClassIdentifier: 
   health: 40
-  currentHealth: 555
-  energy: 20
-  currentEnergy: 640
+  currentHealth: -33
+  energy: 49
+  currentEnergy: 37
   speed: 2
   movesets:
   - name: Shovels

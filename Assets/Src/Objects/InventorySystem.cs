@@ -16,10 +16,10 @@ public class InventorySystem : MonoBehaviour, ISaveable {
     public List<ItemData> inventoryContents = new();
     internal void AddItem(ItemData item) {
         bool itemExists = false;
-        item.inventory.amount ++;
+        item.inventoryAmount ++;
 
         foreach (ItemData existingItem in inventoryContents) {
-            if(existingItem.inventory == item.inventory) {
+            if(existingItem == item) {
                 itemExists = true;
             }
         }
@@ -40,11 +40,11 @@ public class InventorySystem : MonoBehaviour, ISaveable {
         foreach (ItemData item in inventoryContents) {
             GameObject itemSlot = Instantiate(InventorySlotPrefab, InventoryPanel);
             itemSlot.GetComponent<FocusItem>().itemData = item;
-            itemSlot.GetComponentInChildren<Image>().sprite = item.inventory.sprite;
+            itemSlot.GetComponentInChildren<Image>().sprite = item.sprite;
 
-            if(item.inventory.amount > 1)
-                itemSlot.GetComponentInChildren<TextMeshProUGUI>().SetText(item.inventory.amount.ToString());
-            else if(item.inventory.amount == 1)
+            if(item.inventoryAmount > 1)
+                itemSlot.GetComponentInChildren<TextMeshProUGUI>().SetText(item.inventoryAmount.ToString());
+            else if(item.inventoryAmount == 1)
                itemSlot.GetComponentInChildren<TextMeshProUGUI>().SetText("");
             else {
                 itemToDelete = item;

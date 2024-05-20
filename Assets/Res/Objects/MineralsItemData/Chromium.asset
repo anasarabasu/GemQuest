@@ -16,9 +16,12 @@ MonoBehaviour:
     and car finishes, ready to bust out dance moves with its glitzy personality.
 
 '
-  level:
-    sprite: {fileID: 21300000, guid: 3602e2f2f65e4dd45af8b35fa87366b5, type: 3}
-    hitPoints: 8
-  inventory:
-    sprite: {fileID: -1544242360, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    amount: 2
+  sprite: {fileID: -1544242360, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+  hitPoints: 1
+  inventoryAmount: 48
+  itemType: 0
+  healAmount: 0
+  energyAmount: 0
+  stunDuration: 0
+  electricDuration: 0
+  damageAmount: 6

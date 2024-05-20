@@ -2119,6 +2119,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1075231821935878635, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075231821935878635, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075231821935878635, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075231821935878635, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444910330656500747, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444910330656500747, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444910330656500747, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444910330656500747, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5311199483174570961, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2224,6 +2256,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6012957552496369103, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6012957552496369103, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6012957552496369103, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2248,10 +2288,34 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7120127463768591237, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120127463768591237, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120127463768591237, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7120127463768591237, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151933971126144406, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151933971126144406, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151933971126144406, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151933971126144406, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -5819,12 +5883,12 @@ GameObject:
   - component: {fileID: 2097516680}
   - component: {fileID: 2097516679}
   m_Layer: 5
-  m_Name: Clue
+  m_Name: RemoveLaterClue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2097516678
 RectTransform:
   m_ObjectHideFlags: 0

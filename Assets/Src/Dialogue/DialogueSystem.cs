@@ -9,11 +9,10 @@ public class DialogueSystem : MonoBehaviour, ISaveable {
     public List<GameObject> dialogueBoxes;
     private TextMeshProUGUI dialogueContent;
     private (string character, string message)[] dialogueList;
-    private int currentChapter;
     private int currentDialogueContext = 1;
 
     private void Awake() {
-        dialogueList = DialogueLibrary.GetDialogue(currentChapter, currentDialogueContext);
+        dialogueList = DialogueLibrary.GetDialogue(currentDialogueContext);
 
         foreach ((string character, string message) in dialogueList) {
             GameObject dialogueBox = Instantiate(dialogueBoxPrefab, transform);
@@ -62,7 +61,6 @@ public class DialogueSystem : MonoBehaviour, ISaveable {
     }
 
     public void Load(DataRoot data) {
-        currentChapter = data.gameData.chapter;
     }
 
     public void Save(DataRoot data) {

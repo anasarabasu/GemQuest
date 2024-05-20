@@ -29,7 +29,7 @@ public class ItemInfo : MonoBehaviour {
     }
 
     public void _UseItem() {
-        selectedItem.inventory.amount--;
+        // selectedItem.UseItem();
         InventorySystem.instance.UpdateInventoryUI();
     }
 }

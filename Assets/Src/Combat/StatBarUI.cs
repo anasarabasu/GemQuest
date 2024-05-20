@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,14 +41,32 @@ public class StatBarUI : MonoBehaviour {
         easeHealthSlider.maxValue = healthSlider.maxValue;
         currentHealth = entity.currentHealth;
 
+        easeHealthSlider.maxValue = healthSlider.maxValue;
+        currentHealth = entity.currentHealth;
+
         energySlider.maxValue = entity.energy;
         currentEnergy = entity.currentEnergy;
     }
 
+    float lastHealth;
     private void Update() {
         currentHealth = entity.currentHealth;
-        if(healthSlider.value != currentHealth) healthSlider.value = currentHealth;
-        if(healthSlider.value != easeHealthSlider.value) easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, currentHealth, 0.05f);
+        lastHealth = easeHealthSlider.value;
+
+        if(lastHealth > currentHealth) {
+            easeHealthSlider.gameObject.transform.Find("Fill").GetComponent<Image>().color = Color.yellow;
+
+            if(healthSlider.value != currentHealth) healthSlider.value = currentHealth;
+            if(healthSlider.value != easeHealthSlider.value) easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, currentHealth, 0.05f);
+        
+        }
+        else {
+            easeHealthSlider.gameObject.transform.Find("Fill").GetComponent<Image>().color = Color.green;
+            if(easeHealthSlider.value != currentHealth) easeHealthSlider.value = currentHealth;
+            if(easeHealthSlider.value != healthSlider.value) healthSlider.value = Mathf.Lerp(healthSlider.value, currentHealth, 0.05f);
+
+        }
+
 
         currentEnergy = entity.currentEnergy;
         if(energySlider.value != currentEnergy)

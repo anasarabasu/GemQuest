@@ -7,13 +7,13 @@ public class LevelObject : MonoBehaviour { //should make this an inherit or inte
     [SerializeField] ItemData itemData;
     [SerializeField] GameObject DropPrefab;
     
-    internal bool isDestroyedPersistent = false;
-
-    private int hitPoints;
+    [SerializeField] int hitPoints = 1;
     private double halfHP;
+
+    [SerializeField] int lootAmount = 1;
     
     private void Awake() {
-        hitPoints = itemData.level.hitPoints;
+        hitPoints = itemData.hitPoints;
         halfHP = hitPoints / 2;
     }
 
@@ -39,10 +39,8 @@ public class LevelObject : MonoBehaviour { //should make this an inherit or inte
         itemDrop.name = gameObject.name;
         itemDrop.GetComponent<SpawnItemDrop>().itemData = itemData;
 
+        ObjectDestroyedPersistence.ObjectDestroyed(gameObject);
+        DataManager.instance.WriteSaveFile();
         Destroy(gameObject);
-    }
-
-    private void OnDestroy() {
-        isDestroyedPersistent = true;
     }
 }

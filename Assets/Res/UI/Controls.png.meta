@@ -178,27 +178,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interact
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 21
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ff7277291d39614cad6bb9b3ae59fcc
-      internalID: 1497908496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mine
       rect:
         serializedVersion: 2
@@ -261,6 +240,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Controls_0
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 46
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259544dab0cdb624895d781632ddafcb
+      internalID: -1850694766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -275,7 +275,8 @@ TextureImporter:
       Arrow: -2074347855
       Circle: -5086340
       CircleFilled: -1229994247
-      Interact: 1497908496
+      Controls_0: -1850694766
+      Inventory: 1497908496
       Menu: -2114021854
       Mine: -2091655303
   mipmapLimitGroupName: 

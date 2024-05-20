@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 201766967332813777}
   m_Layer: 7
   m_Name: Rock 8
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,3 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 04f2829666332e24b820d4781864dfe3, type: 2}
   DropPrefab: {fileID: 403857066209228780, guid: db21dd94e5e2c6541afe4317619b42b1, type: 3}
+  hitPoints: 1
+  lootAmount: 1

@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 761a4fc7c30a1b2458a5ad87c718f48b, type: 2}
   - {fileID: 11400000, guid: bbf8f67de7265594482393d6c67a5a05, type: 2}
   - {fileID: 11400000, guid: 05bad4e0255953041be7d1e4d1be3a40, type: 2}
+  - {fileID: 11400000, guid: b2ff6fa24048eda438028a279ba8ac61, type: 2}
   controlDriver:
     name: State
     autoIncrement: 0

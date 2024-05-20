@@ -16,9 +16,12 @@ MonoBehaviour:
     but still rocks in industrial uses like cement and plaster production.
 
 '
-  level:
-    sprite: {fileID: 21300000, guid: c62a296e89d9f5641803d409291778db, type: 3}
-    hitPoints: 3
-  inventory:
-    sprite: {fileID: 2011741444, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    amount: 2
+  sprite: {fileID: 2011741444, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+  hitPoints: 1
+  inventoryAmount: 40
+  itemType: 0
+  healAmount: 0
+  energyAmount: 0
+  stunDuration: 0
+  electricDuration: 0
+  damageAmount: 5

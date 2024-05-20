@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Feldspar
   m_EditorClassIdentifier: 
   description: description
-  level:
-    sprite: {fileID: 0}
-    hitPoints: 1
-  inventory:
-    sprite: {fileID: 644949573, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    amount: 1
+  sprite: {fileID: 644949573, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+  hitPoints: 1
+  inventoryAmount: 45
+  itemType: 0
+  healAmount: 0
+  energyAmount: 0
+  stunDuration: 0
+  electricDuration: 0
+  damageAmount: 6

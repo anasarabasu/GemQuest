@@ -71,7 +71,7 @@ public class DataManager: MonoBehaviour {
 
     private void ResetInventoryData () {
         foreach (var item in data.inventoryData)
-            item.inventory.amount = 1;
+            item.inventoryAmount = 1;
     }
 
     private void OnApplicationQuit() => WriteSaveFile();

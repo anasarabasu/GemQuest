@@ -16,9 +16,12 @@ MonoBehaviour:
     from rust and adds a futuristic touch to smartphones.
 
 '
-  level:
-    sprite: {fileID: 21300000, guid: 3602e2f2f65e4dd45af8b35fa87366b5, type: 3}
-    hitPoints: 6
-  inventory:
-    sprite: {fileID: -600163608, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-    amount: 1
+  sprite: {fileID: -1242550664, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
+  hitPoints: 1
+  inventoryAmount: 50
+  itemType: 0
+  healAmount: 0
+  energyAmount: 0
+  stunDuration: 0
+  electricDuration: 0
+  damageAmount: 8

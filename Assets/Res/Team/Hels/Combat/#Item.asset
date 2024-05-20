@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: '#Item'
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 4df8eac17f7840947887629dd9ab6cf1, type: 2}
+  - {fileID: 11400000, guid: 523742e349b242f41b519324b632d4b1, type: 2}
+  controlDriver:
+    name: Item
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 3b5d6e72-a54a-4b7a-9334-2b01fe4cc45a
+  drivers:
+    keys: []
+    values: 

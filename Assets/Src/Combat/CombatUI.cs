@@ -98,41 +98,53 @@ public class CombatUI : MonoBehaviour {
     }
 
     [SerializeField] RectTransform noticePanel;
-    public IEnumerator NullTarget() {
+
+    public IEnumerator SelectTargetNotice() {
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("Select a target");
+        
+        noticePanel.DOAnchorPosY(12.75f, 0.25f);
+        yield return new WaitForSeconds(1);
+        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
+    }
+    public IEnumerator NoTargetNotice() {
         noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("Select a target first!");
+
         noticePanel.DOAnchorPosY(12.75f, 0.25f);
         yield return new WaitForSeconds(1);
         noticePanel.DOAnchorPosY(-12.2f, 0.5f);
     }
 
-    public IEnumerator NoEnergy(string name) {
+    public IEnumerator NoEnergyNotice(string name) {
         noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(name + " is too tired...");
+
         noticePanel.DOAnchorPosY(12.75f, 0.25f);
         yield return new WaitForSeconds(2);
         noticePanel.DOAnchorPosY(-12.2f, 0.5f);
         yield return new WaitForSeconds(1);
-
     }
 
-    [SerializeField] Transform itemPanel;
+    // [SerializeField] Transform camera;
+    [SerializeField] RectTransform itemPanel;
     bool itemToggle;
-    internal void ToggleUseItemButton() => itemPanel.Find("Button").DOLocalMoveY(-58.5f, panelSpeed);
-
     public void _ToggleItemPanel() {
         if(!itemToggle) {
             _ToggleSIRSelectionPanel();
-            CombatSystem.instance.SetMoveType(CombatSystem.MoveType.Item);
+
+            Combat.instance.SearchItemAni();
             InventorySystem.instance.UpdateInventoryUI();
 
-            itemPanel.DOLocalMoveY(0, panelSpeed);
+            itemPanel.DOAnchorPosY(-72.9f, panelSpeed);
             itemToggle = true;
         }
 
         else {
-            itemPanel.Find("Button").DOLocalMoveY(-95, panelSpeed);
-            itemPanel.DOLocalMoveY(-100, panelSpeed);
+            UpdateItemText("");
+            itemPanel.DOAnchorPosY(-104.3f, panelSpeed);
             itemToggle = false;
         }
     }
 
+    public void UpdateItemText(string item) {
+        itemPanel.Find("Name").GetComponent<TextMeshProUGUI>().SetText(item);
+    }
 }

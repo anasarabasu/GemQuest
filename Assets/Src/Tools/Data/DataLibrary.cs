@@ -16,14 +16,12 @@ using UnityEngine;
     public GameData() { //default values
         newGame = true;
         dialogueIndex = 0;
-        chapter = 1;
         teamComposition = new List<string> {"Pik", "Hels"};
         showFPS = true;
     }
     
     public bool newGame;
     public int dialogueIndex;
-    public int chapter;
     public string lastScene;
     public List<string> teamComposition;
     public bool showFPS;
@@ -43,9 +41,14 @@ using UnityEngine;
 [Serializable] public class LevelData {
     public LevelData() {
         levelCoordinates = new Vector2(0, -1);
+        currentLevel = 1;
     }
 
+    public int currentLevel;
     public Vector2 levelCoordinates;
+    public List<GameObject> lvl1ObjectPersistence;
+    // public GameObject[] lvl2ObjectPersistence;
+
 }
 
 [SerializeField] public class CharacterStats {

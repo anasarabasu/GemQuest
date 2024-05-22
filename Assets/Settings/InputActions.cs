@@ -53,6 +53,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DebugIttems"",
+                    ""type"": ""Value"",
+                    ""id"": ""4a272901-313f-4b2e-9fb2-6cf18b2ffebf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -152,6 +161,39 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ReloadScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""52187111-5e4d-43ea-8732-821956643416"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DebugIttems"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""3a52e469-e7cc-40a8-85b4-3b4808ba1582"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DebugIttems"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""58fe2f86-b41d-4398-835f-d0b31c61c36f"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DebugIttems"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -459,6 +501,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Dev_DeleteJSON = m_Dev.FindAction("DeleteJSON", throwIfNotFound: true);
         m_Dev_DisplayJSON = m_Dev.FindAction("DisplayJSON", throwIfNotFound: true);
         m_Dev_ReloadScene = m_Dev.FindAction("ReloadScene", throwIfNotFound: true);
+        m_Dev_DebugIttems = m_Dev.FindAction("DebugIttems", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
@@ -531,6 +574,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Dev_DeleteJSON;
     private readonly InputAction m_Dev_DisplayJSON;
     private readonly InputAction m_Dev_ReloadScene;
+    private readonly InputAction m_Dev_DebugIttems;
     public struct DevActions
     {
         private @InputActions m_Wrapper;
@@ -538,6 +582,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @DeleteJSON => m_Wrapper.m_Dev_DeleteJSON;
         public InputAction @DisplayJSON => m_Wrapper.m_Dev_DisplayJSON;
         public InputAction @ReloadScene => m_Wrapper.m_Dev_ReloadScene;
+        public InputAction @DebugIttems => m_Wrapper.m_Dev_DebugIttems;
         public InputActionMap Get() { return m_Wrapper.m_Dev; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -556,6 +601,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @ReloadScene.started += instance.OnReloadScene;
             @ReloadScene.performed += instance.OnReloadScene;
             @ReloadScene.canceled += instance.OnReloadScene;
+            @DebugIttems.started += instance.OnDebugIttems;
+            @DebugIttems.performed += instance.OnDebugIttems;
+            @DebugIttems.canceled += instance.OnDebugIttems;
         }
 
         private void UnregisterCallbacks(IDevActions instance)
@@ -569,6 +617,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @ReloadScene.started -= instance.OnReloadScene;
             @ReloadScene.performed -= instance.OnReloadScene;
             @ReloadScene.canceled -= instance.OnReloadScene;
+            @DebugIttems.started -= instance.OnDebugIttems;
+            @DebugIttems.performed -= instance.OnDebugIttems;
+            @DebugIttems.canceled -= instance.OnDebugIttems;
         }
 
         public void RemoveCallbacks(IDevActions instance)
@@ -695,6 +746,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnDeleteJSON(InputAction.CallbackContext context);
         void OnDisplayJSON(InputAction.CallbackContext context);
         void OnReloadScene(InputAction.CallbackContext context);
+        void OnDebugIttems(InputAction.CallbackContext context);
     }
     public interface IPlayerActions
     {

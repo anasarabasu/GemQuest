@@ -62,7 +62,7 @@ namespace Pathfinding {
         }
 
         public void Load(DataRoot data) {
-            transform.position = data.levelData.levelCoordinates;
+            transform.position = data.levelData.levelCoordinates - new Vector2(0, 1.5f);
         }
     }
 }

@@ -6,7 +6,7 @@ public class LoadNextLevel : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.gameObject == trigger) {
-            SceneHandler.LoadScene(SceneManager.GetActiveScene().name + "2");
+            SceneManager.LoadSceneAsync("Level2");
             transform.position = Vector3.zero;
         }
     }

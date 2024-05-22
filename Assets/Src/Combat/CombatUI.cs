@@ -87,6 +87,20 @@ public class CombatUI : MonoBehaviour {
         selectedButton.GetComponent<Image>().color = Color.white;
     }
 
+    [SerializeField] RectTransform useSkillWithItem;
+    public void _ToggleUSWIButton(bool show) {
+        if(show) {
+            useSkillWithItem.DOAnchorPosX(-67.7f, 0.35f);
+        }
+        else{
+            useSkillWithItem.DOAnchorPosX(78.5f, 0.35f);
+        }
+    }
+
+    public void _ToggleItemWithSkillKey () {
+        
+    }
+
     [SerializeField] float pulsateSpeed;
     public IEnumerator PulsatingSkillButton() {
         while(true) {
@@ -107,7 +121,7 @@ public class CombatUI : MonoBehaviour {
         noticePanel.DOAnchorPosY(-12.2f, 0.5f);
     }
     public IEnumerator NoTargetNotice() {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("Select a target first!");
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("No target selected");
 
         noticePanel.DOAnchorPosY(12.75f, 0.25f);
         yield return new WaitForSeconds(1);
@@ -115,7 +129,7 @@ public class CombatUI : MonoBehaviour {
     }
 
     public IEnumerator NoEnergyNotice(string name) {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(name + " is too tired...");
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText($"{name} is too tired to do anything...");
 
         noticePanel.DOAnchorPosY(12.75f, 0.25f);
         yield return new WaitForSeconds(2);
@@ -123,28 +137,81 @@ public class CombatUI : MonoBehaviour {
         yield return new WaitForSeconds(1);
     }
 
-    // [SerializeField] Transform camera;
+    public IEnumerator NoItemSelectedNotice() {
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("No item selected");
+
+        noticePanel.DOAnchorPosY(12.75f, 0.25f);
+        yield return new WaitForSeconds(2);
+        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
+        yield return new WaitForSeconds(1);
+    }
+
+    public IEnumerator EntityIsStunned(string name) {
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText($"{name} is stunned and can't move");
+
+        noticePanel.DOAnchorPosY(12.75f, 0.25f);
+        yield return new WaitForSeconds(2);
+        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
+        yield return new WaitForSeconds(1);
+    }
+
+    public IEnumerator HeroDown(string name) {
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText($"{name} is has fallen and can't get up!");
+
+        noticePanel.DOAnchorPosY(12.75f, 0.25f);
+        yield return new WaitForSeconds(2);
+        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
+        yield return new WaitForSeconds(1);
+    }
+
+    [SerializeField] float cameramoveSpeed = 0.25f;
     [SerializeField] RectTransform itemPanel;
+    [SerializeField] float itemPanelMoveSpeed = 0.25f;
     bool itemToggle;
     public void _ToggleItemPanel() {
         if(!itemToggle) {
-            _ToggleSIRSelectionPanel();
+            SIRPanel.DOAnchorPosX(SIRPanelHide, SIRPSpeed);
+            SIRSelectionToggle = false;
 
             Combat.instance.SearchItemAni();
             InventorySystem.instance.UpdateInventoryUI();
 
-            itemPanel.DOAnchorPosY(-72.9f, panelSpeed);
+            itemPanel.DOAnchorPosY(0, itemPanelMoveSpeed);
             itemToggle = true;
         }
 
         else {
-            UpdateItemText("");
-            itemPanel.DOAnchorPosY(-104.3f, panelSpeed);
+            UpdateItemText("No item selected", "Thinking...");
+    
+            itemPanel.DOAnchorPosY(-167.0197f, itemPanelMoveSpeed);
             itemToggle = false;
         }
     }
+    [SerializeField] Transform _camera;
+    public void _MoveCameraDown(bool yes) {
+        if(yes)
+            _camera.DOLocalMoveY(-13.9f, cameramoveSpeed);
+        else
+            _camera.DOLocalMoveY(0, cameramoveSpeed);
+    }
 
-    public void UpdateItemText(string item) {
-        itemPanel.Find("Name").GetComponent<TextMeshProUGUI>().SetText(item);
+    public void UpdateItemText(string item, string description) {
+        itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().SetText(item);
+        itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText(description);
+    }
+
+    [SerializeField] RectTransform itemTargetSelect;
+    bool itemTargetSelectToggle;
+    public void _ToggleSelectTargetToUseItemOn () {
+        if(!itemTargetSelectToggle) {
+            itemTargetSelect.DOAnchorPosY(0, 0.5f);
+            itemTargetSelectToggle = true;
+
+            _ToggleItemPanel();
+        }
+        else {
+            itemTargetSelect.DOAnchorPosY(-27.83662f, 0.5f);
+            itemTargetSelectToggle = false;
+        }
     }
 }

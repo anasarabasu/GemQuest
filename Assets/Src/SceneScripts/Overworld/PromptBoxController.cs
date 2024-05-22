@@ -27,7 +27,7 @@ public class PromptBoxController : MonoBehaviour {
     private Dictionary<string, string[]> countryDictionary = new() {
         {"Africa", new string[6] {"Egypt", "Liberia", "Uganda", "Ghana", "Burundi", "Chad"}},
         {"Europe", new string[6] {"Italy", "Czechia", "Ukraine", "Hungary", "Montenegro", "Greece"}},
-        {"Asia", new string[6] {"Turkey", "Myanmar", "Iran", "Afghanistan", "Japan", "Laos"}},
+        {"Asia", new string[6] {"Turkey", "China", "Iran", "Afghanistan", "Japan", "Laos"}},
         {"Australia", new string[6] {"Australia", "New Zealand", "Fiji", "Kiribati", "Tuvalu", "Nauru"}},
         {"North America", new string[6] {"USA", "Mexico", "Bahamas", "Canada", "Guatemala", "Cuba"}},
         {"South America", new string[6] {"Argentina", "Peru", "Uruguay", "Chile", "Brazil", "Venezuela"}},

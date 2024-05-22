@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class PikAni : AnimateRoam {
+    [SerializeField] Mine mine;
     private void Start() {
         reanimator.AddListener("MiningEndFrame", PickaxeHit);
     }
@@ -13,13 +14,11 @@ public class PikAni : AnimateRoam {
     private const int MINE = 2;
 
     internal override void UpdateState() {
-        if(Mine.StartMining)
+        if(mine.StartMining)
             reanimator.Set("AnimationState", MINE);
         else 
             base.UpdateState();
     }
 
-    private void PickaxeHit() {
-        Mine.FinishMining();
-    }
+    private void PickaxeHit() => mine.FinishMining();
 }

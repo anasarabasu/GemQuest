@@ -16,12 +16,10 @@ public class MainMenu : MonoBehaviour, ISaveable {
             startText.SetText("* Begin Story *");
             nextScene = "Cutscene";
 
-
-
         }
         else {
             startText.SetText("* Continue *");
-            nextScene = "Overworld";
+            nextScene = "Level1";
         }
     }
 

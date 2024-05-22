@@ -20,7 +20,7 @@ public class ItemInfo : MonoBehaviour {
 
     private void ToggleInfoPanel() {
         infoPanel.DOLocalMoveY(30, 0.5f);
-        infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + selectedItem.description);
+        infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + selectedItem.LevelDescription);
     }
 
     internal void HideInfoPanel() {

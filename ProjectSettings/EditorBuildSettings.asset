@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Res/Scenes/TitleMenu.unity
     guid: d0f422cb7eda1e34b981f32f29242f56
   - enabled: 1
-    path: Assets/Res/Scenes/Cutscene.unity
-    guid: 2202b43d978f94b4ead5d502cb89152c
-  - enabled: 1
     path: Assets/Res/Scenes/DialogueSystem.unity
     guid: 75d6e47c20631fe4eb6d6087eb02c2a2
   - enabled: 1
@@ -29,11 +26,53 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Res/Scenes/Combat.unity
     guid: 8be60b3646724e6429867a9ecbb3fcd2
-  - enabled: 0
-    path: Assets/Scenes/Dialogue.unity
-    guid: e2f402fdecdef454a90e61cc7e9cbbad
-  - enabled: 0
-    path: Assets/Scenes/##BuildTest CPU 20ave GPU 10ave.unity
-    guid: 8847f8cf0f2533c4e828dfd521eabe57
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene.unity
+    guid: 96b366e65b2c55f4d908c634477bd1af
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene2.unity
+    guid: 9884ee9ba787227469122c54d15080ff
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene3.unity
+    guid: bf8598cf0016326408f3c026e5c04e30
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene4.unity
+    guid: 66c8208631b79874c80e0433cb5bcb7e
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene5.unity
+    guid: 50831f8a27871d14d8e73fc2641aab1d
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene6.unity
+    guid: efa3983d4fdaecb42bcb60414f35173a
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene7.unity
+    guid: 499b3a7c5a43cdc41bbe33b3f56894a4
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene8.unity
+    guid: 9ec2387bcfec97343a4583a912d52e94
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene9.unity
+    guid: 965a78ad14fc1fd43949b5a142209e11
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene10.unity
+    guid: d5fefd189abe1784a95419e9a95c9f21
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene11.unity
+    guid: 056b2d48f2d6bac4cab9659c60451bb4
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene12.unity
+    guid: 12c34420315f06b4c846fc7239bbd7ba
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene13.unity
+    guid: 94fc1997095afd6409a9d79fa7ed5460
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene14.unity
+    guid: d1ef995b34f7eee4f94c955b536a3ead
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene15.unity
+    guid: 75fd3183ed68175489d9640e4e3ab0d8
+  - enabled: 1
+    path: Assets/Res/Scenes/Cutscenes/Cutscene16.unity
+    guid: ea3bbc32bf5734a4b98a8df596b31af6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 37e0496a70df3d645889dacc9e201d67, type: 2}

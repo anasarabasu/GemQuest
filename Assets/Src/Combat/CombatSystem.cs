@@ -430,7 +430,7 @@ public class CombatSystem : MonoBehaviour {
 
         Combat.instance.HelsBackToIdle();
         DeleteItemTemp();
-        selectedItem.UseItem(target.GetComponent<Combat>());
+        // selectedItem.UseItem(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
         selectedItem = null;
         waitingForPlayerInput = false;

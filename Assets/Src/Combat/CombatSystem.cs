@@ -78,7 +78,6 @@ public class CombatSystem : MonoBehaviour {
     }
 
     [SerializeField] float dashSpeed = 0.17f;
-    [SerializeField] float setRangeDistance = 4;
     internal static bool waitingForPlayerInput;
     
     Vector3 targetPos;
@@ -265,6 +264,7 @@ public class CombatSystem : MonoBehaviour {
                 rememberAttackKey = 0;
     
                 CombatUI.instance._ToggleSkillPanel();
+                CombatUI.instance._ToggleUSWIButton(false);
 
                 waitingForPlayerInput = false;
                 entityState = State.UseSkill;

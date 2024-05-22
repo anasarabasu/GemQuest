@@ -56,7 +56,7 @@ public class Mine : MonoBehaviour {
     public void FinishMining() {
         if(objInRange != null) {
             pikStats.currentEnergy--;
-            objInRange.GetMined();
+            // objInRange.GetMined();
         }
 
         if(!mineRequest) {

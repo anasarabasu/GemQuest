@@ -7,6 +7,8 @@ public class ObjectDestroyedPersistence : MonoBehaviour, ISaveable {
     private void Start() {
         foreach(var obj in persistingObjectDestroyed) 
             Destroy(obj); 
+        AstarPath.active.Scan();
+        
     }
 
     static List<GameObject> persistingObjectDestroyed = new();

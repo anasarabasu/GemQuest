@@ -11,8 +11,6 @@ public class CombatUI : MonoBehaviour {
     public static CombatUI instance;
     private void Awake() => instance = this;
 
-    [SerializeField] float panelSpeed = 0.5f;
-
     [SerializeField] RectTransform SIRPanel;
     [SerializeField] float SIRPanelShow;
     [SerializeField] float SIRPanelHide;

@@ -11,9 +11,9 @@ using UnityEngine.UI;
 public class ItemData : ScriptableObject {
     [TextArea] public string description = "description";
     public Sprite sprite;
+    public int dropChance = 1;
     public int hitPoints = 1;
     public int inventoryAmount = 1;
-
     public enum ItemType {MINERAL, FOOD}
     public ItemType itemType;
 

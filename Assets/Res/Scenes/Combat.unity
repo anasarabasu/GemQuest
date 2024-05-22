@@ -2380,9 +2380,9 @@ MonoBehaviour:
   entity: {fileID: 11400000, guid: d4719779fb6abc6439d6d44ab8920e20, type: 2}
   healthSlider: {fileID: 953209877}
   easeHealthSlider: {fileID: 1441917317}
-  currentHealth: 25
+  currentHealth: 35
   energySlider: {fileID: 933289584}
-  currentEnergy: 40
+  currentEnergy: 44
 --- !u!114 &393268864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4804,7 +4804,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 40
+  m_Value: 44
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5025,7 +5025,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 80
   m_WholeNumbers: 0
-  m_Value: 25
+  m_Value: 35
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6736,7 +6736,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 80
   m_WholeNumbers: 0
-  m_Value: 25
+  m_Value: 35
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8720,7 +8720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 78.19995, y: 15.27002}
+  m_AnchoredPosition: {x: 76.5, y: 16.44}
   m_SizeDelta: {x: 138.4, y: 22.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835427713

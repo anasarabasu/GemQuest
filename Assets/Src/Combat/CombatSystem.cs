@@ -339,15 +339,18 @@ public class CombatSystem : MonoBehaviour {
         tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 4;
         tempraryItemOBject.transform.DOJump(targetToTossItem, 10, 1, 0.5f);
         yield return new WaitForSeconds(1);
+        //use effect
 
         Combat.instance.HelsBackToIdle();
         DeleteItemTemp();
         // selectedItem.UseItem(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
+        //pass selected item effect 
+        //can either increase damage or have a compatibility error where player gets stunned or confused
+        selectedItem = null;
         waitingForPlayerInput = false;
 
         entityState = State.UseSkill;
-        //set effects
     }
 
     public void _ItemSelectTarget() {
@@ -429,6 +432,7 @@ public class CombatSystem : MonoBehaviour {
         DeleteItemTemp();
         selectedItem.UseItem(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
+        selectedItem = null;
         waitingForPlayerInput = false;
     }
 

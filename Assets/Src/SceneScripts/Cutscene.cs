@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cutscene : MonoBehaviour {
     [SerializeField] TextMeshProUGUI screenText;
@@ -32,6 +33,6 @@ public class Cutscene : MonoBehaviour {
     public void _FinishCutscene() { //toggles newgame to false TEMP
         newGame = false;
         DataManager.instance.WriteSaveFile();
-        SceneHandler.LoadScene("Overworld");
+        SceneManager.LoadSceneAsync("Overworld");
     }
 }

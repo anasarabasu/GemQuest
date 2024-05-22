@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599a7e983e14b6a458268c053ece91b4, type: 3}
+  m_Name: ShadowStats
+  m_EditorClassIdentifier: 
+  electrocute: {fileID: 6038871273351805036, guid: 4d01fe39f111aec4ca7979236300a2fd, type: 3}
+  heal: {fileID: 3849021189078432251, guid: d2fbc90a78084e04f990cb0e14455253, type: 3}
+  health: 50
+  currentHealth: 40
+  energy: 30
+  currentEnergy: 30
+  speed: 8
+  movesets:
+  - name: Slash
+    attackDistance: 3
+    type: 1
+    damage: 5
+    energyCost: 0

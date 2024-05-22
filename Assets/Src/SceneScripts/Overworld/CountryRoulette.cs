@@ -2,39 +2,28 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountryRoulette : MonoBehaviour, ISaveable {
-    public static CountryRoulette instance; //might remove this
-
-    private string[] targetCountries = {"Czechia", "Mexico", "Egypt", "Italy", "Turkey"};
     public void _CountryChecker(GameObject country) {
         Time.timeScale = 1;
 
         string name = country.GetComponent<TextMeshProUGUI>().text;
-        if(targetCountries.Contains(name)) {
-            if(name == "Czechia")
-                CorrectCountry(name);
+        if(name == "China") 
+            SceneManager.LoadSceneAsync("Level1");
+        else {
+            SceneManager.LoadSceneAsync("WrongChoice"); //should be additive scene
+            penaltyWrongCountry ++;
         }
-        else
-            WrongCountry();    
 
         DataManager.instance.WriteSaveFile();
-    
-    }
-
-    private void CorrectCountry(string sceneName) {
-        SceneHandler.LoadScene(sceneName); 
-        // chapter ++;
     }
 
     private int penaltyWrongCountry; //might move this or something
-    public void  WrongCountry() {
-        SceneHandler.LoadScene("WrongChoice");
-        penaltyWrongCountry ++;
-    }
 
     public void Save(DataRoot data) {
-        // data.gameData.chapter = this.chapter;
+        data.levelData.currentLevel = 1;
+        data.levelData.levelCoordinates = new Vector2(0, -2);
         data.overworldData.penaltyWrongCountry = penaltyWrongCountry;
     }
 

@@ -33,10 +33,9 @@ public class ItemData : ScriptableObject {
         if(SceneManager.GetActiveScene().name == "Combat") {
             if(itemType == ItemType.MINERAL) {
                 target.Heal(healAmount);
-                target.Damage(damageAmount);
+                target.Damage(damageAmount, stunDuration);
                 //target electrocute
                 //target stun
-
             }
         }
         else {

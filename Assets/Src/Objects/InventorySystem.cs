@@ -30,7 +30,7 @@ public class InventorySystem : MonoBehaviour, ISaveable {
     }
 
     [SerializeField] GameObject InventorySlotPrefab;
-    [SerializeField] Transform InventoryPanel;
+    [SerializeField] RectTransform InventoryPanel;
     public void UpdateInventoryUI() {
         ItemData itemToDelete = null;
 
@@ -60,15 +60,17 @@ public class InventorySystem : MonoBehaviour, ISaveable {
         //not in combat | there is probably a better way to do this but i dont have the time    
         //be in awe of my spaghetti code > <   
         if(!showInventory) {
-            InventoryPanel.DOLocalMoveY(30, 0.5f);
+            InventoryPanel.DOAnchorPosX(-45.525f, 0.5f);
             showInventory = true;
-            Joystick.MovementState(false);
+            Joystick.MovementState(false); 
+            //can enemies still ambush?
+            //yes ha-hide ung inventory kung nakaopen man
         }
         else {
-            InventoryPanel.DOLocalMoveY(150, 0.5f);
+            InventoryPanel.DOAnchorPosX(-350.1f, 0.5f);
             showInventory = false;
 
-            ItemInfo.instance.infoPanel.DOLocalMoveY(150, 0.5f);
+            // ItemInfo.instance.infoPanel.DOLocalMoveY(150, 0.5f);
             Joystick.MovementState(true);
         }  
     }

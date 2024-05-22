@@ -25,10 +25,11 @@ public class SceneHandler : MonoBehaviour, ISaveable {
     public void _QuitGame() => Application.Quit(0);
 
     public void Save(DataRoot data) {
-        if( SceneManager.GetActiveScene().name != "MainMenu")
-            data.gameData.lastScene = SceneManager.GetActiveScene().name;
+        if(SceneManager.GetActiveScene().name == "Level1")
+            data.levelData.currentLevel = 1;
+        if(SceneManager.GetActiveScene().name == "Level2")
+            data.levelData.currentLevel = 2;
     }
 
-    public void Load(DataRoot data) {
-    }
+    public void Load(DataRoot data) {}
 }

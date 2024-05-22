@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Aarthificial.Reanimation;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CombatSystem : MonoBehaviour {
@@ -28,6 +30,16 @@ public class CombatSystem : MonoBehaviour {
 
         SortTurnOrder();
         StartCoroutine(CombatLoop());
+        
+
+    }
+
+    IEnumerator MoveTowardsHeroes() {
+        foreach(var enemy in remainingEnemies) {
+            enemy.transform.DOMove(remainingHeroes[0].transform.position, 100);
+        }
+
+        yield return null;
     }
 
     private void SortTurnOrder() {
@@ -35,7 +47,7 @@ public class CombatSystem : MonoBehaviour {
         turnOrder = combinedList.OrderByDescending(r => r.GetComponent<Combat>().combatData.speed).ToList();
     }
 
-    private GameObject target;
+    public GameObject target;
 
     private void UpdateTargets() {
         remainingHeroes.RemoveAll(hero => !hero.GetComponent<Combat>().isAlive);
@@ -70,98 +82,137 @@ public class CombatSystem : MonoBehaviour {
     internal static bool waitingForPlayerInput;
     
     Vector3 targetPos;
-        Vector3 attackDistance;
+    Vector3 attackDistance;
+    Combat entity;
     IEnumerator CombatLoop() {
         //ambush ani or something
         yield return new WaitForSeconds(1);
 
         int i = 0;
+
         while(true) {    
             UpdateTargets();
 
-            Combat entity = turnOrder[i].GetComponent<Combat>();
+            entity = turnOrder[i].GetComponent<Combat>();
             Vector3 returnPos = entity.transform.position;
-
             target = null;
 
             yield return null;
 
-            if(entity.isAlive) {
-                if(entity.combatData.currentEnergy <= 0)
-                    yield return StartCoroutine(CombatUI.instance.NoEnergyNotice(entity.name.Replace("(Clone)", "")));
 
-                else {
-                    if(entity.CompareTag("Enemy")) {
-                        turn = Turn.Enemy;
-
-                        SelectRandomTarget();
-                        entityState = State.UseSkill;
-
-                        moveKey = Random.Range(0, entity.combatData.movesets.Length);
-                        attackDistance = new(entity.combatData.movesets[moveKey].attackDistance, 0);
-                        targetPos = new Vector3(target.transform.position.x + attackDistance.x, target.transform.position.y);
-                    }
-                    if(entity.CompareTag("Hero")) {
-                        turn = Turn.Hero;
-                        CombatUI.instance.UpdateLabelsToEntity(entity);
-                        CombatUI.instance._ToggleSIRSelectionPanel();
-
-                        entity.transform.Find("Sprite").DOJump(entity.transform.position, 2, 1, 0.5f);
-
-                        waitingForPlayerInput = true;
-                        entityState = State.WaitingForAction;
-
-                        yield return new WaitWhile(WaitForPlayerInput);
-                        
-                        if(entityState == State.UseSkill) {
-                            moveKey--;
-                            attackDistance = new(-entity.combatData.movesets[moveKey].attackDistance, 0);
-                        }
-
-                        targetCircle.GetComponent<Image>().enabled = false;
-                    }
-
-                    if(entityState == State.UseSkill) {
-                        targetPos = new Vector3(target.transform.position.x + attackDistance.x, target.transform.position.y);
-                        
-                        entity.transform.DOMove(targetPos, dashSpeed); 
-                        yield return new WaitForSeconds(0.5f); //after moving to postionn
-
-                        entity.SetTarget(target, entity.combatData.movesets[moveKey].damage);
-                        entity.PerformAttack(moveKey);
-                        yield return new WaitUntil(() => entity.isActionFinished);
-
-                        entity.isActionFinished = false;
-                        entityState = State.WaitingForAction;
-                        yield return new WaitForSeconds(0.5f);
-
-                        entity.transform.DOMove(returnPos, 0.5f);  
-                    }
-
-                    if(entityState == State.UseItem) {
-                        //do the animation or something like throw or heal
-
-                    }
-
-                    yield return new WaitForSeconds(1);
+            if(!entity.isAlive) {
+                if(entity.CompareTag("Hero")) {
+                    entity.CheckHealth();
+                    yield return StartCoroutine(CombatUI.instance.HeroDown(entity.name.Replace("(Clone)", "")));
+                    entity.stunDuration = 0;
+                    entity.combatData.currentEnergy++;
                 }
-            }            
+                
+                i++;
+                if(i == turnOrder.Count) i = 0;
+                continue;
+            }
+
+            if(entity.stunDuration != 0) {
+                entity.transform.DOShakePosition(1);
+                yield return StartCoroutine(CombatUI.instance.EntityIsStunned(entity.name.Replace("(Clone)", "")));
+                entity.stunDuration--;
+
+                i++;
+                if(i == turnOrder.Count) i = 0;
+                continue;
+            }
+
+            if(entity.combatData.currentEnergy <= 0) {
+                yield return StartCoroutine(CombatUI.instance.NoEnergyNotice(entity.name.Replace("(Clone)", "")));
+                
+                i++;
+                if(i == turnOrder.Count) i = 0;
+                continue;
+            }
+
+            if(entity.CompareTag("Enemy")) {
+                turn = Turn.Enemy;
+
+                SelectRandomTarget();
+                entityState = State.UseSkill;
+
+                moveKey = Random.Range(0, entity.combatData.movesets.Length);
+                attackDistance = new(entity.combatData.movesets[moveKey].attackDistance, 0);
+                targetPos = new Vector3(target.transform.position.x + attackDistance.x, target.transform.position.y);
+            }
+            if(entity.CompareTag("Hero")) {
+                // foreach(var enemy in remainingEnemies) {
+                //     enemy.transform.DOBlendableMoveBy(entity.transform.position, 180);
+                // }
+
+                turn = Turn.Hero;
+                CombatUI.instance.UpdateLabelsToEntity(entity);
+                CombatUI.instance._ToggleSIRSelectionPanel();
+
+                entity.transform.Find("Sprite").DOJump(entity.transform.position, 2, 1, 0.5f);
+                entity.transform.Find("Turn Indicator").gameObject.SetActive(true);
+
+                waitingForPlayerInput = true;
+                entityState = State.WaitingForAction;
+
+                yield return new WaitWhile(WaitForPlayerInput);
+
+                if(entityState == State.UseSkill) {
+                    moveKey--;
+                    attackDistance = new(-entity.combatData.movesets[moveKey].attackDistance, 0);
+                }
+
+                entity.transform.Find("Turn Indicator").gameObject.SetActive(false);
+                targetCircle.GetComponent<Image>().enabled = false;
+            }
+
+            if(entityState == State.UseSkill) {
+                targetPos = new Vector3(target.transform.position.x + attackDistance.x, target.transform.position.y);
+                
+                entity.transform.DOMove(targetPos, dashSpeed); 
+                yield return new WaitForSeconds(0.5f); //after moving to postionn
+
+                entity.SetTarget(target, entity.combatData.movesets[moveKey].damage, 0); //set effects
+
+                entity.PerformAttack(moveKey);
+
+                yield return new WaitUntil(() => entity.isActionFinished);
+
+                entity.isActionFinished = false;
+                entityState = State.WaitingForAction;
+                yield return new WaitForSeconds(0.5f);
+
+                entity.transform.DOMove(returnPos, 0.5f);  
+            }
+            
+            yield return new WaitForSeconds(1);
+
             i++;
-            if(i == turnOrder.Count)
-                i = 0;
+            if(i == turnOrder.Count) i = 0;
         }
     }
 
     public enum MoveType {SKILL, ITEM}
-    MoveType moveType;
+    public MoveType moveType;
 
-    public enum State {WaitingForAction, SelectTarget, UseSkill, UseItem, Flee};
-    private State entityState;
+    public void _SetMoveTypeToSKill() => moveType = MoveType.SKILL;
+    public void _SetMoveTypeToItem() => moveType = MoveType.ITEM;
+
+    public enum State {WaitingForAction, SelectTarget, SelectItem, UseSkill, UseItem, Flee};
+    public State entityState;
     private bool WaitForPlayerInput() {
         if(waitingForPlayerInput) {
             if(entityState == State.SelectTarget) {
                 SelectTarget();
             }
+
+            if(target && moveType == MoveType.SKILL && entityState == State.SelectTarget) { //showonly if there are items
+                CombatUI.instance._ToggleUSWIButton(true);
+                entityState = State.WaitingForAction;
+            }
+
+
             if(entityState == State.UseItem) {
                 ///player will have to learn if it can attack or heal
                 
@@ -181,13 +232,12 @@ public class CombatSystem : MonoBehaviour {
     }
 
     int rememberAttackKey;
-    int moveKey = 0;
+    public int moveKey = 0;
     Coroutine pulsate;
     Coroutine notice;
     public void _SkillButton(int attackKey) {
         ChangeTeamTargetSelection(false);
 
-        moveType = MoveType.SKILL;
         entityState = State.SelectTarget;
 
         if(pulsate != null) StopCoroutine(pulsate);
@@ -204,6 +254,8 @@ public class CombatSystem : MonoBehaviour {
         }
         else {
             if(rememberAttackKey != attackKey) {
+                CombatUI.instance._ToggleUSWIButton(false);
+
                 targetCircle.GetComponent<Image>().enabled = false;
                 target = null;
                 rememberAttackKey = attackKey;
@@ -220,50 +272,135 @@ public class CombatSystem : MonoBehaviour {
         }
     }
 
-    ItemData selectedItem;
-    GameObject combatItemViewTemp;
+    public void _UseSkillWithItem() {
+        CombatUI.instance._ToggleItemPanel();
+        CombatUI.instance._ToggleSkillPanel();
+        CombatUI.instance._ToggleUSWIButton(false);
+        entityState = State.SelectItem;
+    }
 
+    public void _CancelSKill() {
+        target = null;
+        targetCircle.GetComponent<Image>().enabled = false;
+        
+        CombatUI.instance._ToggleUSWIButton(false);
+        CombatUI.instance._ToggleSkillPanel();
+        CombatUI.instance._ToggleSIRSelectionPanel();
+    }
+
+    public ItemData selectedItem;
     internal void SelectItem(ItemData itemData) {
         ChangeTeamTargetSelection(true);
 
-        notice = StartCoroutine(CombatUI.instance.SelectTargetNotice());
-        moveType = MoveType.ITEM;
-        entityState = State.SelectTarget;
-
         if(selectedItem != itemData) {
-            Destroy(combatItemViewTemp);
+            DeleteItemTemp();
 
-            targetCircle.GetComponent<Image>().enabled = false;
-            target = null;
+            // targetCircle.GetComponent<Image>().enabled = false;
+            // target = null;
             selectedItem = itemData;
 
             Combat.instance.UpItemAni();
+            CombatUI.instance.UpdateItemText(itemData.name, "TBA");
             return;
         }
 
         selectedItem = itemData;
         
         Combat.instance.UpItemAni();
-        CombatUI.instance.UpdateItemText(itemData.name);
+        CombatUI.instance.UpdateItemText(itemData.name, "TBA");
     }
 
+    public void _CancelItemSelection() {
+        if(moveType == MoveType.ITEM) {
+            selectedItem = null;
+            DeleteItemTemp();
+
+            Combat.instance.HelsBackToIdle();
+            CombatUI.instance._ToggleItemPanel();
+            CombatUI.instance._MoveCameraDown(false);
+            CombatUI.instance._ToggleSIRSelectionPanel();
+        }
+    }
+
+    public void _UseItemOnHeroThenAttack() {
+        if(moveType != MoveType.SKILL) 
+            return;
+        
+        CombatUI.instance._ToggleItemPanel();
+        moveKey = rememberAttackKey;
+
+        StartCoroutine(ItemTossThenSkill(entity.transform.position)); //make a new one
+    }
+
+     public IEnumerator ItemTossThenSkill(Vector3 targetToTossItem) {
+        targetCircle.GetComponent<Image>().enabled = false;
+        floatingTweenTemp.Kill();
+
+        tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        tempraryItemOBject.transform.DOJump(targetToTossItem, 10, 1, 0.5f);
+        yield return new WaitForSeconds(1);
+
+        Combat.instance.HelsBackToIdle();
+        DeleteItemTemp();
+        // selectedItem.UseItem(target.GetComponent<Combat>());
+        selectedItem.inventoryAmount--;
+        waitingForPlayerInput = false;
+
+        entityState = State.UseSkill;
+        //set effects
+    }
+
+    public void _ItemSelectTarget() {
+        if(moveType != MoveType.ITEM)
+            return;
+
+        if(notice != null) StopCoroutine(notice);
+
+        if(selectedItem != null) {
+            entityState = State.SelectTarget;
+            notice = StartCoroutine(CombatUI.instance.SelectTargetNotice());
+            CombatUI.instance._MoveCameraDown(false);
+            CombatUI.instance._ToggleSelectTargetToUseItemOn();
+        }
+        else {
+            notice = StartCoroutine(CombatUI.instance.NoItemSelectedNotice());
+            entityState = State.WaitingForAction;
+        }
+    }
+
+    public void _CancelItemTargetSelection () {
+        entityState = State.WaitingForAction;
+        selectedItem = null;
+        target = null;
+        targetCircle.GetComponent<Image>().enabled = false;
+        DeleteItemTemp();
+        CombatUI.instance._ToggleItemPanel();
+        CombatUI.instance._ToggleSelectTargetToUseItemOn();
+    }
+
+    public void DeleteItemTemp() {
+        Destroy(tempraryItemOBject);
+    }
+
+    [SerializeField] GameObject combatItemViewTemp;
+    GameObject tempraryItemOBject;
     Tween floatingTweenTemp;
     public void CreateItem(bool HelsIsAlive) {
-        combatItemViewTemp = new GameObject("Item", typeof(SpriteRenderer));
-        combatItemViewTemp.transform.localScale = new Vector3(0.5f, 0.5f);
-        combatItemViewTemp.GetComponent<SpriteRenderer>().sprite = selectedItem.sprite;
+        tempraryItemOBject = Instantiate(combatItemViewTemp);
 
-        if(HelsIsAlive) 
-            combatItemViewTemp.transform.position = heroes.Find(hero => hero.name == "Hels(Clone)").transform.position + new Vector3(-0.85f, 4.32f);
-        else {
-            combatItemViewTemp.transform.position = heroes.Find(hero => hero.name == "Hels(Clone)").transform.position + new Vector3(-2.41f, 2.72f);
-            combatItemViewTemp.GetComponent<SpriteRenderer>().sortingOrder = 4;
-            floatingTweenTemp = combatItemViewTemp.transform.DOMoveY(combatItemViewTemp.transform.position.y - 1, 1).SetLoops(-1, LoopType.Yoyo);
+        tempraryItemOBject.transform.localScale = new Vector3(0.5f, 0.5f);
+        tempraryItemOBject.GetComponent<SpriteRenderer>().sprite = selectedItem.sprite;
+
+        if(HelsIsAlive) {
+            tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            tempraryItemOBject.transform.position = heroes.Find(hero => hero.name == "Hels(Clone)").transform.position + new Vector3(-0.85f, 4.32f);
         }
-        
+        else {
+            tempraryItemOBject.transform.position = heroes.Find(hero => hero.name == "Hels(Clone)").transform.position + new Vector3(-2.41f, 2.72f);
+            tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+            floatingTweenTemp = tempraryItemOBject.transform.DOMoveY(tempraryItemOBject.transform.position.y - 1, 1).SetLoops(-1, LoopType.Yoyo);
+        }
     }
-
-
 
     public void _UseItemButton() {
         entityState = State.UseItem;
@@ -273,20 +410,23 @@ public class CombatSystem : MonoBehaviour {
             entityState = State.SelectTarget;
             return;
         }
-        Combat.instance.HelsBackToIdle();
-        CombatUI.instance._ToggleItemPanel();
+
+        CombatUI.instance._ToggleSelectTargetToUseItemOn();
         InventorySystem.instance.UpdateInventoryUI();  
 
-        StartCoroutine(ItemToss());
+        StartCoroutine(ItemTossThenUse(target.transform.position));
     }
 
-    public IEnumerator ItemToss() {
+    public IEnumerator ItemTossThenUse(Vector3 targetToTossItem) {
+        targetCircle.GetComponent<Image>().enabled = false;
         floatingTweenTemp.Kill();
-        combatItemViewTemp.GetComponent<SpriteRenderer>().sortingOrder = 4;
-        combatItemViewTemp.transform.DOJump(target.transform.position, 10, 1, 0.5f);
+
+        tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        tempraryItemOBject.transform.DOJump(targetToTossItem, 10, 1, 0.5f);
         yield return new WaitForSeconds(1);
 
-        Destroy(combatItemViewTemp);
+        Combat.instance.HelsBackToIdle();
+        DeleteItemTemp();
         selectedItem.UseItem(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
         waitingForPlayerInput = false;
@@ -294,12 +434,15 @@ public class CombatSystem : MonoBehaviour {
 
     public void _Flee() {}
 
-    private void Update() => CheckBattleOutcome();
+    private void Update() {
+        CheckBattleOutcome();
+        Debug.Log(entityState);
+    }
 
     private void CheckBattleOutcome() {
         if(remainingHeroes.Count == 0) {
             StopAllCoroutines();
-            SceneHandler.LoadScene("Overworld"); //cutscene -> overworld -> first level
+            SceneManager.LoadSceneAsync("Overworld");
 
             Debug.Log("battle lose");
         }

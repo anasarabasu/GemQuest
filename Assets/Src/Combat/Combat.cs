@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Aarthificial.Reanimation;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class Combat : MonoBehaviour {
-    public CombatData combatData;
+    public EntityStatData combatData;
+    [SerializeField] GameObject floatTextPrefab;
     [SerializeField] int healthEnemy = 1; //for enemy
     [SerializeField] Reanimator reanimator;
 
@@ -21,9 +23,7 @@ public class Combat : MonoBehaviour {
         entities = FindObjectsOfType<Combat>();
     }
 
-    public void ShowItem() {
-        CombatSystem.instance.CreateItem(true);
-    }
+    public void ShowItem() => CombatSystem.instance.CreateItem(true);
 
     internal bool isActionFinished;
     private void ActionFinished() => isActionFinished = true;
@@ -31,9 +31,11 @@ public class Combat : MonoBehaviour {
 
     private Combat target;
     private int damageFromAttacker;
-    public void SetTarget(GameObject target, int damage) {
+    private int stunFromAttacker;
+    public void SetTarget(GameObject target, int damage, int stun) {
         this.target = target.GetComponent<Combat>();
-        this.damageFromAttacker = damage;
+        damageFromAttacker = damage;
+        stunFromAttacker = stun;
     }
     public void PerformAttack(int attackKey) {
         combatData.currentEnergy -= combatData.movesets[attackKey].energyCost;
@@ -41,7 +43,7 @@ public class Combat : MonoBehaviour {
     }
 
     private void AnimationAttackHit() {
-        StartCoroutine(target.IsAttacked(damageFromAttacker));
+        StartCoroutine(target.IsAttacked(damageFromAttacker, 0));
         Debug.Log("Hit!");
     }
 
@@ -70,7 +72,6 @@ public class Combat : MonoBehaviour {
                     CombatSystem.instance.CreateItem(false);
                 }
             }
-
     }
 
     public void HelsBackToIdle() {
@@ -78,15 +79,23 @@ public class Combat : MonoBehaviour {
             if(obj.name.Replace("(Clone)", "") == "Hels") 
                 if(obj.isAlive)
                     obj.reanimator.Set("State", 0);
-
     }
 
-    public void Damage(int amount) => StartCoroutine(IsAttacked(amount));
+    public void Damage(int amount, int stunAmount) => StartCoroutine(IsAttacked(amount, stunAmount));
 
     float flickerSpeed = 0.1f;
-    IEnumerator IsAttacked(int damageAmount) {
+    IEnumerator IsAttacked(int damageAmount, int stunAmount) {
         if(damageAmount == 0) 
             yield break;
+
+        GameObject damageFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
+        damageFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("-" +damageAmount);
+        Destroy(damageFloat, 4);
+
+        GameObject effectGO = Instantiate(CombatEffects.instance.damage, transform.position, Quaternion.identity, transform);
+        var effect = effectGO.GetComponent<ParticleSystem>();
+        effect.Play();
+        Destroy(effectGO, effect.main.duration);
 
         if(CompareTag("Enemy")) 
             healthEnemy -= damageAmount;
@@ -95,16 +104,27 @@ public class Combat : MonoBehaviour {
                 combatData.currentHealth -= damageAmount;
         }
 
+        stunDuration += stunAmount;
+
         transform.DOShakePosition(1);
         for(int i = 0; i < 4; i++) { 
             reanimator.Renderer.color = Color.red;
             yield return new WaitForSeconds(flickerSpeed);
             reanimator.Renderer.color = Color.white;
             yield return new WaitForSeconds(flickerSpeed);
-
         }
         yield return null;
-        yield return null;
+
+        if(damageAmount <= 3) {
+            GameObject textFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
+            textFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("Not effective!");
+            Destroy(textFloat, 4);
+        }
+        if(damageAmount >= 20) {
+            GameObject textFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
+            textFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("Super effective!");
+            Destroy(textFloat, 4);
+        }
         
         reanimator.Renderer.color = Color.white;
         isActionFinished = false;
@@ -116,6 +136,10 @@ public class Combat : MonoBehaviour {
     IEnumerator IsHealed(int healAmount) {
         if(healAmount == 0) 
             yield break;
+            
+        GameObject effectGO = Instantiate(CombatEffects.instance.heal, transform.position, Quaternion.identity, transform);
+        var effect = effectGO.GetComponent<ParticleSystem>();
+        effect.Play();
 
         if(CompareTag("Enemy")) 
             healthEnemy += healAmount;
@@ -132,18 +156,26 @@ public class Combat : MonoBehaviour {
 
         }
         yield return null;
+
+        Destroy(effectGO, effect.main.duration);
         isActionFinished = false;
         CheckHealth();
+
     }
+
+    public int stunDuration;
+    //is stunned
+    //is electrocuted
 
     public bool isAlive = true;
 
-    private void CheckHealth() {
+    public void CheckHealth() {
         if(gameObject.tag == "Hero") {
             if(combatData.currentHealth <= 0) {
                 reanimator.Set("State", 4); //dead
                 reanimator.Renderer.color = Color.white;
                 isAlive = false;
+                combatData.currentEnergy = 0;
             }
             else {
                 reanimator.Set("State", 0); //dead

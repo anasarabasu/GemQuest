@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class StatBarUI : MonoBehaviour {
     public static StatBarUI instance;
 
-    public CombatData entity;
+    public EntityStatData entity;
 
     [SerializeField] Slider healthSlider;
     [SerializeField] Slider easeHealthSlider;
@@ -26,23 +26,26 @@ public class StatBarUI : MonoBehaviour {
 
         healthSlider.maxValue = entity.health;
         easeHealthSlider.maxValue = healthSlider.maxValue;
+
         currentHealth = entity.currentHealth;
+        healthSlider.value = currentHealth;
+        easeHealthSlider.value = currentHealth;
 
         energySlider.maxValue = entity.energy;
         currentEnergy = entity.currentEnergy;
     }
 
-    public void UpdateEntityFocusPanel(CombatData newEntity) {
+    public void UpdateEntityFocusPanel(EntityStatData newEntity) {
         entity = newEntity;
 
         transform.Find("Name").GetComponent<TextMeshProUGUI>().SetText(entity.name.Replace("Stats", ""));
 
         healthSlider.maxValue = entity.health;
         easeHealthSlider.maxValue = healthSlider.maxValue;
-        currentHealth = entity.currentHealth;
 
-        easeHealthSlider.maxValue = healthSlider.maxValue;
         currentHealth = entity.currentHealth;
+        healthSlider.value = currentHealth;
+        easeHealthSlider.value = currentHealth;
 
         energySlider.maxValue = entity.energy;
         currentEnergy = entity.currentEnergy;

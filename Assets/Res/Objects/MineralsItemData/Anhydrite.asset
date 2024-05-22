@@ -18,10 +18,10 @@ MonoBehaviour:
 '
   sprite: {fileID: 2011741444, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   hitPoints: 1
-  inventoryAmount: 40
+  inventoryAmount: 12
   itemType: 0
   healAmount: 0
   energyAmount: 0
-  stunDuration: 0
+  stunDuration: 1
   electricDuration: 0
   damageAmount: 5

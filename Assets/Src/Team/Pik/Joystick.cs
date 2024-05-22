@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class Joystick : MonoBehaviour, ISaveable {
     [SerializeField] Rigidbody2D body;
     [SerializeField] float speed = 4f;
+    [SerializeField] EntityStatData pikStats;
 
     private void Start() {
         GameObject[] teamMates = {GameObject.FindGameObjectWithTag("Hels"), GameObject.FindGameObjectWithTag("Pom"), GameObject.FindGameObjectWithTag("Iska")};
@@ -12,6 +14,9 @@ public class Joystick : MonoBehaviour, ISaveable {
             if(member != null)
                 Physics2D.IgnoreCollision(member.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());    
         }
+
+
+        slowSpeed = speed / 2;
     }
 
     internal static bool canMove = true;
@@ -19,23 +24,42 @@ public class Joystick : MonoBehaviour, ISaveable {
         canMove = state;
     }
 
+    float actualSpeed;
+    float slowSpeed;
+    private void Update() {
+        if(pikStats.currentEnergy > 0)
+            actualSpeed = speed;
+        else
+            actualSpeed = slowSpeed;
+    }
+
+
     private void FixedUpdate() {
         if(canMove && direction != Vector2.zero) 
-            body.AddForce(direction * speed); 
+            body.AddForce(direction * actualSpeed); 
     }
 
     private enum Facing {FRONT = 0, BACK = 1, LEFT = 2, RIGHT = 3}
     private static int facingDirection;
     internal static int UpdateDirection() {
-        if(direction.y < 0) 
+        if(direction.y < 0) {
             facingDirection = (int)Facing.FRONT;
-        else if(direction.y > 0) 
+            // flashLight.transform.Rotate(0,0,180);
+        }
+        else if(direction.y > 0) {
             facingDirection = (int)Facing.BACK;
+            // flashLight.transform.Rotate(0,0,0);
+        }
 
-        if(direction.x < -0.5) 
+        if(direction.x < -0.5) {
             facingDirection = (int)Facing.LEFT;
-        else if(direction.x > 0.5) 
+            // flashLight.transform.Rotate(0,0,90);
+        }
+        else if(direction.x > 0.5) {
+
             facingDirection = (int)Facing.RIGHT;
+            // flashLight.transform.Rotate(0,0,-90);
+        }
 
         return facingDirection;
     }

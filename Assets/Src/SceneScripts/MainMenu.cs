@@ -1,6 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour, ISaveable {
     [SerializeField] TextMeshProUGUI startText;
@@ -8,18 +9,24 @@ public class MainMenu : MonoBehaviour, ISaveable {
 
     private bool newGame;
     private string nextScene;
+    AsyncOperation introCutscene;
 
     private void Start() {
         if(newGame) {
             startText.SetText("* Begin Story *");
             nextScene = "Cutscene";
+
+
+
         }
-        else 
+        else {
             startText.SetText("* Continue *");
+            nextScene = "Overworld";
+        }
     }
 
     public void _StartGame() {
-        SceneHandler.LoadScene(nextScene);
+        SceneManager.LoadSceneAsync("Cutscene", LoadSceneMode.Single);
     }
 
     private bool settingsToggle = false;
@@ -34,15 +41,11 @@ public class MainMenu : MonoBehaviour, ISaveable {
         }            
     }
 
-    public void _ShowCredits() {
-    }
+    public void _ShowCredits() {}
 
-    public void Save(DataRoot data) {
-        // data.userData.newgame = newgame;
-    }
+    public void Save(DataRoot data) {}
 
     public void Load(DataRoot data) {
         newGame = data.gameData.newGame;
-        nextScene = data.gameData.lastScene;
     }
 }

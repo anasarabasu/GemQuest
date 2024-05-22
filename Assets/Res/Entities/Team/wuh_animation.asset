@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: wuh_animation
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 386860607, guid: 20d5723b046d3b74284a7475ef1d8462, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 809636866, guid: 20d5723b046d3b74284a7475ef1d8462, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1399024105, guid: 20d5723b046d3b74284a7475ef1d8462, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1554147504, guid: 20d5723b046d3b74284a7475ef1d8462, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: MyTurn
+    autoIncrement: 1
+    percentageBased: 0
+    guid: c5b7f46f-da9a-4830-addf-11526b7fdadc
+  drivers:
+    keys: []
+    values: 

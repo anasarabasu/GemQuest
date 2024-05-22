@@ -18,7 +18,7 @@ MonoBehaviour:
 '
   sprite: {fileID: -1544242360, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   hitPoints: 1
-  inventoryAmount: 48
+  inventoryAmount: 15
   itemType: 0
   healAmount: 0
   energyAmount: 0

@@ -22,7 +22,6 @@ using UnityEngine;
     
     public bool newGame;
     public int dialogueIndex;
-    public string lastScene;
     public List<string> teamComposition;
     public bool showFPS;
 }
@@ -31,7 +30,6 @@ using UnityEngine;
     public OverworldData() {
         penaltyWrongCountry = 0;
         overworldCoordinates = new Vector3(0, 0, -6.88f);
-
     }
 
     public Vector3 overworldCoordinates;
@@ -40,15 +38,14 @@ using UnityEngine;
 
 [Serializable] public class LevelData {
     public LevelData() {
-        levelCoordinates = new Vector2(0, -1);
+        levelCoordinates = new Vector2(0, -2);
         currentLevel = 1;
     }
 
     public int currentLevel;
     public Vector2 levelCoordinates;
     public List<GameObject> lvl1ObjectPersistence;
-    // public GameObject[] lvl2ObjectPersistence;
-
+    public List<GameObject> lvl2ObjectPersistence;
 }
 
 [SerializeField] public class CharacterStats {

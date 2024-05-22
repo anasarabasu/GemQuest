@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscenes/Cutscene16.unity
     guid: ea3bbc32bf5734a4b98a8df596b31af6
   - enabled: 1
-    path: Assets/Scenes/Doctor.unity
+    path: Assets/Scenes/DialogueSystem.unity
     guid: 75d6e47c20631fe4eb6d6087eb02c2a2
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
@@ -66,10 +66,10 @@ EditorBuildSettings:
     path: Assets/Scenes/WrongChoice.unity
     guid: e7d4b138158209847b7249da698f5c42
   - enabled: 1
-    path: Assets/Scenes/Czechia.unity
+    path: Assets/Scenes/Level1.unity
     guid: f9776952640597949a20082fcc058c50
   - enabled: 1
-    path: Assets/Scenes/Czechia2.unity
+    path: Assets/Scenes/Level2.unity
     guid: 885dfff1911d4cd4b97b16c8e4bbe811
   - enabled: 1
     path: Assets/Scenes/Combat.unity

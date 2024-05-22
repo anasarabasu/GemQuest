@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PikStats
   m_EditorClassIdentifier: 
   health: 80
-  currentHealth: 35
+  currentHealth: 80
   energy: 50
-  currentEnergy: 44
+  currentEnergy: 18.885033
   speed: 5
   movesets:
   - name: Pickaxe Mine

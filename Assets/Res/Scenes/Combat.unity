@@ -973,6 +973,10 @@ MonoBehaviour:
   damage: {fileID: 1758473627833946668, guid: 9b21333b068a5084ba09535839bee3c8, type: 3}
   heal: {fileID: 1157910586704110123, guid: 4e37f41a6b930434db496e5780a57ab2, type: 3}
   electrocute: {fileID: 609137528104868087, guid: 78244c2b179f11443b02f2752769f027, type: 3}
+  shield: {fileID: 1289543790355709915, guid: b99922c2f59b1a542bdd06ae8bee47ae, type: 3}
+  stun: {fileID: 0}
+  acid: {fileID: 0}
+  fail: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
 --- !u!4 &156914465
 Transform:
   m_ObjectHideFlags: 0
@@ -2380,9 +2384,9 @@ MonoBehaviour:
   entity: {fileID: 11400000, guid: d4719779fb6abc6439d6d44ab8920e20, type: 2}
   healthSlider: {fileID: 953209877}
   easeHealthSlider: {fileID: 1441917317}
-  currentHealth: 35
+  currentHealth: 80
   energySlider: {fileID: 933289584}
-  currentEnergy: 44
+  currentEnergy: 22.307354
 --- !u!114 &393268864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,10 +3441,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 169942921}
-        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 663244513}
+        m_TargetAssemblyTypeName: CombatSystem, Assembly-CSharp
+        m_MethodName: _Flee
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4804,7 +4808,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 44
+  m_Value: 22.307354
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5025,7 +5029,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 80
   m_WholeNumbers: 0
-  m_Value: 35
+  m_Value: 80
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6736,7 +6740,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 80
   m_WholeNumbers: 0
-  m_Value: 35
+  m_Value: 80
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8720,7 +8724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 76.5, y: 16.44}
+  m_AnchoredPosition: {x: 76.5, y: 16.440002}
   m_SizeDelta: {x: 138.4, y: 22.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835427713

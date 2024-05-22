@@ -10,8 +10,14 @@ public class SpawnItemDrop : MonoBehaviour{
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = itemData.sprite;
         
-        Vector3 dropDirection = new Vector2(Random.Range(-1, 1), Random.Range(0, 1));
-        transform.DOJump(transform.position + dropDirection, 1, 2, 1f);
+        transform.DOJump(transform.position + Random.insideUnitSphere * 2.5f, 1, 2, 1f);
+        StartCoroutine(Wait());
+
+    }
+
+    private void Update() {
+        transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("Pik").transform.position, 0.01f);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collider) { 
@@ -20,4 +26,11 @@ public class SpawnItemDrop : MonoBehaviour{
             Destroy(gameObject);
         }
     }
+
+    IEnumerator Wait() {
+        yield return new WaitForSeconds(0.5f);
+        tag = "Loot";
+
+    }
+
 }

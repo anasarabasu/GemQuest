@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4631289700878078509}
   - component: {fileID: 3622296521716565281}
   - component: {fileID: 201766967332813777}
+  - component: {fileID: -4456025256229598700}
   m_Layer: 7
   m_Name: Rock 6
   m_TagString: Destroyable
@@ -148,23 +149,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DropPrefab: {fileID: 403857066209228780, guid: db21dd94e5e2c6541afe4317619b42b1, type: 3}
-  itemDropList:
-  - {fileID: 11400000, guid: 04f2829666332e24b820d4781864dfe3, type: 2}
-  - {fileID: 11400000, guid: 7b209c7bf94e605419865f931e35c5b5, type: 2}
-  - {fileID: 11400000, guid: 17904a9a2424b2342bb0ac35cb160694, type: 2}
-  - {fileID: 11400000, guid: 9fa4a9311ef03db47b8ea2c9a9a5007d, type: 2}
-  - {fileID: 11400000, guid: 04c4bd34d56a2e64d89acd67e0b6e5a7, type: 2}
-  - {fileID: 11400000, guid: 08acfb0254e4a3f4083dce9419a05c59, type: 2}
+  theCommonRock: {fileID: 11400000, guid: 305c7a5409eae3e4dabd17d60e88304e, type: 2}
+  itemDropList_LVL1:
+  - {fileID: 11400000, guid: 305c7a5409eae3e4dabd17d60e88304e, type: 2}
   - {fileID: 11400000, guid: 0f084aa54cf654e48b0a394b24eda9fd, type: 2}
-  - {fileID: 11400000, guid: 6921ac2eb089f56479504873c347b058, type: 2}
+  - {fileID: 11400000, guid: a3e67f6f915fbf04abe7ad917347445e, type: 2}
   - {fileID: 11400000, guid: dd0cf9564de29ec46934d113bbc1841f, type: 2}
+  - {fileID: 11400000, guid: 4883772e89fb79843aa8afd9d31a6f96, type: 2}
+  - {fileID: 11400000, guid: 7b209c7bf94e605419865f931e35c5b5, type: 2}
+  - {fileID: 11400000, guid: 04c4bd34d56a2e64d89acd67e0b6e5a7, type: 2}
+  - {fileID: 11400000, guid: 6d09c413ada6bfd458a6bb14ff5afbbe, type: 2}
   - {fileID: 11400000, guid: 169e8702343ca254fadd503fb55ff36a, type: 2}
   - {fileID: 11400000, guid: 1171bf1db8c278441a981956465d80ab, type: 2}
-  - {fileID: 11400000, guid: 20dc1e4d054de8f46810d26d66f43f67, type: 2}
-  - {fileID: 11400000, guid: a3e67f6f915fbf04abe7ad917347445e, type: 2}
-  - {fileID: 11400000, guid: 4883772e89fb79843aa8afd9d31a6f96, type: 2}
-  - {fileID: 11400000, guid: 6d09c413ada6bfd458a6bb14ff5afbbe, type: 2}
-  - {fileID: 11400000, guid: 98c4bbdb7333ad44cb0707d135f0e81a, type: 2}
+  - {fileID: 11400000, guid: 04f2829666332e24b820d4781864dfe3, type: 2}
+  itemDropList_LVL2:
   - {fileID: 11400000, guid: 305c7a5409eae3e4dabd17d60e88304e, type: 2}
+  - {fileID: 11400000, guid: a3e67f6f915fbf04abe7ad917347445e, type: 2}
+  - {fileID: 11400000, guid: 04c4bd34d56a2e64d89acd67e0b6e5a7, type: 2}
+  - {fileID: 11400000, guid: 6d09c413ada6bfd458a6bb14ff5afbbe, type: 2}
+  - {fileID: 11400000, guid: 20dc1e4d054de8f46810d26d66f43f67, type: 2}
+  - {fileID: 11400000, guid: 9fa4a9311ef03db47b8ea2c9a9a5007d, type: 2}
+  - {fileID: 11400000, guid: 1171bf1db8c278441a981956465d80ab, type: 2}
+  - {fileID: 11400000, guid: 6921ac2eb089f56479504873c347b058, type: 2}
+  - {fileID: 11400000, guid: 08acfb0254e4a3f4083dce9419a05c59, type: 2}
+  - {fileID: 11400000, guid: 98c4bbdb7333ad44cb0707d135f0e81a, type: 2}
+  - {fileID: 11400000, guid: 17904a9a2424b2342bb0ac35cb160694, type: 2}
   hitPoints: 1
   lootDropAmount: 1
+--- !u!58 &-4456025256229598700
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269608113286236526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.25

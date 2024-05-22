@@ -10,7 +10,6 @@ using UnityEngine.UI;
 [CreateAssetMenu] [ExecuteInEditMode]
 public class ItemData : ScriptableObject {
     [TextArea] public string CombatDescription = "description";
-
     [TextArea] public string LevelDescription = "description";
     public Sprite sprite;
     public int dropChance = 1;
@@ -22,8 +21,6 @@ public class ItemData : ScriptableObject {
 
     public enum ItemEffectType {NONE, ELECTRIC, ACID, SHIELD, HEAL, STUN}
     public ItemEffectType itemEffectType;
-
-
     public int effectTurnDuration = 1;
     public int effectAmount = 1;
 

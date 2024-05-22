@@ -2,6 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VolFx;
 
 public class Mine : MonoBehaviour {
     [SerializeField] EntityStatData pikStats;
@@ -9,6 +10,11 @@ public class Mine : MonoBehaviour {
 
     private void Update() {
         UpdateObjectInRange();
+
+        if(pikStats.currentEnergy < 0) {
+            mineRequest = false;
+        }
+        
     }
 
     private bool mineRequest = false;
@@ -18,7 +24,7 @@ public class Mine : MonoBehaviour {
         mineRequest = context.performed;
 
         if(mineRequest) {
-            if(pikStats.currentEnergy > 0) {
+            if(pikStats.currentEnergy.RoundToInt() > 0) {
                 Joystick.MovementState(false);
                 StartMining = true;
             }
@@ -29,6 +35,7 @@ public class Mine : MonoBehaviour {
                 tired = StartCoroutine(PikIsTired());
             }
         }
+        
     }
 
     Coroutine tired;
@@ -53,10 +60,22 @@ public class Mine : MonoBehaviour {
             objInRange = null;
     }
 
+    private void OnTriggerEnter2D(Collider2D obj) {
+        if(obj.tag == "Destroyable")
+            objInRange = obj.gameObject.GetComponent<LevelObject>();
+    }
+
+    private void OnTriggerExit2D(Collider2D obj) {
+        if(obj.tag == "Destroyable")
+            objInRange = null;
+    }
+
     public void FinishMining() {
         if(objInRange != null) {
+            objInRange.GetMined();
             pikStats.currentEnergy--;
-            // objInRange.GetMined();
+            if(pikStats.currentEnergy < 0)
+                pikStats.currentEnergy = 0;
         }
 
         if(!mineRequest) {

@@ -31,6 +31,10 @@ public class Joystick : MonoBehaviour, ISaveable {
             actualSpeed = speed;
         else
             actualSpeed = slowSpeed;
+
+        if(!body.IsAwake())
+            if(pikStats.currentEnergy < pikStats.energy)
+                pikStats.currentEnergy += 2 * Time.deltaTime;
     }
 
 

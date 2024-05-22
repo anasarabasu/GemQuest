@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Anhydrite
   m_EditorClassIdentifier: 
-  description: 'The drama queen of minerals, prefers its dry, calcium-sulfate personality,
-    but still rocks in industrial uses like cement and plaster production.
-
-'
+  CombatDescription: Ah! It burns!
+  LevelDescription: Used in the production of sulfuric acid and as a filler in paper,
+    paint, and plastics.
   sprite: {fileID: 2011741444, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
-  hitPoints: 1
-  inventoryAmount: 12
+  dropChance: 30
+  maxLootDrop: 5
+  hitPoints: 2
+  inventoryAmount: 17
   itemType: 0
-  healAmount: 0
-  energyAmount: 0
-  stunDuration: 1
-  electricDuration: 0
-  damageAmount: 5
+  itemEffectType: 2
+  effectTurnDuration: 1
+  effectAmount: 15
+  strongAgainst: 2
+  notEffectiveTo: 1
+  oneHit: 1
+  damageAddedToSkill: 999
+  failSkill: 0

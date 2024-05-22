@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  description: A very normal rock you collected while mining.
+  CombatDescription: A simple stone, perfect for a quick throw.
+  LevelDescription: A couple of rocks you collected while mining
   sprite: {fileID: 1853431996, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 100
+  maxLootDrop: 1
   hitPoints: 1
   inventoryAmount: 1
   itemType: 0
-  healAmount: 0
-  energyAmount: 0
-  stunDuration: 0
-  electricDuration: 0
-  damageAmount: 1
+  itemEffectType: 0
+  effectTurnDuration: 1
+  effectAmount: 1
+  strongAgainst: 0
+  notEffectiveTo: 0
+  oneHit: 0
+  damageAddedToSkill: 0
+  failSkill: 1

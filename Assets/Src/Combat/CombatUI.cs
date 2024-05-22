@@ -111,55 +111,12 @@ public class CombatUI : MonoBehaviour {
 
     [SerializeField] RectTransform noticePanel;
 
-    public IEnumerator SelectTargetNotice() {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("Select a target");
+    public IEnumerator ShowNotice(string message) {
+        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(message);
         
         noticePanel.DOAnchorPosY(12.75f, 0.25f);
         yield return new WaitForSeconds(1);
         noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-    }
-    public IEnumerator NoTargetNotice() {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("No target selected");
-
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(1);
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-    }
-
-    public IEnumerator NoEnergyNotice(string name) {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText($"{name} is too tired to do anything...");
-
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(2);
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-        yield return new WaitForSeconds(1);
-    }
-
-    public IEnumerator NoItemSelectedNotice() {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText("No item selected");
-
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(2);
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-        yield return new WaitForSeconds(1);
-    }
-
-    public IEnumerator EntityIsStunned(string name) {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText($"{name} is stunned and can't move");
-
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(2);
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-        yield return new WaitForSeconds(1);
-    }
-
-    public IEnumerator HeroDown(string name) {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText($"{name} is has fallen and can't get up!");
-
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(2);
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-        yield return new WaitForSeconds(1);
     }
 
     [SerializeField] float cameramoveSpeed = 0.25f;

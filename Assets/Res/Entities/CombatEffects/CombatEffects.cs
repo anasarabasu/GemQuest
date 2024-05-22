@@ -9,4 +9,8 @@ public class CombatEffects : MonoBehaviour {
     public GameObject damage;
     public GameObject heal;
     public GameObject electrocute;
+    public GameObject shield;
+    public GameObject stun;
+    public GameObject acid;
+    public GameObject fail;
 }

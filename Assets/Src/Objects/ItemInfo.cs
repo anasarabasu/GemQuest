@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class ItemInfo : MonoBehaviour {
     public static ItemInfo instance;
-    internal Transform infoPanel;
+    [SerializeField] RectTransform infoPanel;
     private void Awake() {
         instance = this;
-        infoPanel = transform;
     }
 
     private ItemData selectedItem;
@@ -19,13 +18,13 @@ public class ItemInfo : MonoBehaviour {
     }
 
     private void ToggleInfoPanel() {
-        infoPanel.DOLocalMoveY(30, 0.5f);
+        infoPanel.DOAnchorPosY(-28.5285f, 0.5f);
         infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + selectedItem.LevelDescription);
     }
 
     internal void HideInfoPanel() {
         if(infoPanel != null)
-            infoPanel.DOLocalMoveY(150, 0.5f);
+            infoPanel.DOAnchorPosY(-141.3f, 0.5f);
     }
 
     public void _UseItem() {

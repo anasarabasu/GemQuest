@@ -4,10 +4,10 @@ using UnityEngine;
 
 [CreateAssetMenu]
 public class EntityStatData : ScriptableObject {
-    public int health = 40;
-    public int currentHealth = 40;
-    public int energy = 30;
-    public int currentEnergy = 30;
+    public float health = 40;
+    public float currentHealth = 40;
+    public float energy = 30;
+    public float currentEnergy = 30;
     public int speed = 1;
     public Moveset[] movesets;
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215358790657015726}
   - component: {fileID: 2412231907203609833}
+  - component: {fileID: 2109643371439122189}
   m_Layer: 6
   m_Name: Flicker
   m_TagString: Untagged
@@ -49,7 +50,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.65
   m_Color: {r: 1, g: 0.5584551, b: 0, a: 1}
-  m_Intensity: 2.3059874
+  m_Intensity: 2.6513648
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 3100db3a00000000c5f7a468
@@ -82,6 +83,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &2109643371439122189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183368701714354950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048d701dbbc376a48b86be3c2ccc41d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerLight: {fileID: 215358790657015726}
 --- !u!1 &6348157093753316724
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +188,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4937759276400781085}
   - component: {fileID: 6126196031995972964}
-  - component: {fileID: 3492907868139220718}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -251,16 +264,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3492907868139220718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702269442778841113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048d701dbbc376a48b86be3c2ccc41d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flickerLight: {fileID: 215358790657015726}

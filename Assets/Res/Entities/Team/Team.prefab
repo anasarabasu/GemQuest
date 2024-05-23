@@ -378,7 +378,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7060508416503057917}
-  - component: {fileID: 7407560732708787616}
   m_Layer: 0
   m_Name: Team
   m_TagString: Untagged
@@ -405,19 +404,6 @@ Transform:
   - {fileID: 6167601093640544543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7407560732708787616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975804851937714881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a73a08ec55ba2439451cc1a21bed6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 0
 --- !u!1 &2601341231852265278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 5001758676597685638}
   speed: 8
+  pikStats: {fileID: 0}
 --- !u!114 &3639025959222347001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692224155b2b0324eb721d7174e5eba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pikStats: {fileID: 0}
+  noticePanel: {fileID: 0}
+  StartMining: 0
+  pickaxeLevel: 1
 --- !u!114 &5468798338630856791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,6 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 5001758676597685638}
+  mine: {fileID: 0}
 --- !u!1 &8558111114531673981
 GameObject:
   m_ObjectHideFlags: 0

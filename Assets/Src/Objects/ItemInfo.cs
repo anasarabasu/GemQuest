@@ -28,10 +28,18 @@ public class ItemInfo : MonoBehaviour {
             infoPanel.DOAnchorPosY(-141.3f, 0.5f);
     }
 
+    public bool itemToggleForTutorial;
+
+    public void _UseTutorialCopper(ItemData copper) {
+        if(selectedItem == copper) {
+
+
+        }
+    }
+    
     public void _UseItem() {
         if(selectedItem) {
-            ToggleInfoPanel();
-            HideInfoPanel();
+            InventorySystem.instance._ToggleInventory();
             selectedItem.UseItem_LEVEL();
             NoticePanel.instance.ShowNotice($"Used {selectedItem.name}");
             selectedItem.unlockLevelDescription = true;

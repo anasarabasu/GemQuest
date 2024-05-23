@@ -20,7 +20,7 @@ MonoBehaviour:
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 2
-  inventoryAmount: 16
+  inventoryAmount: 2
   itemType: 0
   itemEffectType: 1
   effectTurnDuration: 1

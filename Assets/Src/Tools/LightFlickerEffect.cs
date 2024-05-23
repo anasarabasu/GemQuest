@@ -6,14 +6,14 @@ using UnityEngine.Rendering.Universal;
 public class LightFlicker : MonoBehaviour {
 
     [SerializeField] Transform flickerLight;
+    [SerializeField] float intensityMin = 0;
+    [SerializeField] float intensityMax = 4;
     Light2D flickerLightComponent;
     
     // Start is called before the first frame update
     void Start()
     {
-        flickerLight = transform.GetChild(1);
         flickerLightComponent = flickerLight.GetComponent<Light2D>();
-
         StartCoroutine(Timer());
     }
 
@@ -21,7 +21,7 @@ public class LightFlicker : MonoBehaviour {
     {
         for (; ; ) //this is while(true)
         {
-            float randomIntensity = Random.Range(1.5f, 3.5f);
+            float randomIntensity = Random.Range(intensityMin, intensityMax);
             flickerLightComponent.intensity = randomIntensity;
 
 

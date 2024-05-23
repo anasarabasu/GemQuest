@@ -249,7 +249,7 @@ TextureImporter:
         width: 25
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,6 +257,27 @@ TextureImporter:
       bones: []
       spriteID: 259544dab0cdb624895d781632ddafcb
       internalID: -1850694766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Use
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7feed863c3a1b49a1ca3fcb5745822
+      internalID: 1544426884
       vertices: []
       indices: 
       edges: []
@@ -279,6 +300,7 @@ TextureImporter:
       Inventory: 1497908496
       Menu: -2114021854
       Mine: -2091655303
+      Use: 1544426884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

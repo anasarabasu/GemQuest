@@ -13,13 +13,17 @@ using UnityEngine;
 [Serializable] public class GameData { 
     public GameData() { //default values
         newGame = true;
-        dialogueIndex = 0;
+        dialogueIndexCounter = 0;
         teamComposition = new List<string> {"Pik", "Hels"};
         showFPS = true;
     }
-    
     public bool newGame;
-    public int dialogueIndex;
+    public bool hasShownIntroCutscene;
+    public int dialogueIndexCounter;
+    public bool hasIntroducedOverWorldControls;
+    public bool hasIntroducedLevelControls;
+    
+    
     public List<string> teamComposition;
     public bool showFPS;
 }

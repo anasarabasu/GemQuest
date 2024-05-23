@@ -29,8 +29,11 @@ public class InventorySystem : MonoBehaviour, ISaveable {
     public void UpdateInventoryUI() {
         ItemData itemToDelete = null;
 
-        foreach (Transform reloadItem in InventoryPanel.GetComponentInChildren<Transform>()) 
+        foreach (Transform reloadItem in InventoryPanel.GetComponentInChildren<Transform>()) {
+            if(reloadItem.gameObject.name == "Starting Item")
+                continue;
             Destroy(reloadItem.gameObject);
+        }
 
         foreach (ItemData item in inventoryContents) {
             GameObject itemSlot = Instantiate(InventorySlotPrefab, InventoryPanel);

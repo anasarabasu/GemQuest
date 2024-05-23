@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Res/Scenes/WrongChoice.unity
     guid: e7d4b138158209847b7249da698f5c42
   - enabled: 1
-    path: Assets/Res/Scenes/#Level1.unity
-    guid: 66b061d31bc83e9468ccbeabb26937bf
+    path: Assets/Res/Scenes/Level1.unity
+    guid: 9abe350f3308d7a458c80a23af9be698
   - enabled: 1
     path: Assets/Res/Scenes/Level2.unity
     guid: 3675567300ad1c043b94b1f767dbf375

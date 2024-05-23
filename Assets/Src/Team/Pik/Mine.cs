@@ -1,20 +1,23 @@
 using System.Collections;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VolFx;
 
-public class Mine : MonoBehaviour {
+public class Mine : MonoBehaviour, ISaveable {
     [SerializeField] EntityStatData pikStats;
     [SerializeField] RectTransform noticePanel;
 
+    public static Mine instance;
+
+    private void Awake() => instance = this;
     private void Update() {
         UpdateObjectInRange();
 
         if(pikStats.currentEnergy < 0) {
             mineRequest = false;
         }
-        
     }
 
     private bool mineRequest = false;
@@ -32,19 +35,13 @@ public class Mine : MonoBehaviour {
                 if(tired != null)
                     StopCoroutine(tired);
                 
-                tired = StartCoroutine(PikIsTired());
+                tired = StartCoroutine(NoticePanel.instance.ShowNotice("Pik is tired..."));
             }
         }
         
     }
 
     Coroutine tired;
-    IEnumerator PikIsTired() { //me too
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(1);
-        
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-    }
 
     private RaycastHit2D hit;
     private LevelObject objInRange;
@@ -70,9 +67,15 @@ public class Mine : MonoBehaviour {
             objInRange = null;
     }
 
+    public int pickaxeLevel = 1;
+
+    public void Upgrade(int level) {
+        pickaxeLevel += level;
+        StartCoroutine (NoticePanel.instance.ShowNotice("Tool Upgraded!"));
+    }
     public void FinishMining() {
         if(objInRange != null) {
-            objInRange.GetMined();
+            objInRange.GetMined(pickaxeLevel);
             pikStats.currentEnergy--;
             if(pikStats.currentEnergy < 0)
                 pikStats.currentEnergy = 0;
@@ -82,5 +85,11 @@ public class Mine : MonoBehaviour {
             Joystick.MovementState(true);
             StartMining = false;
         }
-    }    
+    }
+
+    public void Save(DataRoot data) {}
+
+    public void Load(DataRoot data) {
+        // pickaxeLevel = data.characterStats.pickaxeLevel;
+    }
 }

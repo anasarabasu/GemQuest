@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class LevelObject : MonoBehaviour { //should make this an inherit or interface... nah
-    
+    [SerializeField] int levelRequired = 1;
     [SerializeField] GameObject DropPrefab;
     [SerializeField] ItemData theCommonRock;
     [SerializeField] List<ItemData> itemDropList_LVL1;
@@ -57,10 +56,20 @@ public class LevelObject : MonoBehaviour { //should make this an inherit or inte
             Debug.Log("half sprite");
     }
 
-    public void GetMined() {
+    public void GetMined(int pickaxeLevel) {
         transform.DOShakePosition(1, 0.25f);
-        hitPoints -= 1;
+
+        if(pickaxeLevel >= levelRequired) {
+            hitPoints -= 1;
+        }
+        else {
+            if(notice != null)
+                StopCoroutine(notice);
+                
+            notice = StartCoroutine(NoticePanel.instance.ShowNotice("Your tool is to weak to mine this rock..."));
+        }
     }
+    Coroutine notice;
 
     private void DropLoot() {
         Bounds bounds = gameObject.GetComponent<Collider2D>().bounds; //update party AI

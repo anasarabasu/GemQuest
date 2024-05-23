@@ -1,16 +1,13 @@
-using System;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using System.Collections;
-
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 [CreateAssetMenu] [ExecuteInEditMode]
 public class ItemData : ScriptableObject {
-    [TextArea] public string CombatDescription = "description";
+    public bool unlockLevelDescription;
     [TextArea] public string LevelDescription = "description";
+
+    public bool unlockCombatDescription;
+    [TextArea] public string CombatDescription = "description";
+
     public Sprite sprite;
     public int dropChance = 1;
     public int maxLootDrop = 1;
@@ -32,31 +29,37 @@ public class ItemData : ScriptableObject {
     public int damageAddedToSkill;
     public bool failSkill;
 
+    public int UpgradesTool;
+
     //constructiom -> shield
     //tool -> attack
     //medicine ->heal
     //electric -> electrify
     //weight -> stun
 
+    public void UseItem_LEVEL() {
+        Mine.instance.Upgrade(UpgradesTool);
+    }
+
     public void UseItem_EFFECT(Combat target) {
-        // if(itemEffectType == ItemEffectType.ELECTRIC) //can hold
-        //     target.SetElectrocute(effectTurnDuration, effectAmount);
+        if(itemEffectType == ItemEffectType.ELECTRIC)
+            target.SetElectrocute(effectTurnDuration, effectAmount);
 
-        // if(itemEffectType == ItemEffectType.ACID)
-        //     target.Acid(effectAmount);
+        if(itemEffectType == ItemEffectType.ACID)
+            target.SetAcid(effectAmount);
 
-        // if(itemEffectType == ItemEffectType.SHIELD) //block damage
-        //     target.SetShield(effectTurnDuration);
+        if(itemEffectType == ItemEffectType.SHIELD) //block damage
+            target.SetShield(effectTurnDuration);
 
-        // if(itemEffectType == ItemEffectType.HEAL)
-        //     target.Heal(effectAmount);
+        if(itemEffectType == ItemEffectType.HEAL)
+            target.SetHeal(effectAmount);
 
-        // if(itemEffectType == ItemEffectType.STUN) //can hold
-        //     target.Stun(effectTurnDuration, effectAmount);
-        
+        if(itemEffectType == ItemEffectType.STUN) //can hold
+            target.SetStun(effectTurnDuration);
     }
 
     public void UseItem_SKILL() {
         
     }
+    
 }

@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Nickel
   m_EditorClassIdentifier: 
-  CombatDescription: Tough and conductive, Nickel Ore can electrocute enemies
+  unlockLevelDescription: 0
   LevelDescription: An important component in the production of rechargeable batteries
+  unlockCombatDescription: 0
+  CombatDescription: Tough and conductive, Nickel Ore can electrocute enemies
   sprite: {fileID: -1780641145, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 50
   maxLootDrop: 7
   hitPoints: 4
-  inventoryAmount: 15
+  inventoryAmount: 18
   itemType: 0
   itemEffectType: 1
   effectTurnDuration: 1
@@ -28,3 +30,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 6
   failSkill: 0
+  UpgradesTool: 1

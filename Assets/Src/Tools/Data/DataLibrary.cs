@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +7,6 @@ using UnityEngine;
     public OverworldData overworldData;
     public LevelData levelData;
     public List<ItemData> inventoryData;
-
     public CharacterStats characterStats;
 }
 
@@ -49,7 +47,10 @@ using UnityEngine;
 }
 
 [SerializeField] public class CharacterStats {
-
+    public CharacterStats() {
+        pickaxeLevel = 1;
+    }
+    public int pickaxeLevel;
 }
     
 

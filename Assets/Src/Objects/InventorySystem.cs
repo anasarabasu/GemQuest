@@ -1,13 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
-using System.Linq;
-using System.Reflection;
-using System;
 
 public class InventorySystem : MonoBehaviour, ISaveable {
     public static InventorySystem instance;

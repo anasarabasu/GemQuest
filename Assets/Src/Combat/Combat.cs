@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Aarthificial.Reanimation;
 using DG.Tweening;
 using TMPro;
@@ -17,8 +15,11 @@ public class Combat : MonoBehaviour {
     [SerializeField] GameObject floatTextPrefab;
     [SerializeField] float healthEnemy = 1; //for enemy
     [SerializeField] Reanimator reanimator;
+    string name;
 
     private void Awake() {
+        name = gameObject.name.Replace("(Clone)", "");
+
         instance = this;
 
         reanimator.AddListener("ActionFinished", ActionFinished);
@@ -39,10 +40,9 @@ public class Combat : MonoBehaviour {
     public void SetTarget(GameObject target, int damage) {
         this.target = target.GetComponent<Combat>();
 
-        if(this.target.shieldHitAmount > 0) {
+        if(this.target.shieldHitAmount > 0) 
             damageFromAttacker = 0;
-            this.target.shieldHitAmount--;
-        }
+        
         else
             damageFromAttacker = damage;
     }
@@ -95,9 +95,14 @@ public class Combat : MonoBehaviour {
 
     float flickerSpeed = 0.1f;
     public void Damage(int amount) => StartCoroutine(IsAttacked(amount));
-    public void Heal(int amount) => StartCoroutine(IsHealed(amount));
+    public void SetHeal(int amount) => StartCoroutine(IsHealed(amount));
     IEnumerator IsAttacked(int damageAmount) {
-
+        if(shieldHitAmount > 0) {
+            shield.transform.DOShakePosition(1);
+            ShieldUsed = true;
+            yield break;
+        }
+        
         GameObject damageFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
         damageFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("-" +damageAmount);
         Destroy(damageFloat, 4);
@@ -118,16 +123,16 @@ public class Combat : MonoBehaviour {
         }
         yield return null;
 
-        // if(damageAmount <= 3) {
-        //     GameObject textFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
-        //     textFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("Not effective!");
-        //     Destroy(textFloat, 4);
-        // }
-        // if(damageAmount >= 20) {
-        //     GameObject textFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
-        //     textFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("Super effective!");
-        //     Destroy(textFloat, 4);
-        // }
+        if(damageAmount <= 4) {
+            GameObject textFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
+            textFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("Not effective...");
+            Destroy(textFloat, 4);
+        }
+        if(damageAmount >= 20) {
+            GameObject textFloat = Instantiate(floatTextPrefab, transform.position, Quaternion.identity,GameObject.FindWithTag("Floating Text").transform);
+            textFloat.GetComponentInChildren<TextMeshProUGUI>().SetText("Super effective!");
+            Destroy(textFloat, 4);
+        }
 
         reanimator.Renderer.color = Color.white;
         isActionFinished = false;
@@ -159,14 +164,18 @@ public class Combat : MonoBehaviour {
     }
 
     public int stunDuration;
-    public void Stun(int duration, int stunAmount) => stunDuration = stunAmount;
-    
+    public void SetStun(int duration) {
+        stunDuration = duration;
+        StartCoroutine(CombatUI.instance.ShowNotice(name + " was dazed from the impact!"));
+    }
+
     public int electricDuration;
     private int electricDamage;
     public void SetElectrocute(int duration, int amount) {
         electricDuration = duration;
         electricDamage = amount;
 
+        StartCoroutine(CombatUI.instance.ShowNotice(name + " was electrocuted!"));
         Electrocuted();
     }
 
@@ -182,32 +191,44 @@ public class Combat : MonoBehaviour {
 
 
     public int shieldHitAmount;
-    GameObject shieldEffect;
     public void SetShield(int amount) {
         shieldHitAmount = amount;
 
         shield.SetActive(true);
         var effect = shield.GetComponent<ParticleSystem>();
         effect.Play();
+
+        StartCoroutine(CombatUI.instance.ShowNotice(name + " formed a shield!"));
     }
 
-    public void UpdateShield() {
-        shield.transform.DOShakePosition(1);
+    public bool ShieldUsed;
 
-        if(shieldHitAmount <= 0) {
-            var effect = shieldEffect.GetComponent<ParticleSystem>();
-            effect.Stop();
+    public void UpdateShield() {
+        if(ShieldUsed) {
+            shieldHitAmount--;
+                Debug.Log("shield");
+
+            if(shieldHitAmount == 0) {
+                Debug.Log("shield");
+                var effect = shield.GetComponent<ParticleSystem>();
+                shieldHitAmount = 0;
+                effect.Stop();
+            }
+            
+            ShieldUsed = false;
         }
     }
 
     public int acidAmount;
-    public void Acid(int amount) => acidAmount = amount;
+    public void SetAcid(int amount) {
+        acidAmount = amount;
 
-
+        StartCoroutine(CombatUI.instance.ShowNotice(name + " was damaged by acid!"));
+        
+    }
 
     public bool isAlive = true;
     public void CheckHealth() {
-
         if(gameObject.tag == "Hero") {
             if(combatData.currentHealth <= 0) {
                 reanimator.Set("State", 4); //dead

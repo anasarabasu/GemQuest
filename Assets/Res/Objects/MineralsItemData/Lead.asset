@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Lead
   m_EditorClassIdentifier: 
-  CombatDescription: 'Heavy and dense, Lead Ore unleashes mid-level acid damage. '
+  unlockLevelDescription: 0
   LevelDescription: has many useful properties, but its toxicity requires careful
     handling and management
+  unlockCombatDescription: 0
+  CombatDescription: 'Heavy and dense, Lead Ore unleashes mid-level acid damage. '
   sprite: {fileID: -99778211, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 50
   maxLootDrop: 9
   hitPoints: 2
-  inventoryAmount: 15
+  inventoryAmount: 18
   itemType: 0
   itemEffectType: 2
   effectTurnDuration: 1
@@ -29,3 +31,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 14
   failSkill: 0
+  UpgradesTool: 1

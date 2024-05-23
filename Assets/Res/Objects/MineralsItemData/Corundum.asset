@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Corundum
   m_EditorClassIdentifier: 
-  CombatDescription: Hard and unyielding, Corundum forms a protective shield.
+  unlockLevelDescription: 0
   LevelDescription: one of the hardest minerals known, making it an excellent abrasive
     material.
+  unlockCombatDescription: 0
+  CombatDescription: Hard and unyielding, Corundum forms a protective shield.
   sprite: {fileID: 1562490256, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 20
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 16
+  inventoryAmount: 19
   itemType: 0
   itemEffectType: 3
   effectTurnDuration: 3
@@ -29,3 +31,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 20
   failSkill: 0
+  UpgradesTool: 1

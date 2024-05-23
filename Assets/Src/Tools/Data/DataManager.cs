@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.InputSystem;
-using Unity.VisualScripting;
 
 public class DataManager: MonoBehaviour {
     public static DataManager instance;

@@ -566,7 +566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 100.1, y: 142.59999}
+  m_AnchoredPosition: {x: 100.1, y: 142.59998}
   m_SizeDelta: {x: 67.72, y: 18.345}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125351245
@@ -622,7 +622,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Doctor
+          m_StringArgument: DialogueSystem
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1125351246
@@ -808,6 +808,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f9d0a8e0-af9d-4314-b8c6-07ed12d1fac7
     m_ActionName: Player/Inventory[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a272901-313f-4b2e-9fb2-6cf18b2ffebf
+    m_ActionName: Dev/DebugIttems[/Keyboard/ctrl,/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Dev

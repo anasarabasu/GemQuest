@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.TextCore.Text;
 
 public class PixelizeFeature : ScriptableRendererFeature
 {

@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Chromium
   m_EditorClassIdentifier: 
-  CombatDescription: Shiny and reflective, Chromium Ore can stun enemies.
+  unlockLevelDescription: 0
   LevelDescription: enhances the corrosion resistance, hardness, and strength of
     stainless steel
+  unlockCombatDescription: 0
+  CombatDescription: Shiny and reflective, Chromium Ore can stun enemies.
   sprite: {fileID: -1544242360, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 40
   maxLootDrop: 8
   hitPoints: 4
-  inventoryAmount: 16
+  inventoryAmount: 19
   itemType: 0
   itemEffectType: 5
   effectTurnDuration: 2
@@ -29,3 +31,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 10
   failSkill: 0
+  UpgradesTool: 1

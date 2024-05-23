@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Lithium
   m_EditorClassIdentifier: 
-  CombatDescription: Energetic and volatile, Lithium Ore can electrocute enemies
+  unlockLevelDescription: 0
   LevelDescription: has a high electrochemical potential, allowing it to store and
     release electrical energy efficiently.
+  unlockCombatDescription: 0
+  CombatDescription: Energetic and volatile, Lithium Ore can electrocute enemies
   sprite: {fileID: 1277933366, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 40
   maxLootDrop: 6
   hitPoints: 4
-  inventoryAmount: 21
+  inventoryAmount: 24
   itemType: 0
   itemEffectType: 1
   effectTurnDuration: 3
@@ -29,3 +31,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 0
   failSkill: 0
+  UpgradesTool: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 80
   currentHealth: 80
   energy: 50
-  currentEnergy: 18.885033
+  currentEnergy: 50
   speed: 5
   movesets:
   - name: Pickaxe Mine

@@ -1,7 +1,5 @@
 using System.Collections;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class AmbushRNG : MonoBehaviour{
@@ -18,12 +16,13 @@ public class AmbushRNG : MonoBehaviour{
             int randomInterval = Random.Range(1, 20);
             timer = randomInterval;
 
+            DataManager.instance.WriteSaveFile();
+            
             combatScene = SceneManager.LoadSceneAsync("Combat");
             combatScene.allowSceneActivation = false;
             if(!combatScene.isDone) 
                 StartCoroutine(EnemyAmbush());
 
-            DataManager.instance.WriteSaveFile();
 
             Debug.Log("Enemy Ambush!");
         }

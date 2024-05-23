@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Bauxite
   m_EditorClassIdentifier: 
-  CombatDescription: I heard this was used in healthcare equipments...
+  unlockLevelDescription: 0
   LevelDescription: The aluminum extracted from it plays various vital roles in healthcare
     and medical treatments.
+  unlockCombatDescription: 1
+  CombatDescription: I heard this was used in healthcare equipments...
   sprite: {fileID: 1307531436, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 2
-  inventoryAmount: 20
+  inventoryAmount: 19
   itemType: 0
   itemEffectType: 4
   effectTurnDuration: 1

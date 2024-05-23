@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Sulfur
   m_EditorClassIdentifier: 
-  CombatDescription: Smells like rotten eggs
+  unlockLevelDescription: 0
   LevelDescription: a primary raw material in the production of sulfuric acid,
+  unlockCombatDescription: 0
+  CombatDescription: Smells like rotten eggs
   sprite: {fileID: 1522941221, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 1
-  inventoryAmount: 16
+  inventoryAmount: 19
   itemType: 0
   itemEffectType: 2
   effectTurnDuration: 1
@@ -28,3 +30,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 10
   failSkill: 0
+  UpgradesTool: 1

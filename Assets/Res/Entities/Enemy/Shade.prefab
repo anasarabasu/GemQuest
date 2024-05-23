@@ -134,6 +134,7 @@ MonoBehaviour:
   stunDuration: 0
   electricDuration: 0
   shieldHitAmount: 0
+  ShieldUsed: 0
   acidAmount: 0
   isAlive: 1
 --- !u!114 &4417139968493788972
@@ -162,7 +163,7 @@ MonoBehaviour:
   - {x: 0.8475461, y: -3.2552288, z: 0}
   m_ShapePathHash: -1193241979
   m_Mesh: {fileID: 0}
-  m_InstanceId: 443618
+  m_InstanceId: 729810
   m_LocalBounds:
     m_Center: {x: -0.3345182, y: 0.1796217, z: 0}
     m_Extent: {x: 1.1820643, y: 3.627465, z: 0}

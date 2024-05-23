@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering.Universal;
 
 public class Joystick : MonoBehaviour, ISaveable {
     [SerializeField] Rigidbody2D body;

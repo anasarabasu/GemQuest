@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using Aarthificial.Reanimation;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CombatSystem : MonoBehaviour, ISaveable {
+public class CombatSystem : MonoBehaviour {
     public static CombatSystem instance;
     private void Awake() => instance = this;
 
@@ -138,7 +136,7 @@ public class CombatSystem : MonoBehaviour, ISaveable {
                 entity.Electrocuted();
                 string name = entity.name.Replace("(Clone)", "");
 
-                yield return StartCoroutine(CombatUI.instance.ShowNotice($"{name}: aksfasakjxcasndalksjd!"));
+                yield return StartCoroutine(CombatUI.instance.ShowNotice($"{name}: sdlkjmsdflkj!"));
                 entity.electricDuration--;
 
                 i++;
@@ -189,7 +187,7 @@ public class CombatSystem : MonoBehaviour, ISaveable {
                 entity.transform.DOMove(targetPos, dashSpeed); 
                 yield return new WaitForSeconds(0.5f); //after moving to postionn
 
-                entity.SetTarget(target, entity.combatData.movesets[moveKey].damage); //set effects
+                entity.SetTarget(target, entity.combatData.movesets[moveKey].damage);
                 entity.PerformAttack(moveKey);
 
                 yield return new WaitUntil(() => entity.isActionFinished);
@@ -200,7 +198,7 @@ public class CombatSystem : MonoBehaviour, ISaveable {
 
                 entity.transform.DOMove(returnPos, 0.5f);  
             }
-            
+            target.GetComponent<Combat>().UpdateShield();
             yield return new WaitForSeconds(1);
 
             i++;
@@ -316,14 +314,15 @@ public class CombatSystem : MonoBehaviour, ISaveable {
             selectedItem = itemData;
 
             Combat.instance.UpItemAni();
-            CombatUI.instance.UpdateItemText(itemData.name, itemData.CombatDescription);
+            if(selectedItem)
+            CombatUI.instance.UpdateItemText(itemData.name, itemData.CombatDescription, itemData.unlockCombatDescription);
             return;
         }
 
         selectedItem = itemData;
         
         Combat.instance.UpItemAni();
-        CombatUI.instance.UpdateItemText(itemData.name, itemData.CombatDescription);
+        CombatUI.instance.UpdateItemText(itemData.name, itemData.CombatDescription, itemData.unlockCombatDescription);
     }
 
     public void _CancelItemSelection() {
@@ -359,8 +358,9 @@ public class CombatSystem : MonoBehaviour, ISaveable {
 
         Combat.instance.HelsBackToIdle();
         DeleteItemTemp();
-        selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
+        // selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
+        selectedItem.unlockCombatDescription = true;
         //pass selected item effect 
         //can either increase damage or have a compatibility error where player gets stunned or confused
         selectedItem = null;
@@ -433,10 +433,10 @@ public class CombatSystem : MonoBehaviour, ISaveable {
         CombatUI.instance._ToggleSelectTargetToUseItemOn();
         InventorySystem.instance.UpdateInventoryUI();  
 
-        StartCoroutine(ItemTossThenUse(target.transform.position));
+        StartCoroutine(ItemTossThenEffect(target.transform.position));
     }
 
-    public IEnumerator ItemTossThenUse(Vector3 targetToTossItem) {
+    public IEnumerator ItemTossThenEffect(Vector3 targetToTossItem) {
         targetCircle.GetComponent<Image>().enabled = false;
         floatingTweenTemp.Kill();
 
@@ -446,14 +446,16 @@ public class CombatSystem : MonoBehaviour, ISaveable {
 
         Combat.instance.HelsBackToIdle();
         DeleteItemTemp();
-        // selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
+
+        selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
+        selectedItem.unlockCombatDescription = true;
         selectedItem = null;
         waitingForPlayerInput = false;
     }
 
     public void _Flee() {
-        SceneManager.LoadSceneAsync("Level" + currentLevel);
+        SceneHandler.LoadCurrentLevel();
     }
 
     private void Update() {
@@ -470,17 +472,11 @@ public class CombatSystem : MonoBehaviour, ISaveable {
         }
         if(remainingEnemies.Count == 0) {
             StopAllCoroutines();
-            SceneHandler.LoadScene("Czechia"); //load previous scene
+            SceneHandler.LoadCurrentLevel();
 
             Debug.Log("battle win");
         }
     }
 
     public void Save(DataRoot data){}
-
-    int currentLevel;
-
-    public void Load(DataRoot data) {
-        currentLevel = data.levelData.currentLevel;
-    }
 }

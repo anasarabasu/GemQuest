@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 public class DialogueLibrary {
@@ -27,7 +26,11 @@ public class DialogueLibrary {
             ("Pik", "And I have to figure out where it is. Hey my job is to mine rocks not answer some riddles or somethi-"),
 
             ("Sai", "I'll pay you."),
-            ("Pik", "Deal.")
+            ("Pik", "Deal."),
+
+            ("Sai", "Great"),
+            ("Sai", "The rocks I need are abundant in China"),
+            ("Sai", "Please head over there")
         }
     }};
 }

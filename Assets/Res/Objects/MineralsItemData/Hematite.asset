@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Hematite
   m_EditorClassIdentifier: 
-  CombatDescription: Strong and resilient, Hematite shields you for 1 turn. When
-    used with a skill, it boosts the damage of your steel weapons.
+  unlockLevelDescription: 1
   LevelDescription: one of the primary sources of iron ore and a key ingredient in
     the production of steel.
+  unlockCombatDescription: 0
+  CombatDescription: Strong and resilient, Hematite shields you for 1 turn. When
+    used with a skill, it boosts the damage of your steel weapons.
   sprite: {fileID: 138806801, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 90
   maxLootDrop: 10
   hitPoints: 4
-  inventoryAmount: 38
+  inventoryAmount: 55
   itemType: 0
   itemEffectType: 3
   effectTurnDuration: 1
@@ -30,3 +32,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 10
   failSkill: 0
+  UpgradesTool: 1

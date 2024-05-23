@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -136,7 +133,7 @@ public class CombatUI : MonoBehaviour {
         }
 
         else {
-            UpdateItemText("No item selected", "Thinking...");
+            UpdateItemText();
     
             itemPanel.DOAnchorPosY(-167.0197f, itemPanelMoveSpeed);
             itemToggle = false;
@@ -150,9 +147,19 @@ public class CombatUI : MonoBehaviour {
             _camera.DOLocalMoveY(0, cameramoveSpeed);
     }
 
-    public void UpdateItemText(string item, string description) {
+    public void UpdateItemText() {
+        itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().SetText("No item selected");
+        itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText("Thinking...");
+    }
+
+    public void UpdateItemText(string item, string description, bool unlock) {
         itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().SetText(item);
-        itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText(description);
+
+        if(unlock)
+            itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText(description);
+
+        else
+            itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText("What does this mineral do?");
     }
 
     [SerializeField] RectTransform itemTargetSelect;

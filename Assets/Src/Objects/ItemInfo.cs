@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -19,7 +17,10 @@ public class ItemInfo : MonoBehaviour {
 
     private void ToggleInfoPanel() {
         infoPanel.DOAnchorPosY(-28.5285f, 0.5f);
-        infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + selectedItem.LevelDescription);
+        if(selectedItem.unlockLevelDescription)
+            infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + selectedItem.LevelDescription);
+        else
+            infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + "We don't know what this mineral is for...");
     }
 
     internal void HideInfoPanel() {
@@ -28,6 +29,14 @@ public class ItemInfo : MonoBehaviour {
     }
 
     public void _UseItem() {
+        if(selectedItem) {
+            ToggleInfoPanel();
+            HideInfoPanel();
+            selectedItem.UseItem_LEVEL();
+            NoticePanel.instance.ShowNotice($"Used {selectedItem.name}");
+            selectedItem.unlockLevelDescription = true;
+            infoPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(selectedItem.name + "\n" + selectedItem.LevelDescription);
+        }
         // selectedItem.UseItem();
         InventorySystem.instance.UpdateInventoryUI();
     }

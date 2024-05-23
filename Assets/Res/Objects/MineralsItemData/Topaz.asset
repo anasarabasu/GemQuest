@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Topaz
   m_EditorClassIdentifier: 
-  CombatDescription: Glowing with electric energy, Topaz can stun enemies
+  unlockLevelDescription: 0
   LevelDescription: Can generate an electric charge when subjected to mechanical
     stress, making it useful in sensitive equipment.
+  unlockCombatDescription: 1
+  CombatDescription: Glowing with electric energy, Topaz can stun enemies
   sprite: {fileID: -600163608, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 20
   maxLootDrop: 5
@@ -23,9 +25,10 @@ MonoBehaviour:
   itemType: 0
   itemEffectType: 1
   effectTurnDuration: 3
-  effectAmount: 0
+  effectAmount: 2
   strongAgainst: 0
   notEffectiveTo: 0
   oneHit: 0
   damageAddedToSkill: 8
   failSkill: 0
+  UpgradesTool: 1

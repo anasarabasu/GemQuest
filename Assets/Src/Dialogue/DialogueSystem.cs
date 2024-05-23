@@ -38,7 +38,7 @@ public class DialogueSystem : MonoBehaviour, ISaveable {
                     StartCoroutine(MovePanel());
             }
             else {
-                SceneHandler.LoadScene("Level1");
+                SceneHandler.LoadScene("Overworld");
                 DataManager.instance.WriteSaveFile();
             }
         }

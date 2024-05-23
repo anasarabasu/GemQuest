@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Beryl
   m_EditorClassIdentifier: 
-  CombatDescription: 'Mystical and enchanting, Beryl can electrocute enemies five
-    times. '
+  unlockLevelDescription: 0
   LevelDescription: can generate an electric charge when subjected to mechanical
     stress.
+  unlockCombatDescription: 1
+  CombatDescription: 'Mystical and enchanting, Beryl can electrocute enemies five
+    times. '
   sprite: {fileID: -1906543859, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 10
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 16
+  inventoryAmount: 17
   itemType: 0
   itemEffectType: 1
   effectTurnDuration: 5
@@ -30,3 +32,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 15
   failSkill: 0
+  UpgradesTool: 1

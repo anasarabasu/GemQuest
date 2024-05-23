@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Feldspar
   m_EditorClassIdentifier: 
-  CombatDescription: Sparkling with potential, Feldspar gives a slight edge.
+  unlockLevelDescription: 0
   LevelDescription: incorporated into concrete mixtures to improve the strength,
     workability, and durability of concrete structures
+  unlockCombatDescription: 1
+  CombatDescription: Sparkling with potential, Feldspar gives a slight edge.
   sprite: {fileID: 644949573, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 90
   maxLootDrop: 10
   hitPoints: 4
-  inventoryAmount: 17
+  inventoryAmount: 23
   itemType: 0
   itemEffectType: 3
   effectTurnDuration: 1
@@ -29,3 +31,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 6
   failSkill: 0
+  UpgradesTool: 1

@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Garnet
   m_EditorClassIdentifier: 
-  CombatDescription: With its fiery brilliance, Garnet provides a shield for 2 turns.
+  unlockLevelDescription: 0
   LevelDescription: favored for their ability to cut through hard materials while
-    producing minimal dus
+    producing minimal dust
+  unlockCombatDescription: 1
+  CombatDescription: With its fiery brilliance, Garnet provides a shield for 2 turns.
   sprite: {fileID: -986574121, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 30
   maxLootDrop: 6
   hitPoints: 4
-  inventoryAmount: 16
+  inventoryAmount: 18
   itemType: 0
   itemEffectType: 0
   effectTurnDuration: 2
@@ -29,3 +31,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 18
   failSkill: 0
+  UpgradesTool: 1

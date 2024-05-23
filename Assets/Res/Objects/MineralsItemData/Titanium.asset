@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Titanium
   m_EditorClassIdentifier: 
-  CombatDescription: Incredibly strong, Titanium Ore significantly heals your wounds
+  unlockLevelDescription: 0
   LevelDescription: an ideal material for medical applications
+  unlockCombatDescription: 0
+  CombatDescription: Incredibly strong, Titanium Ore significantly heals your wounds
   sprite: {fileID: -1242550664, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 70
   maxLootDrop: 5
   hitPoints: 4
-  inventoryAmount: 15
+  inventoryAmount: 18
   itemType: 0
   itemEffectType: 4
   effectTurnDuration: 0
@@ -28,3 +30,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 0
   failSkill: 1
+  UpgradesTool: 1

@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Quartz
   m_EditorClassIdentifier: 
-  CombatDescription: Radiant and protective, Quartz shields you.
+  unlockLevelDescription: 0
   LevelDescription: a primary ingredient in the production of concrete and cement
+  unlockCombatDescription: 0
+  CombatDescription: Radiant and protective, Quartz shields you.
   sprite: {fileID: -983497734, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 100
   maxLootDrop: 10
   hitPoints: 6
-  inventoryAmount: 24
+  inventoryAmount: 31
   itemType: 0
   itemEffectType: 3
   effectTurnDuration: 1
@@ -28,3 +30,4 @@ MonoBehaviour:
   oneHit: 0
   damageAddedToSkill: 4
   failSkill: 0
+  UpgradesTool: 1

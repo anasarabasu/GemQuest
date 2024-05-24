@@ -12,18 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Beryl
   m_EditorClassIdentifier: 
-  unlockLevelDescription: 0
-  LevelDescription: can generate an electric charge when subjected to mechanical
-    stress.
-  unlockCombatDescription: 1
-  CombatDescription: 'Mystical and enchanting, Beryl can electrocute enemies five
-    times. '
+  introDesccription: A mineral commonly used in jewelry
   sprite: {fileID: -1906543859, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 10
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 17
-  itemType: 0
+  inventoryAmount: 21
+  description:
+    unlockedLevelDescription: 0
+    Level: 
+    unlockedCombatDescription_ITEM: 0
+    Combat_ITEM: 
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: 
+  levelFunction:
+    unlockedPriceRank: 1
+    priceRank: 2
+    function: 1
+    amount: 0
+  combatFunction:
+    effectiveTo: 0
+    uselessTo: 0
+    asAnItem: 0
+    asAnItemDuration: 0
+    asAnItemAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 0
   itemEffectType: 1
   effectTurnDuration: 5
   effectAmount: 8

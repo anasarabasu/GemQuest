@@ -12,17 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Anhydrite
   m_EditorClassIdentifier: 
-  unlockLevelDescription: 0
-  LevelDescription: Used in the production of sulfuric acid and as a filler in paper,
-    paint, and plastics.
-  unlockCombatDescription: 1
-  CombatDescription: Damages enemies with acid
+  introDesccription: This mineral can  be used for drying things. Get it because
+    anhydrite, unhydrate? No? Okay...
   sprite: {fileID: 2011741444, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 30
   maxLootDrop: 5
   hitPoints: 2
-  inventoryAmount: 16
-  itemType: 0
+  inventoryAmount: 10
+  description:
+    unlockedLevelDescription: 1
+    Level: 
+    unlockedCombatDescription_ITEM: 0
+    Combat_ITEM: 
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: 
+  levelFunction:
+    unlockedPriceRank: 1
+    priceRank: 0
+    function: 0
+    amount: 0
+  combatFunction:
+    effectiveTo: 0
+    uselessTo: 0
+    asAnItem: 4
+    asAnItemDuration: 0
+    asAnItemAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 0
   itemEffectType: 2
   effectTurnDuration: 1
   effectAmount: 15
@@ -31,3 +47,4 @@ MonoBehaviour:
   oneHit: 1
   damageAddedToSkill: 999
   failSkill: 0
+  UpgradesTool: 0

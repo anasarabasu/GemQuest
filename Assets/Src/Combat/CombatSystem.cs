@@ -315,14 +315,15 @@ public class CombatSystem : MonoBehaviour {
 
             Combat.instance.UpItemAni();
             if(selectedItem)
-            CombatUI.instance.UpdateItemText(itemData.name, itemData.CombatDescription, itemData.unlockCombatDescription);
+            CombatUI.instance.UpdateItemText(itemData.name, itemData.description.Combat_ITEM, itemData.description.unlockedCombatDescription_ITEM);
             return;
         }
 
         selectedItem = itemData;
         
         Combat.instance.UpItemAni();
-        CombatUI.instance.UpdateItemText(itemData.name, itemData.CombatDescription, itemData.unlockCombatDescription);
+        CombatUI.instance.UpdateItemText(itemData.name, itemData.description.Combat_ITEM, itemData.description.unlockedCombatDescription_ITEM);
+
     }
 
     public void _CancelItemSelection() {
@@ -360,7 +361,7 @@ public class CombatSystem : MonoBehaviour {
         DeleteItemTemp();
         // selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
-        selectedItem.unlockCombatDescription = true;
+        selectedItem.description.unlockedCombatDescription_SKILL = true;
         //pass selected item effect 
         //can either increase damage or have a compatibility error where player gets stunned or confused
         selectedItem = null;
@@ -449,7 +450,7 @@ public class CombatSystem : MonoBehaviour {
 
         selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
         selectedItem.inventoryAmount--;
-        selectedItem.unlockCombatDescription = true;
+        selectedItem.description.unlockedCombatDescription_ITEM = true;
         selectedItem = null;
         waitingForPlayerInput = false;
     }

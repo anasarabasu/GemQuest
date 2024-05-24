@@ -12,16 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Quartz
   m_EditorClassIdentifier: 
-  unlockLevelDescription: 0
-  LevelDescription: a primary ingredient in the production of concrete and cement
-  unlockCombatDescription: 0
-  CombatDescription: Radiant and protective, Quartz shields you.
+  introDesccription: This is found everywhere. It's a very common mineral.
   sprite: {fileID: -983497734, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 100
   maxLootDrop: 10
   hitPoints: 6
-  inventoryAmount: 31
-  itemType: 0
+  inventoryAmount: 63
+  description:
+    unlockedLevelDescription: 0
+    Level: 
+    unlockedCombatDescription_ITEM: 0
+    Combat_ITEM: 
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: 
+  levelFunction:
+    unlockedPriceRank: 0
+    priceRank: 0
+    function: 0
+    amount: 0
+  combatFunction:
+    effectiveTo: 0
+    uselessTo: 0
+    asAnItem: 0
+    asAnItemDuration: 0
+    asAnItemAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 0
   itemEffectType: 3
   effectTurnDuration: 1
   effectAmount: 1

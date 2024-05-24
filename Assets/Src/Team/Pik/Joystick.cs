@@ -33,7 +33,7 @@ public class Joystick : MonoBehaviour, ISaveable {
 
         if(!body.IsAwake())
             if(pikStats.currentEnergy < pikStats.energy)
-                pikStats.currentEnergy += 2 * Time.deltaTime;
+                pikStats.currentEnergy += (int) (1 * Time.deltaTime);
     }
 
 

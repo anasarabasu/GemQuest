@@ -35,18 +35,12 @@ public class IntroduceLevelControls : MonoBehaviour, ISaveable {
     [SerializeField] RectTransform inventory;
 
 
-    public bool itemInfoDiscovered;
-    [SerializeField] GameObject itemInfo;
-
-
-    bool useItemDiscovered;
-    public void _UseItem() {
-        useItemDiscovered = true;
-        ItemInfo.instance._UseItem();
-    }
-
+    [SerializeField] RectTransform useItemFake;
     [SerializeField] GameObject useItem;
 
+
+    [SerializeField] RectTransform sellItemFake;
+    [SerializeField] GameObject sellItem;
 
 
     public bool enemyDiscovered;
@@ -59,7 +53,13 @@ public class IntroduceLevelControls : MonoBehaviour, ISaveable {
         mine.anchoredPosition = new Vector2(40.47557f, mine.anchoredPosition.y);
         statBar.anchoredPosition = new Vector2(statBar.anchoredPosition.x, 40.16111f);
         inventory.anchoredPosition = new Vector2(27.19112f, inventory.anchoredPosition.y);
+        
         useItem.SetActive(false);
+        useItemFake.gameObject.SetActive(true);
+
+        sellItem.SetActive(false);
+        sellItemFake.gameObject.SetActive(true);
+
         enemyAmbush.SetActive(false);
 
         WaitForSeconds wait = new WaitForSeconds(0.5f);
@@ -77,7 +77,7 @@ public class IntroduceLevelControls : MonoBehaviour, ISaveable {
         yield return wait;
 
         tutorialPanel.DOAnchorPosY(-24.27527f, 0.25f);
-        tutorialPanelText.SetText("Make sure to keep in mind your stamina and take a moment to rest.");
+        tutorialPanelText.SetText("Make sure to keep track of your energy and take a moment to rest.");
         statBar.DOAnchorPosY(9.5f, moveSpeed);
         yield return new WaitUntil(() => InventorySystem.instance.inventoryContents.Count >= 1);
         yield return new WaitForSeconds(5);
@@ -92,13 +92,24 @@ public class IntroduceLevelControls : MonoBehaviour, ISaveable {
         inventory.DOAnchorPosX(27.19112f, moveSpeed);
         yield return new WaitForSeconds(5);
 
-        tutorialPanelText.SetText("We don't know what these items are for.\nBut if we use it then we have a chance of finding out.");
+        tutorialPanelText.SetText("We don't know what these rocks are for.\nBut if you use it then you have a chance of finding out."); //change this kasi di makita ung text
+        tutorialPanel.DOAnchorPosY(-43.3f, moveSpeed);
+        useItemFake.DOAnchorPosX(-20.98767f, moveSpeed);
         yield return new WaitForSeconds(5);
 
         tutorialPanelText.SetText("Its function varies on where it is used: In level or in combat.");
         yield return new WaitForSeconds(5);
 
+        tutorialPanelText.SetText("You can also sell the minerals you've collected. Don't know how much each the ores are though. Maybe you can try selling one to find out");
+        sellItemFake.DOAnchorPosX(-20.98767f, moveSpeed);
+        yield return new WaitForSeconds(5);
+
         InventorySystem.instance._ToggleInventory();
+        useItem.SetActive(true);
+        useItemFake.gameObject.SetActive(false);
+        sellItem.SetActive(true);
+        sellItemFake.gameObject.SetActive(false);
+
         tutorialPanelText.SetText("Its up to you to collect them and discover their different functions.");
         joystick.DOAnchorPosX(48, moveSpeed);
         inventory.DOAnchorPosX(-23.0791f, moveSpeed);
@@ -106,7 +117,6 @@ public class IntroduceLevelControls : MonoBehaviour, ISaveable {
 
         tutorialPanel.DOAnchorPosX(-261.1f, 0.5f);
         enemyAmbush.SetActive(true);
-        useItem.SetActive(true);
         hasIntroducedScene = true;
         DataManager.instance.WriteSaveFile();
         yield break;

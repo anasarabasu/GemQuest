@@ -16,6 +16,8 @@ using UnityEngine;
         dialogueIndexCounter = 0;
         teamComposition = new List<string> {"Pik", "Hels"};
         showFPS = true;
+
+        // hasIntroducedLevelControls = 
     }
     public bool newGame;
     public bool hasShownIntroCutscene;
@@ -23,7 +25,7 @@ using UnityEngine;
     public bool hasIntroducedOverWorldControls;
     public bool hasIntroducedLevelControls;
     
-    
+
     public List<string> teamComposition;
     public bool showFPS;
 }

@@ -202,10 +202,10 @@ TextureImporter:
       name: Menu
       rect:
         serializedVersion: 2
-        x: 155
-        y: 46
+        x: 136
+        y: 47
         width: 39
-        height: 26
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,7 +245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 46
+        y: 47
         width: 25
         height: 24
       alignment: 0
@@ -270,7 +270,7 @@ TextureImporter:
         width: 42
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,6 +278,27 @@ TextureImporter:
       bones: []
       spriteID: cf7feed863c3a1b49a1ca3fcb5745822
       internalID: 1544426884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 74
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9d701715b1c564ab78890a31a3daa2
+      internalID: -651779169
       vertices: []
       indices: 
       edges: []
@@ -301,6 +322,7 @@ TextureImporter:
       Menu: -2114021854
       Mine: -2091655303
       Use: 1544426884
+      energy: -651779169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

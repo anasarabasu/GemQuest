@@ -1,3 +1,4 @@
+using Aarthificial.Reanimation;
 using UnityEngine;
 
 public class PikAni : AnimateRoam {
@@ -9,6 +10,12 @@ public class PikAni : AnimateRoam {
     private void Update() {
         UpdateDirection(Joystick.GetDirection());
         UpdateState();
+
+        if(ItemInfo.instance.itemsSold >= 10)  //add some sort of effect
+            reanimator.fps = 12;
+        else
+            reanimator.fps = 6;
+
     }
 
     private const int MINE = 2;

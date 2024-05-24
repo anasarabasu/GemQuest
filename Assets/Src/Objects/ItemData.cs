@@ -1,20 +1,57 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu] [ExecuteInEditMode]
 public class ItemData : ScriptableObject {
-    public bool unlockLevelDescription;
-    [TextArea] public string LevelDescription = "description";
-
-    public bool unlockCombatDescription;
-    [TextArea] public string CombatDescription = "description";
-
+    [TextArea] public string introDesccription;
     public Sprite sprite;
     public int dropChance = 1;
     public int maxLootDrop = 1;
     public int hitPoints = 1;
     public int inventoryAmount = 1;
-    public enum ItemType {MINERAL, FOOD}
-    public ItemType itemType;
+
+    public Description description;
+
+    [Serializable] public class Description {
+        public bool unlockedLevelDescription;
+        [TextArea] public string Level;
+
+        public bool unlockedCombatDescription_ITEM;
+        [TextArea] public string Combat_ITEM;
+
+        public bool unlockedCombatDescription_SKILL;
+        [TextArea] public string Combat_SKILL;
+
+    }
+
+
+    public LevelFunction levelFunction;
+    [Serializable] public class LevelFunction {
+        public bool unlockedPriceRank;
+        public enum PriceRank {Low, Mid, High, Zero} //have a boost after certain amount sold 10 
+        public PriceRank priceRank;
+        public enum Function {None, ReplenishBattery, UpgradeTool, Heal}
+        public Function function;
+        public int amount;
+    }
+
+
+    public CombatFunction combatFunction;
+    [Serializable] public class CombatFunction {
+        public enum Enemy {None, Shade, Golem}
+        public Enemy effectiveTo;
+        public Enemy uselessTo;
+
+        public enum AsAnItem {None, Stun, Electric, Acid, Shield, Heal}
+        public AsAnItem asAnItem;
+        public int asAnItemDuration;
+        public int asAnItemAmount;
+
+
+        public enum WithASkill  {Fail, IncreaseAttack, OneHit}
+        public WithASkill withASkill;
+        public int skillDamageIncreaseAmount;
+    }
 
     public enum ItemEffectType {NONE, ELECTRIC, ACID, SHIELD, HEAL, STUN}
     public ItemEffectType itemEffectType;
@@ -30,12 +67,6 @@ public class ItemData : ScriptableObject {
     public bool failSkill;
 
     public int UpgradesTool;
-
-    //constructiom -> shield
-    //tool -> attack
-    //medicine ->heal
-    //electric -> electrify
-    //weight -> stun
 
     public void UseItem_LEVEL() {
         Mine.instance.Upgrade(UpgradesTool);

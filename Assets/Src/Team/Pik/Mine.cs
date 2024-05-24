@@ -27,7 +27,7 @@ public class Mine : MonoBehaviour, ISaveable {
         mineRequest = context.performed;
 
         if(mineRequest) {
-            if(pikStats.currentEnergy.RoundToInt() > 0) {
+            if(pikStats.currentEnergy > 0) {
                 Joystick.MovementState(false);
                 StartMining = true;
             }

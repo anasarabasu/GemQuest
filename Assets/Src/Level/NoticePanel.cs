@@ -10,10 +10,11 @@ public class NoticePanel : MonoBehaviour {
     [SerializeField] RectTransform noticePanel;
     
     public IEnumerator ShowNotice(string message) { //me too
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
         noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(message);
-        yield return new WaitForSeconds(1);
-        
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
+        if(noticePanel.anchoredPosition.y != 12.75f) {
+            noticePanel.DOAnchorPosY(12.75f, 0.25f);
+            yield return new WaitForSeconds(4);
+            noticePanel.DOAnchorPosY(-47.7f, 0.5f);
+        }
     }
 }

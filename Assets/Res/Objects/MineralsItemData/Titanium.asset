@@ -12,16 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Titanium
   m_EditorClassIdentifier: 
-  unlockLevelDescription: 0
-  LevelDescription: an ideal material for medical applications
-  unlockCombatDescription: 0
-  CombatDescription: Incredibly strong, Titanium Ore significantly heals your wounds
+  introDesccription: It's very light compared to the other heavvy ones...
   sprite: {fileID: -1242550664, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 70
   maxLootDrop: 5
   hitPoints: 4
-  inventoryAmount: 18
-  itemType: 0
+  inventoryAmount: 25
+  description:
+    unlockedLevelDescription: 0
+    Level: 
+    unlockedCombatDescription_ITEM: 0
+    Combat_ITEM: 
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: 
+  levelFunction:
+    unlockedPriceRank: 0
+    priceRank: 1
+    function: 4
+    amount: 17
+  combatFunction:
+    effectiveTo: 0
+    uselessTo: 0
+    asAnItem: 0
+    asAnItemDuration: 0
+    asAnItemAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 0
   itemEffectType: 4
   effectTurnDuration: 0
   effectAmount: 30

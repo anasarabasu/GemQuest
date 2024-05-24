@@ -12,17 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Garnet
   m_EditorClassIdentifier: 
-  unlockLevelDescription: 0
-  LevelDescription: favored for their ability to cut through hard materials while
-    producing minimal dust
-  unlockCombatDescription: 1
-  CombatDescription: With its fiery brilliance, Garnet provides a shield for 2 turns.
+  introDesccription: Vibrant, colourful, and shiny. A common gemstone in jewelries.
   sprite: {fileID: -986574121, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 30
   maxLootDrop: 6
   hitPoints: 4
-  inventoryAmount: 18
-  itemType: 0
+  inventoryAmount: 16
+  description:
+    unlockedLevelDescription: 0
+    Level: 
+    unlockedCombatDescription_ITEM: 0
+    Combat_ITEM: 
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: 
+  levelFunction:
+    unlockedPriceRank: 0
+    priceRank: 2
+    function: 0
+    amount: 0
+  combatFunction:
+    effectiveTo: 0
+    uselessTo: 0
+    asAnItem: 0
+    asAnItemDuration: 0
+    asAnItemAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 0
   itemEffectType: 0
   effectTurnDuration: 2
   effectAmount: 1

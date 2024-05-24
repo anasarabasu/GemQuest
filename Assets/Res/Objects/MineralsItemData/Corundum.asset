@@ -12,17 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Corundum
   m_EditorClassIdentifier: 
-  unlockLevelDescription: 0
-  LevelDescription: one of the hardest minerals known, making it an excellent abrasive
-    material.
-  unlockCombatDescription: 0
-  CombatDescription: Hard and unyielding, Corundum forms a protective shield.
+  introDesccription: The gems cut from this is common in jewelries.
   sprite: {fileID: 1562490256, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 20
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 19
-  itemType: 0
+  inventoryAmount: 22
+  description:
+    unlockedLevelDescription: 0
+    Level: 
+    unlockedCombatDescription_ITEM: 0
+    Combat_ITEM: 
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: 
+  levelFunction:
+    unlockedPriceRank: 1
+    priceRank: 2
+    function: 0
+    amount: 0
+  combatFunction:
+    effectiveTo: 0
+    uselessTo: 0
+    asAnItem: 0
+    asAnItemDuration: 0
+    asAnItemAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 0
   itemEffectType: 3
   effectTurnDuration: 3
   effectAmount: 1

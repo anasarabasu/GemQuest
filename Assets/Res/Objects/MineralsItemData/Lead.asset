@@ -17,19 +17,19 @@ MonoBehaviour:
   dropChance: 50
   maxLootDrop: 9
   hitPoints: 2
-  inventoryAmount: 26
+  inventoryAmount: 36
   description:
-    unlockedLevelDescription: 0
-    Level: 
+    unlockedLevelDescription: 1
+    Level: More batteries for the flashlight...
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: 
   levelFunction:
-    unlockedPriceRank: 0
+    unlockedPriceRank: 1
     priceRank: 1
-    function: 0
-    amount: 0
+    function: 1
+    amount: 14
   combatFunction:
     effectiveTo: 0
     uselessTo: 0

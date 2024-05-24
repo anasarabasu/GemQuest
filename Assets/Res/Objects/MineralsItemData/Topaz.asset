@@ -17,10 +17,10 @@ MonoBehaviour:
   dropChance: 20
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 12
+  inventoryAmount: 22
   description:
     unlockedLevelDescription: 1
-    Level: 
+    Level: We have jewelry now. Energising.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 
     unlockedCombatDescription_SKILL: 0

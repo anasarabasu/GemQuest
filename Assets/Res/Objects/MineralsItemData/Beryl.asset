@@ -17,10 +17,10 @@ MonoBehaviour:
   dropChance: 10
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 21
+  inventoryAmount: 10
   description:
-    unlockedLevelDescription: 0
-    Level: 
+    unlockedLevelDescription: 1
+    Level: After subjecting this mineral to stress, it produces some electrical charge.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 
     unlockedCombatDescription_SKILL: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     unlockedPriceRank: 1
     priceRank: 2
     function: 1
-    amount: 0
+    amount: 30
   combatFunction:
     effectiveTo: 0
     uselessTo: 0

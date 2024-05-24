@@ -17,10 +17,10 @@ MonoBehaviour:
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 2
-  inventoryAmount: 12
+  inventoryAmount: 9
   description:
-    unlockedLevelDescription: 0
-    Level: 
+    unlockedLevelDescription: 1
+    Level: Charges the flashlight.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 
     unlockedCombatDescription_SKILL: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     unlockedPriceRank: 1
     priceRank: 1
     function: 1
-    amount: 0
+    amount: 10
   combatFunction:
     effectiveTo: 0
     uselessTo: 0

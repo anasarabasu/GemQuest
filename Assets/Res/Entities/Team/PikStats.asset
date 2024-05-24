@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a7e983e14b6a458268c053ece91b4, type: 3}
   m_Name: PikStats
   m_EditorClassIdentifier: 
-  health: 80
-  currentHealth: 80
-  energy: 30
-  currentEnergy: 42
+  level: 1
+  currentXP: 2
+  nextLevelThreshold: 127
+  toolLevel: 3
+  currentToolXP: 0
+  nextToolLevelThreshold: 10
+  health: 34
+  currentHealth: 30
+  energy: 22
+  currentEnergy: 17
   speed: 5
   movesets:
   - name: Pickaxe Mine

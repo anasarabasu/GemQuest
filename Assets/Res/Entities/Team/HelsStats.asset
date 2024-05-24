@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a7e983e14b6a458268c053ece91b4, type: 3}
   m_Name: HelsStats
   m_EditorClassIdentifier: 
-  health: 80
-  currentHealth: 80
-  energy: 50
-  currentEnergy: 50
+  level: 1
+  currentXP: 52
+  nextLevelThreshold: 61
+  toolLevel: 0
+  currentToolXP: 0
+  nextToolLevelThreshold: 10
+  health: 34
+  currentHealth: 30
+  energy: 20
+  currentEnergy: 20
   speed: 2
   movesets:
   - name: Shovel Dart

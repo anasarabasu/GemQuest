@@ -17,6 +17,7 @@ TagManager:
   - Destroyable
   - FPS
   - Floating Text
+  - Light
   layers:
   - Default
   - TransparentFX

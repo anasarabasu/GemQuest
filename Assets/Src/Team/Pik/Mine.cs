@@ -67,15 +67,9 @@ public class Mine : MonoBehaviour, ISaveable {
             objInRange = null;
     }
 
-    public int pickaxeLevel = 1;
-
-    public void Upgrade(int level) {
-        pickaxeLevel += level;
-        StartCoroutine (NoticePanel.instance.ShowNotice("Tool Upgraded!"));
-    }
     public void FinishMining() {
         if(objInRange != null) {
-            objInRange.GetMined(pickaxeLevel);
+            objInRange.GetMined(pikStats.toolLevel);
             pikStats.currentEnergy--;
             if(pikStats.currentEnergy < 0)
                 pikStats.currentEnergy = 0;

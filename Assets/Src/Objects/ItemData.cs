@@ -30,7 +30,7 @@ public class ItemData : ScriptableObject {
         public bool unlockedPriceRank;
         public enum PriceRank {Low, Mid, High, Zero} //have a boost after certain amount sold 10 
         public PriceRank priceRank;
-        public enum Function {None, ReplenishBattery, UpgradeTool, Heal}
+        public enum Function {None, ReplenishBattery, UpgradeTool, Heal, DeterEnemies, ConvertToOther}
         public Function function;
         public int amount;
     }
@@ -67,10 +67,6 @@ public class ItemData : ScriptableObject {
     public bool failSkill;
 
     public int UpgradesTool;
-
-    public void UseItem_LEVEL() {
-        Mine.instance.Upgrade(UpgradesTool);
-    }
 
     public void UseItem_EFFECT(Combat target) {
         if(itemEffectType == ItemEffectType.ELECTRIC)

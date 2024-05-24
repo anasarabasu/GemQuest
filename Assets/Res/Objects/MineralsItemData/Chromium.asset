@@ -17,10 +17,10 @@ MonoBehaviour:
   dropChance: 40
   maxLootDrop: 8
   hitPoints: 4
-  inventoryAmount: 22
+  inventoryAmount: 34
   description:
-    unlockedLevelDescription: 0
-    Level: 
+    unlockedLevelDescription: 1
+    Level: Applying it on the steel pickaxe greatly improves its performance.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 
     unlockedCombatDescription_SKILL: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   levelFunction:
     unlockedPriceRank: 1
     priceRank: 1
-    function: 4
+    function: 2
     amount: 0
   combatFunction:
     effectiveTo: 0

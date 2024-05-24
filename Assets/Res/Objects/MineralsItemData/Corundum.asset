@@ -17,10 +17,10 @@ MonoBehaviour:
   dropChance: 20
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 22
+  inventoryAmount: 10
   description:
-    unlockedLevelDescription: 0
-    Level: 
+    unlockedLevelDescription: 1
+    Level: The pickaxe is now sharper.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 
     unlockedCombatDescription_SKILL: 0
@@ -28,8 +28,8 @@ MonoBehaviour:
   levelFunction:
     unlockedPriceRank: 1
     priceRank: 2
-    function: 0
-    amount: 0
+    function: 2
+    amount: 100
   combatFunction:
     effectiveTo: 0
     uselessTo: 0

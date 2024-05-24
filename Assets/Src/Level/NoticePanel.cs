@@ -16,5 +16,7 @@ public class NoticePanel : MonoBehaviour {
             yield return new WaitForSeconds(4);
             noticePanel.DOAnchorPosY(-47.7f, 0.5f);
         }
+        else 
+            yield break;
     }
 }

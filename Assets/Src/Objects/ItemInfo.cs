@@ -9,6 +9,7 @@ using ColorUtility = UnityEngine.ColorUtility;
 public class ItemInfo : MonoBehaviour {
     public static ItemInfo instance;
     [SerializeField] RectTransform infoPanel;
+    [SerializeField] RectTransform viewPort;
     private void Awake() => instance = this;
 
 
@@ -31,7 +32,7 @@ public class ItemInfo : MonoBehaviour {
     }
 
     private void ToggleInfoPanel() {
-        infoPanel.DOAnchorPosY(-7.949f, 0.5f);
+        viewPort.DOAnchorPosY(0, 0.5f);
 
 
         infoPanel.Find("Name").GetComponent<TextMeshProUGUI>().SetText(selectedItem.name);
@@ -42,18 +43,18 @@ public class ItemInfo : MonoBehaviour {
         if(selectedItem.description.unlockedLevelDescription) 
             infoPanel.Find("Level").GetComponent<TextMeshProUGUI>().SetText(selectedItem.description.Level);
         else
-            infoPanel.Find("Level").GetComponent<TextMeshProUGUI>().SetText("...");
+            infoPanel.Find("Level").GetComponent<TextMeshProUGUI>().SetText("Can this be used here?");
 
 
         if(selectedItem.description.unlockedCombatDescription_ITEM)
             infoPanel.Find("Combat1").GetComponent<TextMeshProUGUI>().SetText(selectedItem.description.Combat_ITEM);
         else
-            infoPanel.Find("Combat1").GetComponent<TextMeshProUGUI>().SetText("...");
+            infoPanel.Find("Combat1").GetComponent<TextMeshProUGUI>().SetText("Not sure how this could be used in battle...");
 
         if(selectedItem.description.unlockedCombatDescription_SKILL)
             infoPanel.Find("Combat2").GetComponent<TextMeshProUGUI>().SetText(selectedItem.description.Combat_SKILL);
         else
-            infoPanel.Find("Combat2").GetComponent<TextMeshProUGUI>().SetText("...");
+            infoPanel.Find("Combat2").GetComponent<TextMeshProUGUI>().SetText("Can it be combined with an attack?");
     }
 
     Color textColour = Color.black;
@@ -101,8 +102,10 @@ public class ItemInfo : MonoBehaviour {
     }
 
     internal void HideInfoPanel() {
-        if(infoPanel != null)
-            infoPanel.DOAnchorPosY(-160.1f, 0.5f);
+        if(infoPanel != null) {
+            selectedItem = null;
+            viewPort.DOAnchorPosY(-160.1f, 0.5f);
+        }
     }
 
     private EntityStatData ChooseRandomPartyMember() {
@@ -113,35 +116,47 @@ public class ItemInfo : MonoBehaviour {
     public int itemsSold;
     public void _SellItem() {
         if(selectedItem) {
-            EntityStatData randomParty = ChooseRandomPartyMember();
-            if(randomParty.currentEnergy < randomParty.energy) {
-                switch (selectedItem.levelFunction.priceRank) {
-                    case ItemData.LevelFunction.PriceRank.Low:
-                        ChooseRandomPartyMember().currentEnergy += 5;
-                        break;
-                    case ItemData.LevelFunction.PriceRank.Mid:
-                        ChooseRandomPartyMember().currentEnergy += 12;
-                        break;
-                    case ItemData.LevelFunction.PriceRank.High:
-                        ChooseRandomPartyMember().currentEnergy += 18;
-                        break;
-                }
-                if(randomParty.currentEnergy >= randomParty.energy)
-                    randomParty.currentEnergy = randomParty.energy;
-                
-                StartCoroutine(NoticePanel.instance.ShowNotice($"{selectedItem.name} sold!  \nThe heavier wallet energised {randomParty.name.Replace("Stats", "")}!"));
+            if(selectedItem.inventoryAmount == 0) {
+                selectedItem = null;
+                HideInfoPanel();
+                return;
+            }
 
+            EntityStatData randomParty = ChooseRandomPartyMember();
+            switch (selectedItem.levelFunction.priceRank) {
+
+                case ItemData.LevelFunction.PriceRank.Zero:
+                    randomParty.IncreaseXP(1);
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nI don't know what you were expecting when you sold that rock..."));
+                    break;
+
+                case ItemData.LevelFunction.PriceRank.Low:
+                    randomParty.IncreaseXP(16);
+                    randomParty.currentEnergy += 5;
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nAlthough it wasn't much, {randomParty.name.Replace("Stats", "")} was still pleased with the profit"));
+                    break;
+
+                case ItemData.LevelFunction.PriceRank.Mid:
+                    randomParty.IncreaseXP(44);
+                    randomParty.currentEnergy += 12;
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nThe heavier wallet encourages {randomParty.name.Replace("Stats", "")} to continue for more!"));
+                    break;
+
+                case ItemData.LevelFunction.PriceRank.High:
+                    randomParty.IncreaseXP(102);
+                    randomParty.currentEnergy += 18;
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nMore gems sold means even more money, {randomParty.name.Replace("Stats", "")} needs to go even deeper!"));
+                    break;
             }
-            else {
-                StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!"));
-            }
+            if(randomParty.currentEnergy >= randomParty.energy)
+                randomParty.currentEnergy = randomParty.energy;
+                
             itemsSold++;
 
             selectedItem.inventoryAmount--;
             selectedItem.levelFunction.unlockedPriceRank = true;
             
             UpdateTextColour();
-            
             InventorySystem.instance.UpdateInventoryUI();
         }
         else 
@@ -150,14 +165,20 @@ public class ItemInfo : MonoBehaviour {
 
     public void _UseItem() {
         if(selectedItem) {
-            InventorySystem.instance._ToggleInventory();
-            selectedItem.UseItem_LEVEL();
+            if(selectedItem.inventoryAmount == 0) {
+                selectedItem = null;
+                HideInfoPanel();
+                return;
+            }
             selectedItem.description.unlockedLevelDescription = true;
             selectedItem.inventoryAmount--;
 
-            StartCoroutine(NoticePanel.instance.ShowNotice($"Used {selectedItem.name}"));
+            LevelItemsUseEffect.instance.UseItem(selectedItem);
             InventorySystem.instance.UpdateInventoryUI();
         }
+        else 
+            StartCoroutine(NoticePanel.instance.ShowNotice("Select a mineral to use first!"));
+
         // selectedItem.UseItem();
     }
 }

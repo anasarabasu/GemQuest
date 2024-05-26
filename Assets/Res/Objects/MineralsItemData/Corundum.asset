@@ -17,9 +17,9 @@ MonoBehaviour:
   dropChance: 20
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 19
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: The pickaxe is now sharper.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'The second hardest mineral. Don''t throw it at your team members
@@ -28,9 +28,9 @@ MonoBehaviour:
 
       Stuns for 4 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Makes for a ruthless increase in attack.
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 2
     function: 2
     amount: 100
@@ -40,5 +40,5 @@ MonoBehaviour:
     asAnItem: 1
     asAnItemDuration: 4
     asAnItemAmount: 20
-    withASkill: 0
+    withASkill: 1
     skillDamageIncreaseAmount: 0

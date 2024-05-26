@@ -26,12 +26,18 @@ public class AmbushRNG : MonoBehaviour{
         }
     }
 
+    public static AmbushRNG instance;
+
+    private void Awake() {
+        instance = this;
+    }
+
     private void AmbushOccurs() {
         DataManager.instance.WriteSaveFile();
-            // combatScene = SceneManager.LoadSceneAsync("Combat");
-            // combatScene.allowSceneActivation = false;
-            // if(!combatScene.isDone) 
-            //     StartCoroutine(EnemyAmbush());
+            combatScene = SceneManager.LoadSceneAsync("Combat");
+            combatScene.allowSceneActivation = false;
+            if(!combatScene.isDone) 
+                StartCoroutine(EnemyAmbush());
 
 
             Debug.Log("Enemy Ambush!");

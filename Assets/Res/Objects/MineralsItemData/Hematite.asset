@@ -18,9 +18,9 @@ MonoBehaviour:
   dropChance: 90
   maxLootDrop: 10
   hitPoints: 4
-  inventoryAmount: 21
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: A key component in producing steel. Upgrades the pickaxe a little bit.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'It''s rather heavy and hard. Would be unfortunate if this got thrown
@@ -29,9 +29,9 @@ MonoBehaviour:
 
       Stuns for 1 turn.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Boosts the damage caused when performing an attack.
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 1
     function: 2
     amount: 5
@@ -41,5 +41,5 @@ MonoBehaviour:
     asAnItem: 1
     asAnItemDuration: 1
     asAnItemAmount: 8
-    withASkill: 0
+    withASkill: 1
     skillDamageIncreaseAmount: 0

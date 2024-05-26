@@ -146,7 +146,7 @@ public class CombatUI : MonoBehaviour {
     }
 
     public void UpdateItemText(ItemData selectedItem, CombatSystem.MoveType moveType) {
-        Color textColour = Color.black;
+        Color textColour = Color.white;
         if(selectedItem.levelFunction.unlockedPriceRank) 
             switch (selectedItem.levelFunction.priceRank) {
                 case ItemData.LevelFunction.PriceRank.Low:
@@ -160,11 +160,11 @@ public class CombatUI : MonoBehaviour {
                     ColorUtility.TryParseHtmlString("#D42DD4", out textColour);
                     break;
                 case ItemData.LevelFunction.PriceRank.Zero:
-                    textColour = Color.black;
+                    textColour = Color.white;
                     break;                    
             }
         else
-            textColour = Color.black;
+            textColour = Color.white;
 
         itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().SetText(selectedItem.name);
         itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().color = textColour;

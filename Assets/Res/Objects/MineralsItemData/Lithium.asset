@@ -17,9 +17,9 @@ MonoBehaviour:
   dropChance: 40
   maxLootDrop: 6
   hitPoints: 4
-  inventoryAmount: 32
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: Charges the flashlight greatly!
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'A reliable source of power for all things electronic.
@@ -28,17 +28,17 @@ MonoBehaviour:
       Causes
       electrocution for 3 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Improves the damage of a skill.
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 2
     function: 1
     amount: 20
   combatFunction:
-    effectiveTo: 0
+    effectiveTo: 1
     uselessTo: 0
-    asAnItem: 0
-    asAnItemDuration: 0
-    asAnItemAmount: 0
-    withASkill: 0
+    asAnItem: 2
+    asAnItemDuration: 3
+    asAnItemAmount: 7
+    withASkill: 1
     skillDamageIncreaseAmount: 0

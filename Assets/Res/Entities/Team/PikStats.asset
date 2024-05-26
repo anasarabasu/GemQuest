@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a7e983e14b6a458268c053ece91b4, type: 3}
   m_Name: PikStats
   m_EditorClassIdentifier: 
-  level: 3
-  currentXP: 86
-  nextLevelThreshold: 116
+  level: 0
+  currentXP: 0
+  nextLevelThreshold: 0
   toolLevel: 0
   currentToolXP: 0
   nextToolLevelThreshold: 10
-  health: 5e+13
-  currentHealth: 5e+13
+  health: 80
+  currentHealth: 80
   energy: 30
-  currentEnergy: 24
+  currentEnergy: 30
   speed: 5
   entityType: 0
   movesets:

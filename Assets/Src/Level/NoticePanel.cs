@@ -9,7 +9,7 @@ public class NoticePanel : MonoBehaviour {
     private void Awake() => instance = this;
     [SerializeField] RectTransform noticePanel;
     
-    public IEnumerator ShowNotice(string message) { //me too
+    public IEnumerator ShowNotice(string message, float duration = 0.5f) { //me too
         noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(message);
         if(noticePanel.anchoredPosition.y != 12.75f) {
             noticePanel.DOAnchorPosY(12.75f, 0.25f);

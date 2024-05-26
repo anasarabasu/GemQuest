@@ -17,9 +17,9 @@ MonoBehaviour:
   dropChance: 100
   maxLootDrop: 10
   hitPoints: 6
-  inventoryAmount: 115
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: If we believe hard enough, the spriritual power of quartz will heal us!
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'A strong, durable, and also aesthetically pleasing material for
@@ -28,9 +28,9 @@ MonoBehaviour:
 
       Provides protection against 1 attack.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Combining this with an attack didn't help at all!
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 0
     function: 0
     amount: 0

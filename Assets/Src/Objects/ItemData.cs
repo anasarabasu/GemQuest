@@ -91,9 +91,6 @@ public class ItemData : ScriptableObject {
                 target.SetHeal(asAnItemAmount);
 
             if(asAnItem == AsAnItem.Distract)
-                target.SetHeal(asAnItemDuration);
-
-            if(asAnItem == AsAnItem.Distract)
                 target.SetDistraction(asAnItemDuration);
         }
 
@@ -101,5 +98,18 @@ public class ItemData : ScriptableObject {
         public enum WithASkill  {Fail, IncreaseAttack, OneHit}
         public WithASkill withASkill;
         public int skillDamageIncreaseAmount;
+
+        public CombatSystem.SkillOutcome UseItem_Skill(Combat attacker) {
+            if(withASkill == WithASkill.Fail)
+                return CombatSystem.SkillOutcome.FAIL;
+
+            if(withASkill == WithASkill.IncreaseAttack)
+                return CombatSystem.SkillOutcome.INCREASE;
+
+            if(withASkill == WithASkill.OneHit)
+                return CombatSystem.SkillOutcome.ONEHIT;
+
+            return CombatSystem.SkillOutcome.NONE;
+        }
     }
 }

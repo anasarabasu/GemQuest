@@ -14,12 +14,12 @@ public class LevelItemsUseEffect : MonoBehaviour {
         string starting = $"Used {item.name}\n";
         switch (item.levelFunction.function) {
             case ItemData.LevelFunction.Function.None:
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Nothing happened..."));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Nothing happened...", 0.5f));
                 break;
 
             case ItemData.LevelFunction.Function.ReplenishBattery:
                 FlashLightMechanic.instance.AddBattery(item.levelFunction.amount);
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Flashlight charged!"));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Flashlight charged!", 0.5f));
                 InventorySystem.instance._ToggleInventory();
                 break;
 
@@ -28,11 +28,12 @@ public class LevelItemsUseEffect : MonoBehaviour {
                 break;
 
             case ItemData.LevelFunction.Function.Heal:
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "not yet added..."));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "not yet added...", 0.5f));
                 break;
 
             case ItemData.LevelFunction.Function.DeterEnemies:
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Things seems a little quiter... for now\nWe stink though!"));
+                AmbushRNG.instance.timer += 20;
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Things seems a little quiter... for now\nWe stink though!", 0.5f));
                 InventorySystem.instance._ToggleInventory();
                 break;
             

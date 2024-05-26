@@ -17,9 +17,9 @@ MonoBehaviour:
   dropChance: 30
   maxLootDrop: 6
   hitPoints: 4
-  inventoryAmount: 18
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: Polished and made the pickaxe look brand new.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'Focus this captivating gemstone!
@@ -28,9 +28,9 @@ MonoBehaviour:
       Chance of distraction
       for 3 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Increases the damage of attacks greatly!
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 2
     function: 2
     amount: 50
@@ -40,5 +40,5 @@ MonoBehaviour:
     asAnItem: 6
     asAnItemDuration: 3
     asAnItemAmount: 8
-    withASkill: 0
+    withASkill: 1
     skillDamageIncreaseAmount: 0

@@ -66,7 +66,7 @@ public class LevelObject : MonoBehaviour { //should make this an inherit or inte
             if(notice != null)
                 StopCoroutine(notice);
                 
-            notice = StartCoroutine(NoticePanel.instance.ShowNotice("Your tool is to weak to mine this rock..."));
+            notice = StartCoroutine(NoticePanel.instance.ShowNotice("Your tool is to weak to mine this rock...", 0.5f));
         }
     }
     Coroutine notice;

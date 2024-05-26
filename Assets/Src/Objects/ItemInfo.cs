@@ -85,20 +85,20 @@ public class ItemInfo : MonoBehaviour {
         if(selectedItem.levelFunction.unlockedPriceRank)
             switch (selectedItem.levelFunction.priceRank) {
                 case ItemData.LevelFunction.PriceRank.Low:
-                    StartCoroutine(NoticePanel.instance.ShowNotice("This mineral doesn't sell much"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice("This mineral doesn't sell much", 2));
                     break;
                 case ItemData.LevelFunction.PriceRank.Mid:
-                    StartCoroutine(NoticePanel.instance.ShowNotice("A very useful mineral with an average price"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice("A very useful mineral with an average price", 2));
                     break;
                 case ItemData.LevelFunction.PriceRank.High:
-                    StartCoroutine(NoticePanel.instance.ShowNotice("A high value nad demand mineral that sells at a high price"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice("A high value nad demand mineral that sells at a high price", 2));
                     break;
                 default:
-                    StartCoroutine(NoticePanel.instance.ShowNotice("What do you expect the generic rock to sell for?"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice("What do you expect the generic rock to sell for?", 2));
                     return;                    
             }
         else 
-            StartCoroutine(NoticePanel.instance.ShowNotice("Don't know how much this sells..."));
+            StartCoroutine(NoticePanel.instance.ShowNotice("Don't know how much this sells...", 2));
     }
 
     internal void HideInfoPanel() {
@@ -128,25 +128,25 @@ public class ItemInfo : MonoBehaviour {
                 case ItemData.LevelFunction.PriceRank.Zero:
                     randomParty.IncreaseXP(1);
                     randomParty.currentEnergy += 1;
-                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nI don't know what you were expecting when you sold that rock..."));
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nI don't know what you were expecting when you sold that rock...", 2));
                     break;
 
                 case ItemData.LevelFunction.PriceRank.Low:
                     randomParty.IncreaseXP(16);
                     randomParty.currentEnergy += 5;
-                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nAlthough it wasn't much, {randomParty.name.Replace("Stats", "")} was still pleased with the profit"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nAlthough it wasn't much, {randomParty.name.Replace("Stats", "")} was still pleased with the profit", 2));
                     break;
 
                 case ItemData.LevelFunction.PriceRank.Mid:
                     randomParty.IncreaseXP(44);
                     randomParty.currentEnergy += 12;
-                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nThe heavier wallet encourages {randomParty.name.Replace("Stats", "")} to continue for more!"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nThe heavier wallet encourages {randomParty.name.Replace("Stats", "")} to continue for more!", 2));
                     break;
 
                 case ItemData.LevelFunction.PriceRank.High:
                     randomParty.IncreaseXP(102);
                     randomParty.currentEnergy += 18;
-                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nMore gems sold means even more money, {randomParty.name.Replace("Stats", "")} needs to go even deeper!"));
+                    StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nMore gems sold means even more money, {randomParty.name.Replace("Stats", "")} needs to go even deeper!", 2));
                     break;
             }
             if(randomParty.currentEnergy >= randomParty.energy)
@@ -161,7 +161,7 @@ public class ItemInfo : MonoBehaviour {
             InventorySystem.instance.UpdateInventoryUI();
         }
         else 
-            StartCoroutine(NoticePanel.instance.ShowNotice("Select a mineral to sell first!"));
+            StartCoroutine(NoticePanel.instance.ShowNotice("Select a mineral to sell first!", 0.5f));
     }
 
     public void _UseItem() {
@@ -178,7 +178,7 @@ public class ItemInfo : MonoBehaviour {
             InventorySystem.instance.UpdateInventoryUI();
         }
         else 
-            StartCoroutine(NoticePanel.instance.ShowNotice("Select a mineral to use first!"));
+            StartCoroutine(NoticePanel.instance.ShowNotice("Select a mineral to use first!", 0.5f));
 
         // selectedItem.UseItem();
     }

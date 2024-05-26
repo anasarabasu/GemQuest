@@ -17,9 +17,9 @@ MonoBehaviour:
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 2
-  inventoryAmount: 17
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: Charges the flashlight.
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'Heavy and dense. Can cause some serious damage when thrown.
@@ -28,9 +28,9 @@ MonoBehaviour:
       Stuns
       for 2 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: The weapon just turned softer
+    Combat_SKILL: The weapon just became squishy...
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 1
     function: 1
     amount: 10

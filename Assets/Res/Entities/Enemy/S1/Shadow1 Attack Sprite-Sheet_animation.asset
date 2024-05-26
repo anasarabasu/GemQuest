@@ -82,18 +82,6 @@ MonoBehaviour:
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 1830665887, guid: 1a746e7d3d1099e43af8fa9a6af134c4, type: 3}
-    drivers:
-      keys: []
-      values: 
-  - sprite: {fileID: -1238744229, guid: 1a746e7d3d1099e43af8fa9a6af134c4, type: 3}
-    drivers:
-      keys: []
-      values: 
-  - sprite: {fileID: -448557814, guid: 1a746e7d3d1099e43af8fa9a6af134c4, type: 3}
-    drivers:
-      keys: []
-      values: 
   - sprite: {fileID: 1026887929, guid: 1a746e7d3d1099e43af8fa9a6af134c4, type: 3}
     drivers:
       keys:

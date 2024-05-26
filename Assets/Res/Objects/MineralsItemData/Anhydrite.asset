@@ -18,20 +18,20 @@ MonoBehaviour:
   dropChance: 30
   maxLootDrop: 5
   hitPoints: 2
-  inventoryAmount: 18
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: It seems to have no use here...
-    unlockedCombatDescription_ITEM: 1
+    unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'Contributed greatly in building the cement wall. A very sturdy
       wall!
 
 
       Provides protection against attacks 4 times.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: Combining with an attack didn't help at all!
+    Combat_SKILL: Combining this with an attack didn't help at all!
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 0
     function: 0
     amount: 0

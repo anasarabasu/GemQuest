@@ -17,9 +17,9 @@ MonoBehaviour:
   dropChance: 50
   maxLootDrop: 9
   hitPoints: 2
-  inventoryAmount: 45
+  inventoryAmount: 1
   description:
-    unlockedLevelDescription: 1
+    unlockedLevelDescription: 0
     Level: More batteries for the flashlight...
     unlockedCombatDescription_ITEM: 0
     Combat_ITEM: 'The chemical reactions in the lead battery caused an acidic formation.
@@ -28,17 +28,17 @@ MonoBehaviour:
       Causes
       acid damage for 4 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Greatly increases attack
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 1
     function: 1
     amount: 14
   combatFunction:
-    effectiveTo: 0
+    effectiveTo: 2
     uselessTo: 0
     asAnItem: 3
     asAnItemDuration: 4
     asAnItemAmount: 8
-    withASkill: 0
+    withASkill: 1
     skillDamageIncreaseAmount: 0

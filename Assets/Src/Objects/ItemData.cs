@@ -35,6 +35,33 @@ public class ItemData : ScriptableObject {
         public int amount;
     }
 
+    public void SellItem(Combat target, string name) {
+        switch (levelFunction.priceRank) {
+            case LevelFunction.PriceRank.Zero:
+                target.combatData.IncreaseXP(1);
+                target.SetEnergy(1, name);
+                break;
+
+            case LevelFunction.PriceRank.Low:
+                target.combatData.IncreaseXP(16);
+                target.SetEnergy(5, name);
+                break;
+
+            case LevelFunction.PriceRank.Mid:
+                target.combatData.IncreaseXP(44);
+                target.SetEnergy(12, name);
+                break;
+
+            case LevelFunction.PriceRank.High:
+                target.GetComponent<Combat>().combatData.IncreaseXP(102);
+                target.SetEnergy(20, name);
+                break;
+        }
+
+        if(target.combatData.currentEnergy >= target.GetComponent<Combat>().combatData.energy)
+                target.combatData.currentEnergy = target.GetComponent<Combat>().combatData.energy;
+    }
+
 
     public CombatFunction combatFunction;
     [Serializable] public class CombatFunction {
@@ -42,51 +69,37 @@ public class ItemData : ScriptableObject {
         public Enemy effectiveTo;
         public Enemy uselessTo;
 
-        public enum AsAnItem {None, Stun, Electric, Acid, Shield, Heal}
+        public enum AsAnItem {None, Stun, Electric, Acid, Shield, Heal, Distract}
         public AsAnItem asAnItem;
         public int asAnItemDuration;
         public int asAnItemAmount;
+
+        public void UseItem_Effect(Combat target) {
+            if(asAnItem == AsAnItem.Stun) //can hold
+                target.SetStun(asAnItemDuration, asAnItemAmount);
+
+            if(asAnItem == AsAnItem.Electric)
+            target.SetElectrocute(asAnItemDuration, asAnItemAmount);
+
+            if(asAnItem == AsAnItem.Acid)
+                target.SetAcid(asAnItemDuration, asAnItemAmount);
+
+            if(asAnItem == AsAnItem.Shield) //block damage
+                target.SetShield(asAnItemDuration);
+
+            if(asAnItem == AsAnItem.Heal)
+                target.SetHeal(asAnItemAmount);
+
+            if(asAnItem == AsAnItem.Distract)
+                target.SetHeal(asAnItemDuration);
+
+            if(asAnItem == AsAnItem.Distract)
+                target.SetDistraction(asAnItemDuration);
+        }
 
 
         public enum WithASkill  {Fail, IncreaseAttack, OneHit}
         public WithASkill withASkill;
         public int skillDamageIncreaseAmount;
     }
-
-    public enum ItemEffectType {NONE, ELECTRIC, ACID, SHIELD, HEAL, STUN}
-    public ItemEffectType itemEffectType;
-    public int effectTurnDuration = 1;
-    public int effectAmount = 1;
-
-
-    public enum Enemies {NONE, SHADE, GOLEM}
-    public Enemies strongAgainst;
-    public Enemies notEffectiveTo;
-    public bool oneHit;
-    public int damageAddedToSkill;
-    public bool failSkill;
-
-    public int UpgradesTool;
-
-    public void UseItem_EFFECT(Combat target) {
-        if(itemEffectType == ItemEffectType.ELECTRIC)
-            target.SetElectrocute(effectTurnDuration, effectAmount);
-
-        if(itemEffectType == ItemEffectType.ACID)
-            target.SetAcid(effectAmount);
-
-        if(itemEffectType == ItemEffectType.SHIELD) //block damage
-            target.SetShield(effectTurnDuration);
-
-        if(itemEffectType == ItemEffectType.HEAL)
-            target.SetHeal(effectAmount);
-
-        if(itemEffectType == ItemEffectType.STUN) //can hold
-            target.SetStun(effectTurnDuration);
-    }
-
-    public void UseItem_SKILL() {
-        
-    }
-    
 }

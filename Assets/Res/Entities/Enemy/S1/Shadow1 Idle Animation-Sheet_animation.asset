@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Shadow1 Idle Animation-Sheet_animation
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 2013756144, guid: 037889c497e452340b78373052fc0e24, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1345625517, guid: 037889c497e452340b78373052fc0e24, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1445445241, guid: 037889c497e452340b78373052fc0e24, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1841138096, guid: 037889c497e452340b78373052fc0e24, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1527942198, guid: 037889c497e452340b78373052fc0e24, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1079409566, guid: 037889c497e452340b78373052fc0e24, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: Idle
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 48a90ccb-d1bf-4d78-ad1c-fb54814ef257
+  drivers:
+    keys: []
+    values: 

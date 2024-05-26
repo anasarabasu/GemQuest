@@ -4,8 +4,7 @@ using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class AmbushRNG : MonoBehaviour{
-    public float timer = 60;
-    private void Awake() => timer = Random.Range(10, 45);
+    public float timer = 10;
 
     [SerializeField] GameObject ambushImage;
     public int frequencyForShow = 50; //75, 50, 25, 0
@@ -18,7 +17,7 @@ public class AmbushRNG : MonoBehaviour{
         timer -= Time.deltaTime;
 
         if(timer <= 0) {
-            int randomInterval = Random.Range(1, 20);
+            int randomInterval = Random.Range(1, 10);
             timer = randomInterval;
 
             int randomRoll = Random.Range(0, 101);

@@ -12,17 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81c1281a66824a4d87b358601c40235, type: 3}
   m_Name: Titanium
   m_EditorClassIdentifier: 
-  introDesccription: It's very light compared to the other heavvy ones...
+  introDesccription: It's very light compared to the other heavy ones...
   sprite: {fileID: -1242550664, guid: 84be1aad0acf8644e88794da2339028d, type: 3}
   dropChance: 70
   maxLootDrop: 5
   hitPoints: 4
-  inventoryAmount: 37
+  inventoryAmount: 39
   description:
     unlockedLevelDescription: 1
     Level: The pickaxe was not only upgraded but felt lighter as well!
     unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Combat_ITEM: 'Its biocompatibility allows it to integrated well with the human
+      body.
+
+
+      Replenishes health by 13 points.'
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: 
   levelFunction:
@@ -33,17 +37,8 @@ MonoBehaviour:
   combatFunction:
     effectiveTo: 0
     uselessTo: 0
-    asAnItem: 0
+    asAnItem: 5
     asAnItemDuration: 0
-    asAnItemAmount: 0
+    asAnItemAmount: 13
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 4
-  effectTurnDuration: 0
-  effectAmount: 30
-  strongAgainst: 0
-  notEffectiveTo: 0
-  oneHit: 0
-  damageAddedToSkill: 0
-  failSkill: 1
-  UpgradesTool: 1

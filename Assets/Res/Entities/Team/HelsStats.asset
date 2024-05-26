@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: HelsStats
   m_EditorClassIdentifier: 
   level: 1
-  currentXP: 52
+  currentXP: 10
   nextLevelThreshold: 61
   toolLevel: 0
   currentToolXP: 0
   nextToolLevelThreshold: 10
-  health: 34
-  currentHealth: 30
-  energy: 20
-  currentEnergy: 20
+  health: 5e+13
+  currentHealth: 5e+13
+  energy: 32
+  currentEnergy: 4
   speed: 2
+  entityType: 0
   movesets:
   - name: Shovel Dart
     attackDistance: 28

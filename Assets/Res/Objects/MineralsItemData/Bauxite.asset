@@ -17,33 +17,28 @@ MonoBehaviour:
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 2
-  inventoryAmount: 39
+  inventoryAmount: 42
   description:
     unlockedLevelDescription: 1
-    Level: We were able to extract some aluminum from it. That's all.
-    unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Level: Extracted some aluminum from it. Pretty useful stuff.
+    unlockedCombatDescription_ITEM: 1
+    Combat_ITEM: 'The aluminum derived plays a useful role in medical applications.
+
+
+      Replenishes
+      health by 7 points.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Somewhat increases the damage of steel attacks.
   levelFunction:
     unlockedPriceRank: 1
     priceRank: 0
-    function: 0
-    amount: 0
+    function: 2
+    amount: 3
   combatFunction:
     effectiveTo: 0
     uselessTo: 0
     asAnItem: 5
     asAnItemDuration: 0
-    asAnItemAmount: 0
-    withASkill: 0
-    skillDamageIncreaseAmount: 0
-  itemEffectType: 4
-  effectTurnDuration: 1
-  effectAmount: 10
-  strongAgainst: 0
-  notEffectiveTo: 0
-  oneHit: 0
-  damageAddedToSkill: 0
-  failSkill: 1
-  UpgradesTool: 0
+    asAnItemAmount: 7
+    withASkill: 1
+    skillDamageIncreaseAmount: 5

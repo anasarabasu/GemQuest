@@ -1,14 +1,20 @@
+using System;
 using System.Collections;
 using Aarthificial.Reanimation;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using Random = UnityEngine.Random;
 
 public class Combat : MonoBehaviour {
     [SerializeField] GameObject shield;
     [SerializeField] GameObject electro;
     [SerializeField] GameObject heal;
     [SerializeField] GameObject hit;
+    [SerializeField] GameObject energise;
+    [SerializeField] GameObject acid;
+    [SerializeField] GameObject stun;
 
 
     public EntityStatData combatData;
@@ -25,6 +31,8 @@ public class Combat : MonoBehaviour {
         reanimator.AddListener("ActionFinished", ActionFinished);
         reanimator.AddListener("AttackHit", AnimationAttackHit);
         reanimator.AddListener("ShowItem", ShowItem);
+        reanimator.Set("Idle", Random.Range(0, 5));
+
         healthEnemy = combatData.currentHealth;
 
         entities = FindObjectsOfType<Combat>();
@@ -36,15 +44,11 @@ public class Combat : MonoBehaviour {
     private void ActionFinished() => isActionFinished = true;
 
     private Combat target;
-    private int damageFromAttacker;
+    private int damageOfAttack;
     public void SetTarget(GameObject target, int damage) {
         this.target = target.GetComponent<Combat>();
 
-        if(this.target.shieldHitAmount > 0) 
-            damageFromAttacker = 0;
-        
-        else
-            damageFromAttacker = damage;
+        damageOfAttack = damage;
     }
 
     public void PerformAttack(int attackKey) {
@@ -57,7 +61,7 @@ public class Combat : MonoBehaviour {
         var effect = hit.GetComponent<ParticleSystem>();
         effect.Play();
 
-        StartCoroutine(target.IsAttacked(damageFromAttacker));
+        StartCoroutine(target.IsAttacked(damageOfAttack));
         Debug.Log("Hit!");
     }
 
@@ -140,16 +144,17 @@ public class Combat : MonoBehaviour {
     }
 
     IEnumerator IsHealed(int healAmount) {
-        GameObject effectGO = Instantiate(CombatEffects.instance.heal, transform.position, Quaternion.identity, transform);
-        var effect = effectGO.GetComponent<ParticleSystem>();
-        
+        heal.SetActive(true);
+        var effect = heal.GetComponent<ParticleSystem>();
         effect.Play();
-        Destroy(effectGO, effect.main.duration);
 
         if(CompareTag("Enemy")) 
             healthEnemy += healAmount;
-        else 
+        else {
             combatData.currentHealth += healAmount;
+            if(combatData.currentHealth >= combatData.health)
+                combatData.currentHealth = combatData.health;
+        }
 
         for(int i = 0; i < 4; i++) { 
             reanimator.Renderer.color = Color.green;
@@ -163,10 +168,47 @@ public class Combat : MonoBehaviour {
         CheckHealth();
     }
 
+    public void SetEnergy(int amount, string selectedItem) => StartCoroutine(IsEnergised(amount, selectedItem));
+
+    IEnumerator IsEnergised(int amount, string selectedItem) {
+        energise.SetActive(true);
+        var effect = energise.GetComponent<ParticleSystem>();
+        effect.Play();
+
+        if(amount == 1)
+            StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem}!\n{gameObject.name.Replace("(Clone)", "")} was energised... with a rock?"));
+        else 
+            StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem}!\n{gameObject.name.Replace("(Clone)", "")} was energised!"));
+
+        combatData.currentEnergy += amount;
+        if(combatData.currentEnergy >= combatData.energy)
+                combatData.currentEnergy = combatData.energy;
+
+        for(int i = 0; i < 4; i++) { 
+            reanimator.Renderer.color = Color.yellow;
+            yield return new WaitForSeconds(flickerSpeed);
+            reanimator.Renderer.color = Color.white;
+            yield return new WaitForSeconds(flickerSpeed);
+        }
+        yield return null;
+    }
+
+
     public int stunDuration;
-    public void SetStun(int duration) {
+    public void SetStun(int duration, int amount) {
         stunDuration = duration;
-        StartCoroutine(CombatUI.instance.ShowNotice(name + " was dazed from the impact!"));
+        Stun();
+        
+        StartCoroutine(IsAttacked(amount));
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was dazed from the impact!"));
+    }
+
+    public void Stun() {
+        stun.SetActive(true);
+        var effect = stun.GetComponent<ParticleSystem>();
+        effect.Play();
+        transform.DOShakePosition(1);
+
     }
 
     public int electricDuration;
@@ -175,18 +217,19 @@ public class Combat : MonoBehaviour {
         electricDuration = duration;
         electricDamage = amount;
 
-        StartCoroutine(CombatUI.instance.ShowNotice(name + " was electrocuted!"));
+        if(combatData.entityType == EntityStatData.EntityType.Shade)
+            electricDamage *= 4;
+
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was electrocuted!"));
         Electrocuted();
     }
 
     public void Electrocuted() {
-        GameObject effectGO = Instantiate(CombatEffects.instance.electrocute, transform.position, Quaternion.identity, transform);
-        var effect = effectGO.GetComponent<ParticleSystem>();
-        
+        electro.SetActive(true);
+        var effect = electro.GetComponent<ParticleSystem>();
         effect.Play();
-        Destroy(effectGO, effect.main.duration);
 
-        StartCoroutine(IsAttacked(electricDamage));
+        StartCoroutine(IsAttacked(Random.Range(electricDamage-4, electricDamage)));
     }
 
 
@@ -198,7 +241,7 @@ public class Combat : MonoBehaviour {
         var effect = shield.GetComponent<ParticleSystem>();
         effect.Play();
 
-        StartCoroutine(CombatUI.instance.ShowNotice(name + " formed a shield!"));
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " formed a shield!"));
     }
 
     public bool ShieldUsed;
@@ -219,25 +262,55 @@ public class Combat : MonoBehaviour {
         }
     }
 
-    public int acidAmount;
-    public void SetAcid(int amount) {
-        acidAmount = amount;
+    public int acidDuration;
+    public int acidDamage;
+    public void SetAcid(int duration, int amount) {
+        acidDuration = duration;
+        acidDamage = amount;
 
-        StartCoroutine(CombatUI.instance.ShowNotice(name + " was damaged by acid!"));
-        
+        if(combatData.entityType == EntityStatData.EntityType.Golem)
+            acidDamage *= 4;
+
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was damaged by acid!"));
+        Acid();
+    }
+
+    public void Acid() {
+        acid.SetActive(true);
+        var effect = acid.GetComponent<ParticleSystem>();
+        effect.Play();
+
+        StartCoroutine(IsAttacked(acidDamage));
+    }
+
+
+    public int distractedDuration;
+    public void SetDistraction(int amount) {
+        distractedDuration = amount;
+        Distracted();
+    }
+
+    public void Distracted() {
+        transform.DOShakePosition(1);
     }
 
     public bool isAlive = true;
     public void CheckHealth() {
         if(gameObject.tag == "Hero") {
             if(combatData.currentHealth <= 0) {
+                if(gameObject.name.Contains("Pik"))
+                    transform.Find("Ray").GetComponent<Light2D>().enabled = false;
+
                 reanimator.Set("State", 4); //dead
                 reanimator.Renderer.color = Color.white;
                 isAlive = false;
                 combatData.currentEnergy = 0;
             }
             else {
-                reanimator.Set("State", 0); //dead
+                if(gameObject.name.Contains("Pik"))
+                    transform.Find("Ray").GetComponent<Light2D>().enabled = true;
+
+                reanimator.Set("State", 0); 
                 isAlive = true;
             }
         }

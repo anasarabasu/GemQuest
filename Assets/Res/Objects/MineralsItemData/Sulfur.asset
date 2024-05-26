@@ -17,12 +17,16 @@ MonoBehaviour:
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 1
-  inventoryAmount: 20
+  inventoryAmount: 29
   description:
     unlockedLevelDescription: 1
     Level: Now WE smell bad... Atleast it seems to have warded off those... creatures.
     unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Combat_ITEM: 'When heated, it releases sulfur gas which can react with the air
+      and form sulfuric acid.
+
+
+      Causes acid damage for 2 turns.'
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: 
   levelFunction:
@@ -31,19 +35,10 @@ MonoBehaviour:
     function: 4
     amount: 20
   combatFunction:
-    effectiveTo: 0
-    uselessTo: 0
-    asAnItem: 0
-    asAnItemDuration: 0
-    asAnItemAmount: 0
+    effectiveTo: 2
+    uselessTo: 1
+    asAnItem: 3
+    asAnItemDuration: 2
+    asAnItemAmount: 7
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 2
-  effectTurnDuration: 1
-  effectAmount: 5
-  strongAgainst: 2
-  notEffectiveTo: 1
-  oneHit: 0
-  damageAddedToSkill: 10
-  failSkill: 0
-  UpgradesTool: 1

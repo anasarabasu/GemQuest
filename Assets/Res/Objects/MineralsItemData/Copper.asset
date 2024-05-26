@@ -17,33 +17,28 @@ MonoBehaviour:
   dropChance: 70
   maxLootDrop: 10
   hitPoints: 2
-  inventoryAmount: 9
+  inventoryAmount: 17
   description:
     unlockedLevelDescription: 1
     Level: Charges the flashlight.
     unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Combat_ITEM: 'Heavy and dense. Can cause some serious damage when thrown.
+
+
+      Stuns
+      for 2 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: The weapon just turned softer
   levelFunction:
     unlockedPriceRank: 1
     priceRank: 1
     function: 1
     amount: 10
   combatFunction:
-    effectiveTo: 0
-    uselessTo: 0
-    asAnItem: 5
-    asAnItemDuration: 0
-    asAnItemAmount: 0
+    effectiveTo: 1
+    uselessTo: 2
+    asAnItem: 1
+    asAnItemDuration: 2
+    asAnItemAmount: 10
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 1
-  effectTurnDuration: 1
-  effectAmount: 4
-  strongAgainst: 1
-  notEffectiveTo: 2
-  oneHit: 0
-  damageAddedToSkill: 7
-  failSkill: 0
-  UpgradesTool: 1

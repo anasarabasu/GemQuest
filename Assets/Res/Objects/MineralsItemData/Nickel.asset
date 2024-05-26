@@ -17,12 +17,16 @@ MonoBehaviour:
   dropChance: 50
   maxLootDrop: 7
   hitPoints: 4
-  inventoryAmount: 32
+  inventoryAmount: 41
   description:
     unlockedLevelDescription: 1
     Level: Enhances the property of the pickaxe.
     unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Combat_ITEM: 'Holding it, you can feel its heaviness and density. Throw it at
+      someone?
+
+
+      Stuns for 3 turns.'
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: 
   levelFunction:
@@ -33,17 +37,8 @@ MonoBehaviour:
   combatFunction:
     effectiveTo: 0
     uselessTo: 0
-    asAnItem: 0
-    asAnItemDuration: 0
-    asAnItemAmount: 0
+    asAnItem: 1
+    asAnItemDuration: 9
+    asAnItemAmount: 3
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 1
-  effectTurnDuration: 1
-  effectAmount: 1
-  strongAgainst: 1
-  notEffectiveTo: 2
-  oneHit: 0
-  damageAddedToSkill: 6
-  failSkill: 0
-  UpgradesTool: 1

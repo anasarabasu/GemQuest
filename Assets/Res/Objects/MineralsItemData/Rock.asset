@@ -38,12 +38,3 @@ MonoBehaviour:
     asAnItemAmount: 0
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 0
-  effectTurnDuration: 1
-  effectAmount: 1
-  strongAgainst: 0
-  notEffectiveTo: 0
-  oneHit: 0
-  damageAddedToSkill: 0
-  failSkill: 1
-  UpgradesTool: 1

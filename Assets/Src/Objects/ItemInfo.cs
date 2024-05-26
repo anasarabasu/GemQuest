@@ -32,7 +32,7 @@ public class ItemInfo : MonoBehaviour {
     }
 
     private void ToggleInfoPanel() {
-        viewPort.DOAnchorPosY(0, 0.5f);
+        viewPort.DOAnchorPosY(-9.785f, 0.5f);
 
 
         infoPanel.Find("Name").GetComponent<TextMeshProUGUI>().SetText(selectedItem.name);
@@ -104,7 +104,7 @@ public class ItemInfo : MonoBehaviour {
     internal void HideInfoPanel() {
         if(infoPanel != null) {
             selectedItem = null;
-            viewPort.DOAnchorPosY(-160.1f, 0.5f);
+            viewPort.DOAnchorPosY(-300f, 0.5f);
         }
     }
 
@@ -127,6 +127,7 @@ public class ItemInfo : MonoBehaviour {
 
                 case ItemData.LevelFunction.PriceRank.Zero:
                     randomParty.IncreaseXP(1);
+                    randomParty.currentEnergy += 1;
                     StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem.name}!\nI don't know what you were expecting when you sold that rock..."));
                     break;
 

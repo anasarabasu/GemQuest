@@ -17,33 +17,28 @@ MonoBehaviour:
   dropChance: 10
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 10
+  inventoryAmount: 15
   description:
     unlockedLevelDescription: 1
     Level: After subjecting this mineral to stress, it produces some electrical charge.
-    unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    unlockedCombatDescription_ITEM: 1
+    Combat_ITEM: 'The energy generated are electrifying.
+
+
+      Causes electrocution
+      for 2 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: 
+    Combat_SKILL: Super effective agaisnt Shades!
   levelFunction:
     unlockedPriceRank: 1
     priceRank: 2
     function: 1
     amount: 30
   combatFunction:
-    effectiveTo: 0
-    uselessTo: 0
-    asAnItem: 0
-    asAnItemDuration: 0
-    asAnItemAmount: 0
-    withASkill: 0
+    effectiveTo: 1
+    uselessTo: 2
+    asAnItem: 2
+    asAnItemDuration: 2
+    asAnItemAmount: 5
+    withASkill: 2
     skillDamageIncreaseAmount: 0
-  itemEffectType: 1
-  effectTurnDuration: 5
-  effectAmount: 8
-  strongAgainst: 1
-  notEffectiveTo: 2
-  oneHit: 0
-  damageAddedToSkill: 15
-  failSkill: 0
-  UpgradesTool: 1

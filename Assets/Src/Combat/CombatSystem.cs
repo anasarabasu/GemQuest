@@ -101,7 +101,7 @@ public class CombatSystem : MonoBehaviour {
                 if(entity.CompareTag("Hero")) {
                     entity.CheckHealth();
                     string name = entity.name.Replace("(Clone)", "");
-                    yield return StartCoroutine(CombatUI.instance.ShowNotice($"{name} is has fallen and can't get up!"));
+                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} has fallen and can't get up!"));
                     entity.stunDuration = 0;
                     entity.combatData.currentEnergy++;
                 }
@@ -114,7 +114,7 @@ public class CombatSystem : MonoBehaviour {
             if(entity.combatData.currentEnergy <= 0) {
                 entity.transform.DOShakePosition(1);
                 string name = entity.name.Replace("(Clone)", "");
-                yield return StartCoroutine(CombatUI.instance.ShowNotice($"{name} is too tired to do anything..."));
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is too tired to do anything..."));
 
                 i++;
                 if(i == turnOrder.Count) i = 0;
@@ -122,9 +122,9 @@ public class CombatSystem : MonoBehaviour {
             }
 
             if(entity.stunDuration != 0) {
-                entity.transform.DOShakePosition(1);
+                entity.Stun();
                 string name = entity.name.Replace("(Clone)", "");
-                yield return StartCoroutine(CombatUI.instance.ShowNotice($"{name} is dazed and can't move..."));
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is dazed and can't move..."));
                 entity.stunDuration--;
 
                 i++;
@@ -136,13 +136,48 @@ public class CombatSystem : MonoBehaviour {
                 entity.Electrocuted();
                 string name = entity.name.Replace("(Clone)", "");
 
-                yield return StartCoroutine(CombatUI.instance.ShowNotice($"{name}: sdlkjmsdflkj!"));
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name}: is damaged by the electricity!"));
                 entity.electricDuration--;
 
-                i++;
-                if(i == turnOrder.Count) i = 0;
-                continue;
-            }            
+                int chance = Random.Range(0, 2);
+                if(chance == 0) {
+                    i++;
+                    if(i == turnOrder.Count) i = 0;
+                    continue;
+                }
+            }      
+
+            if(entity.acidDuration != 0) {
+                entity.Acid();
+                string name = entity.name.Replace("(Clone)", "");
+
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name}: is burned by the acid!"));
+                entity.acidDuration--;
+
+                entity.transform.DOShakePosition(1);
+
+                int chance = Random.Range(0, 2);
+                if(chance == 0) {
+                    i++;
+                    if(i == turnOrder.Count) i = 0;
+                    continue;
+                }
+            }
+
+            if(entity.distractedDuration != 0) {
+                entity.transform.DOShakePosition(1);
+                string name = entity.name.Replace("(Clone)", "");
+
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name}: is distracted by the gem!"));
+                entity.distractedDuration--;
+
+                int chance = Random.Range(0, 2);
+                if(chance == 0) {
+                    i++;
+                    if(i == turnOrder.Count) i = 0;
+                    continue;
+                }
+            }
 
 
             if(entity.CompareTag("Enemy")) {
@@ -258,10 +293,10 @@ public class CombatSystem : MonoBehaviour {
 
         if(target == null) {
             if(rememberAttackKey != attackKey) {
-                notice = StartCoroutine(CombatUI.instance.ShowNotice("Select a target"));
+                notice = StartCoroutine(NoticePanel.instance.ShowNotice("Select a target"));
             }
             else 
-                notice = StartCoroutine(CombatUI.instance.ShowNotice("No target selected"));
+                notice = StartCoroutine(NoticePanel.instance.ShowNotice("No target selected"));
 
             rememberAttackKey = attackKey;
         }
@@ -314,15 +349,14 @@ public class CombatSystem : MonoBehaviour {
             selectedItem = itemData;
 
             Combat.instance.UpItemAni();
-            if(selectedItem)
-            CombatUI.instance.UpdateItemText(itemData.name, itemData.description.Combat_ITEM, itemData.description.unlockedCombatDescription_ITEM);
+            CombatUI.instance.UpdateItemText(itemData, moveType);
             return;
         }
 
         selectedItem = itemData;
         
         Combat.instance.UpItemAni();
-        CombatUI.instance.UpdateItemText(itemData.name, itemData.description.Combat_ITEM, itemData.description.unlockedCombatDescription_ITEM);
+        CombatUI.instance.UpdateItemText(itemData, moveType);
 
     }
 
@@ -378,12 +412,12 @@ public class CombatSystem : MonoBehaviour {
 
         if(selectedItem != null) {
             entityState = State.SelectTarget;
-            notice = StartCoroutine(CombatUI.instance.ShowNotice("Select a target"));
+            notice = StartCoroutine(NoticePanel.instance.ShowNotice("Select a target"));
             CombatUI.instance._MoveCameraDown(false);
             CombatUI.instance._ToggleSelectTargetToUseItemOn();
         }
         else {
-            notice = StartCoroutine(CombatUI.instance.ShowNotice("No item selected"));
+            notice = StartCoroutine(NoticePanel.instance.ShowNotice("No item selected"));
             entityState = State.WaitingForAction;
         }
     }
@@ -426,7 +460,7 @@ public class CombatSystem : MonoBehaviour {
         entityState = State.UseItem;
 
         if(target == null) {
-            notice = StartCoroutine(CombatUI.instance.ShowNotice("No target selected")); 
+            notice = StartCoroutine(NoticePanel.instance.ShowNotice("No target selected")); 
             entityState = State.SelectTarget;
             return;
         }
@@ -442,13 +476,44 @@ public class CombatSystem : MonoBehaviour {
         floatingTweenTemp.Kill();
 
         tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        tempraryItemOBject.transform.DOJump(targetToTossItem, 10, 1, 0.25f);
+        yield return new WaitForSeconds(1);
+
+        Combat.instance.HelsBackToIdle();
+        DeleteItemTemp();
+
+        selectedItem.combatFunction.UseItem_Effect(target.GetComponent<Combat>());
+        selectedItem.inventoryAmount--;
+        selectedItem.description.unlockedCombatDescription_ITEM = true;
+        selectedItem = null;
+        waitingForPlayerInput = false;
+    }
+
+    public void _SellItemButton() {
+        if(target == null) {
+            notice = StartCoroutine(NoticePanel.instance.ShowNotice("No target selected")); 
+            entityState = State.SelectTarget;
+            return;
+        }
+
+        CombatUI.instance._ToggleSelectTargetToUseItemOn();
+        InventorySystem.instance.UpdateInventoryUI();  
+
+        StartCoroutine(ItemTossThenSell(target.transform.position));
+    }
+
+    public IEnumerator ItemTossThenSell(Vector3 targetToTossItem) {
+        targetCircle.GetComponent<Image>().enabled = false;
+        floatingTweenTemp.Kill();
+
+        tempraryItemOBject.GetComponent<SpriteRenderer>().sortingOrder = 4;
         tempraryItemOBject.transform.DOJump(targetToTossItem, 10, 1, 0.5f);
         yield return new WaitForSeconds(1);
 
         Combat.instance.HelsBackToIdle();
         DeleteItemTemp();
 
-        selectedItem.UseItem_EFFECT(target.GetComponent<Combat>());
+        selectedItem.SellItem(target.GetComponent<Combat>(), selectedItem.name);
         selectedItem.inventoryAmount--;
         selectedItem.description.unlockedCombatDescription_ITEM = true;
         selectedItem = null;

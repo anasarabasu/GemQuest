@@ -17,12 +17,15 @@ MonoBehaviour:
   dropChance: 20
   maxLootDrop: 5
   hitPoints: 6
-  inventoryAmount: 22
+  inventoryAmount: 31
   description:
     unlockedLevelDescription: 1
     Level: We have jewelry now. Energising.
     unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Combat_ITEM: 'A fascinating gemstone.
+
+
+      Chance of distraction for 2 turns.'
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: 
   levelFunction:
@@ -33,17 +36,8 @@ MonoBehaviour:
   combatFunction:
     effectiveTo: 0
     uselessTo: 0
-    asAnItem: 0
-    asAnItemDuration: 0
+    asAnItem: 6
+    asAnItemDuration: 2
     asAnItemAmount: 0
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 1
-  effectTurnDuration: 3
-  effectAmount: 2
-  strongAgainst: 0
-  notEffectiveTo: 0
-  oneHit: 0
-  damageAddedToSkill: 8
-  failSkill: 0
-  UpgradesTool: 1

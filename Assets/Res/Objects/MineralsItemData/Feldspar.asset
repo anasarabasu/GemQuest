@@ -17,13 +17,17 @@ MonoBehaviour:
   dropChance: 90
   maxLootDrop: 10
   hitPoints: 4
-  inventoryAmount: 29
+  inventoryAmount: 37
   description:
     unlockedLevelDescription: 1
     Level: Does DIY Skincare still counts as skincare? We don't know but incorporating
       it in cleansers felt refreshing.
     unlockedCombatDescription_ITEM: 0
-    Combat_ITEM: 
+    Combat_ITEM: 'Widely used in the construction industry.
+
+
+      Provides protection
+      against attacks 2 times.'
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: 
   levelFunction:
@@ -34,17 +38,8 @@ MonoBehaviour:
   combatFunction:
     effectiveTo: 0
     uselessTo: 0
-    asAnItem: 0
-    asAnItemDuration: 0
+    asAnItem: 4
+    asAnItemDuration: 2
     asAnItemAmount: 0
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 3
-  effectTurnDuration: 1
-  effectAmount: 1
-  strongAgainst: 0
-  notEffectiveTo: 0
-  oneHit: 0
-  damageAddedToSkill: 6
-  failSkill: 0
-  UpgradesTool: 1

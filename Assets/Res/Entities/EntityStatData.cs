@@ -38,6 +38,8 @@ public class EntityStatData : ScriptableObject {
     public int energy = 20;
     public int currentEnergy = 20;
     public int speed = 1;
+    public enum EntityType {Hero, Shade, Golem}
+    public EntityType entityType;
     public Moveset[] movesets;
 
     [Serializable]

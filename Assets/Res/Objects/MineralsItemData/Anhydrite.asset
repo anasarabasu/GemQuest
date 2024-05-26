@@ -18,14 +18,18 @@ MonoBehaviour:
   dropChance: 30
   maxLootDrop: 5
   hitPoints: 2
-  inventoryAmount: 25
+  inventoryAmount: 18
   description:
     unlockedLevelDescription: 1
     Level: It seems to have no use here...
     unlockedCombatDescription_ITEM: 1
-    Combat_ITEM: ' '
-    unlockedCombatDescription_SKILL: 1
-    Combat_SKILL: ' '
+    Combat_ITEM: 'Contributed greatly in building the cement wall. A very sturdy
+      wall!
+
+
+      Provides protection against attacks 4 times.'
+    unlockedCombatDescription_SKILL: 0
+    Combat_SKILL: Combining with an attack didn't help at all!
   levelFunction:
     unlockedPriceRank: 1
     priceRank: 0
@@ -35,16 +39,7 @@ MonoBehaviour:
     effectiveTo: 0
     uselessTo: 0
     asAnItem: 4
-    asAnItemDuration: 0
+    asAnItemDuration: 4
     asAnItemAmount: 0
     withASkill: 0
     skillDamageIncreaseAmount: 0
-  itemEffectType: 2
-  effectTurnDuration: 1
-  effectAmount: 15
-  strongAgainst: 2
-  notEffectiveTo: 1
-  oneHit: 1
-  damageAddedToSkill: 999
-  failSkill: 0
-  UpgradesTool: 0

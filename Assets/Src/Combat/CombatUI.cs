@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using TMPro;
@@ -108,14 +109,6 @@ public class CombatUI : MonoBehaviour {
 
     [SerializeField] RectTransform noticePanel;
 
-    public IEnumerator ShowNotice(string message) {
-        noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(message);
-        
-        noticePanel.DOAnchorPosY(12.75f, 0.25f);
-        yield return new WaitForSeconds(1);
-        noticePanel.DOAnchorPosY(-12.2f, 0.5f);
-    }
-
     [SerializeField] float cameramoveSpeed = 0.25f;
     [SerializeField] RectTransform itemPanel;
     [SerializeField] float itemPanelMoveSpeed = 0.25f;
@@ -152,14 +145,42 @@ public class CombatUI : MonoBehaviour {
         itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText("Thinking...");
     }
 
-    public void UpdateItemText(string item, string description, bool unlock) {
-        itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().SetText(item);
-
-        if(unlock)
-            itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText(description);
-
+    public void UpdateItemText(ItemData selectedItem, CombatSystem.MoveType moveType) {
+        Color textColour = Color.black;
+        if(selectedItem.levelFunction.unlockedPriceRank) 
+            switch (selectedItem.levelFunction.priceRank) {
+                case ItemData.LevelFunction.PriceRank.Low:
+                    ColorUtility.TryParseHtmlString("#48A448", out textColour);
+                    break;
+                case ItemData.LevelFunction.PriceRank.Mid:
+                    ColorUtility.TryParseHtmlString("#1C1CBA", out textColour);
+                    
+                    break;
+                case ItemData.LevelFunction.PriceRank.High:
+                    ColorUtility.TryParseHtmlString("#D42DD4", out textColour);
+                    break;
+                case ItemData.LevelFunction.PriceRank.Zero:
+                    textColour = Color.black;
+                    break;                    
+            }
         else
-            itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText("What does this mineral do?");
+            textColour = Color.black;
+
+        itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().SetText(selectedItem.name);
+        itemPanel.Find("Header").Find("Name").GetComponent<TextMeshProUGUI>().color = textColour;
+
+
+        if(moveType == CombatSystem.MoveType.ITEM)
+            if(selectedItem.description.unlockedCombatDescription_ITEM)
+                itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText(selectedItem.description.Combat_ITEM);
+            else
+                itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText("What does this mineral do?");
+        
+        if(moveType == CombatSystem.MoveType.SKILL)
+            if(selectedItem.description.unlockedCombatDescription_SKILL)
+                itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText(selectedItem.description.Combat_SKILL);
+             else
+                itemPanel.Find("Description").GetComponent<TextMeshProUGUI>().SetText("What does this mineral do?");
     }
 
     [SerializeField] RectTransform itemTargetSelect;

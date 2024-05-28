@@ -32,19 +32,15 @@ public class FlashLightMechanic : MonoBehaviour {
                 break;
 
             case <= 3:
-                AmbushRNG.SetFrequency(100);
+                AmbushRNG.SetFrequency(75);
                 break;
 
             case <= 8:
-                AmbushRNG.SetFrequency(75);
+                AmbushRNG.SetFrequency(50);
                 break;
 
             case <= 12:
                 decreaseSpeed = 0.05f;
-                AmbushRNG.SetFrequency(50);
-                break;
-
-            case <= 20:
                 AmbushRNG.SetFrequency(25);
                 break;
 

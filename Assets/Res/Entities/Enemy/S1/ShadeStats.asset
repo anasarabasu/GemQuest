@@ -18,8 +18,8 @@ MonoBehaviour:
   toolLevel: 0
   currentToolXP: 0
   nextToolLevelThreshold: 10
-  health: 50
-  currentHealth: 40
+  health: 30
+  currentHealth: 30
   energy: 30
   currentEnergy: 30
   speed: 8
@@ -28,5 +28,5 @@ MonoBehaviour:
   - name: Slash
     attackDistance: 4.05
     type: 1
-    damage: 5
+    damage: 2
     energyCost: 0

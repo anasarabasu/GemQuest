@@ -67,3 +67,6 @@ TagManager:
   - name: UI
     uniqueID: 717102289
     locked: 0
+  - name: Torch
+    uniqueID: 475014365
+    locked: 0

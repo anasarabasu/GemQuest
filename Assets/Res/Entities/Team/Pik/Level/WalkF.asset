@@ -15,16 +15,18 @@ MonoBehaviour:
   cels:
   - sprite: {fileID: -1152534513, guid: 0ecea372db0e0a04b9a5ef4bbc002373, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - Step
+      values: 00000000
   - sprite: {fileID: 1354244486, guid: 0ecea372db0e0a04b9a5ef4bbc002373, type: 3}
     drivers:
       keys: []
       values: 
   - sprite: {fileID: -966472798, guid: 0ecea372db0e0a04b9a5ef4bbc002373, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - Step
+      values: 00000000
   - sprite: {fileID: 1354244486, guid: 0ecea372db0e0a04b9a5ef4bbc002373, type: 3}
     drivers:
       keys: []

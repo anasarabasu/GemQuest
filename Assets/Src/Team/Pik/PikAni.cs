@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using Aarthificial.Reanimation;
 using UnityEngine;
 
 public class PikAni : AnimateRoam {
     [SerializeField] Mine mine;
+    [SerializeField] AudioClip[] MineSounds;
     private void Start() {
         reanimator.AddListener("MiningEndFrame", PickaxeHit);
     }
@@ -27,5 +29,8 @@ public class PikAni : AnimateRoam {
             base.UpdateState();
     }
 
-    private void PickaxeHit() => mine.FinishMining();
+    private void PickaxeHit() {
+        mine.FinishMining();
+        audioSource.PlayOneShot(MineSounds[Random.Range(0, MineSounds.Length)]);
+    }
 }

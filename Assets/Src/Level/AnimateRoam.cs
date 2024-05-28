@@ -1,15 +1,24 @@
+using System.Collections.Generic;
 using Aarthificial.Reanimation;
 using UnityEngine;
 
 public class AnimateRoam : MonoBehaviour {
     protected Reanimator reanimator;
     [SerializeField] Rigidbody2D body;
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] AudioClip[] stepSounds;
+
 
     private enum Facing {FRONT = 0, BACK = 1, LEFT = 2, RIGHT = 3}
     private int facingDirection;
 
     private void Awake() {
         reanimator = GetComponent<Reanimator>();
+        reanimator.AddListener("Step", PlayStepSound);
+    }
+
+    private void PlayStepSound() {
+        audioSource.PlayOneShot(stepSounds[Random.Range(0, stepSounds.Length)]); 
     }
 
     protected void UpdateDirection(Vector3 velocity) {

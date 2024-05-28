@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Res/Scenes/Combat.unity
     guid: 8be60b3646724e6429867a9ecbb3fcd2
   - enabled: 1
+    path: Assets/Res/Scenes/end.unity
+    guid: 6e7a3670cec11ff4a8f6887ad93c64b6
+  - enabled: 1
     path: Assets/Res/Scenes/Cutscenes/Cutscene.unity
     guid: 96b366e65b2c55f4d908c634477bd1af
   - enabled: 1

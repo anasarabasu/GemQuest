@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueSystem : MonoBehaviour, ISaveable {
     [SerializeField] GameObject dialogueBoxPrefab;
@@ -19,6 +20,20 @@ public class DialogueSystem : MonoBehaviour, ISaveable {
 
             dialogueContent = dialogueBox.GetComponentInChildren<TextMeshProUGUI>();
             dialogueContent.SetText(character +"\n"+ message);
+
+            Color panelColour;
+
+            if(character == "Sai") {
+                ColorUtility.TryParseHtmlString("#191629", out panelColour);
+                dialogueBox.GetComponent<Image>().color = panelColour;
+                dialogueContent.color = Color.white;
+            }
+
+            if(character == "Pik") {
+                ColorUtility.TryParseHtmlString("#8E5C61", out panelColour);
+                dialogueBox.GetComponent<Image>().color = panelColour;
+                dialogueContent.color = Color.black;
+            }
 
             dialogueBoxes.Add(dialogueBox);
         }
@@ -45,7 +60,11 @@ public class DialogueSystem : MonoBehaviour, ISaveable {
     }
 
     private IEnumerator MovePanel() {
+        if(panelFocus > 0) {
+            dialogueBoxes[panelFocus-1].GetComponent<Image>().DOFade(0.5f, 0.25f);
+        }
         yield return new WaitForEndOfFrame();
+
         RectTransform top = gameObject.GetComponent<RectTransform>();
         RectTransform nextPanel = dialogueBoxes[panelFocus].GetComponent<RectTransform>();
         float nextPosition = top.anchoredPosition.y + nextPanel.rect.height + 10;

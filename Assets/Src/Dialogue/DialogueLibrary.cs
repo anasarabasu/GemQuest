@@ -16,21 +16,26 @@ public class DialogueLibrary {
             ("Pik", "You needed me for something?"),
 
             ("Sai", "I need you to go gather a couple of rocks for me."),
-            ("Pik", "Sure. What are they? I might have some left behind from-"),
+            ("Sai", "I may have figured out the neccessary materials for a much safer base"),
 
-            ("Sai", "No idea."),
-            ("Pik", "Huh..?"),
+            ("Pik", "Wait- Really?"),
+            ("Pik", "That's great!"),
 
-            ("Sai", "I found some sort of writings in a cave. They described a group of rocks... for something. I managed to decipher it, but only its location."),
-            ("Pik", "..."),
-            ("Pik", "And I have to figure out where it is. Hey my job is to mine rocks not answer some riddles or somethi-"),
+            ("Sai", "I visited a cave some time ago. Noticed that the Shades were..."),
+            ("Sai", "guarding something. A pile of rocks?"),
+            
+            ("Pik", "... There must be some sort of reason why they're doing that..."),
+            ("Pik", "Sure. I'll do it"),
 
-            ("Sai", "I'll pay you."),
-            ("Pik", "Deal."),
-
+            ("Sai", "Don't worry. You'll be rewarded handsomely for your efforts"),
+            ("Pik", "Well, that just sweetens the deala lot more!"),
+            
+            ("Pik", "Right. I'll contact Hels. We'll start as soon as we can."),
             ("Sai", "Great"),
-            ("Sai", "The rocks I need are abundant in China"),
-            ("Sai", "Please head over there")
+
+            ("Sai", "Good. The cave I went to was in China. Minerals are abundant there."),
+            ("Sai", "... Be careful."),
+            ("Sai", "Those monsters will surely be roaming around")
         }
     }};
 }

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: HelsStats
   m_EditorClassIdentifier: 
   level: 0
-  currentXP: 44
+  currentXP: 0
   nextLevelThreshold: 50
   toolLevel: 0
   currentToolXP: 0
   nextToolLevelThreshold: 10
   health: 50
-  currentHealth: 50
+  currentHealth: 25
   energy: 30
   currentEnergy: 30
   speed: 2

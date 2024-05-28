@@ -30,7 +30,7 @@ MonoBehaviour:
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: Super effective agaisnt Shades!
   levelFunction:
-    unlockedPriceRank: 1
+    unlockedPriceRank: 0
     priceRank: 2
     function: 1
     amount: 30

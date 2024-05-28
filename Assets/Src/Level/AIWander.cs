@@ -26,7 +26,7 @@ namespace Pathfinding {
             targets.Add(wanderAround);
 		}
 
-		void Update () {
+		protected virtual void UpdateStuff () {
             UpdateTargets();
             UpdateSearchPath();
 		}

@@ -18,6 +18,7 @@ TagManager:
   - FPS
   - Floating Text
   - Light
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -64,9 +65,9 @@ TagManager:
   - name: Void
     uniqueID: 1755641797
     locked: 0
-  - name: UI
-    uniqueID: 717102289
-    locked: 0
   - name: Torch
     uniqueID: 475014365
+    locked: 0
+  - name: UI
+    uniqueID: 717102289
     locked: 0

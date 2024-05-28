@@ -19,13 +19,13 @@ public class LevelItemsUseEffect : MonoBehaviour {
         switch (item.levelFunction.function) {
             case ItemData.LevelFunction.Function.None:
                 audioSource.PlayOneShot(Fail);
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Nothing happened...", 0.5f));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Nothing happened...", 2f));
                 break;
 
             case ItemData.LevelFunction.Function.ReplenishBattery:
                 FlashLightMechanic.instance.AddBattery(item.levelFunction.amount);
                 audioSource.PlayOneShot(Flashlight);
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Flashlight charged!", 0.5f));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Flashlight charged!", 2f));
                 InventorySystem.instance._ToggleInventory();
                 break;
 
@@ -35,13 +35,13 @@ public class LevelItemsUseEffect : MonoBehaviour {
                 break;
 
             case ItemData.LevelFunction.Function.Heal:
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "not yet added...", 0.5f));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "not yet added...", 2f));
                 break;
 
             case ItemData.LevelFunction.Function.DeterEnemies:
                 AmbushRNG.instance.timer += 20;
                 audioSource.PlayOneShot(Smell);
-                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Things seems a little quiter... for now\nWe stink though!", 0.5f));
+                StartCoroutine(NoticePanel.instance.ShowNotice(starting + "Things seems a little quiter... for now\nWe stink though!", 2f));
                 InventorySystem.instance._ToggleInventory();
                 break;
             

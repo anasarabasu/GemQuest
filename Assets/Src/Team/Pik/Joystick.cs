@@ -38,7 +38,8 @@ public class Joystick : MonoBehaviour, ISaveable {
             if(!body.IsAwake())
                 if(pikStats.currentEnergy < pikStats.energy)
                     pikStats.currentEnergy ++;
-            
+                if(pikStats.currentHealth < pikStats.health)
+                    pikStats.currentHealth += 4;
             timer = 1;
         }
 

@@ -276,6 +276,8 @@ public class CombatSystem : MonoBehaviour {
                 yield return new WaitForSeconds(0.5f);
 
                 entity.transform.DOMove(returnPos, 0.5f);  
+                damageIncrease = 1;
+
             }
             target.GetComponent<Combat>().UpdateShield();
             yield return new WaitForSeconds(1);
@@ -591,7 +593,7 @@ public class CombatSystem : MonoBehaviour {
             Debug.Log("battle lose");
 
             foreach(var obj in heroes) {
-                obj.GetComponent<Combat>().combatData.currentHealth = 10;
+                obj.GetComponent<Combat>().combatData.currentHealth = obj.GetComponent<Combat>().combatData.health;
             }
         }
         if(remainingEnemies.Count == 0) {

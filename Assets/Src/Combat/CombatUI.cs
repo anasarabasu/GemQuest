@@ -52,7 +52,6 @@ public class CombatUI : MonoBehaviour {
                 selectedButton.transform.localScale = Vector3.one;
                 selectedButton = null;
             }
-            noticePanel.DOAnchorPosY(-12.2f, 0.5f);
             skillPanel.DOAnchorPosX(skillPanelHide, skillPSpeed);
             skillToggle = false;
 

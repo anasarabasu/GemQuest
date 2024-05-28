@@ -28,17 +28,17 @@ MonoBehaviour:
 
       Causes acid damage for 2 turns.'
     unlockedCombatDescription_SKILL: 0
-    Combat_SKILL: Increases attack.
+    Combat_SKILL: Combining this with an attack didn't help at all!
   levelFunction:
-    unlockedPriceRank: 0
+    unlockedPriceRank: 1
     priceRank: 0
     function: 4
     amount: 20
   combatFunction:
-    effectiveTo: 2
+    effectiveTo: 1
     uselessTo: 1
     asAnItem: 3
     asAnItemDuration: 2
     asAnItemAmount: 7
-    withASkill: 1
-    skillDamageIncreaseAmount: 0
+    withASkill: 0
+    skillDamageIncreaseAmount: 4

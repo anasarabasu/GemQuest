@@ -13,8 +13,8 @@ public class NoticePanel : MonoBehaviour {
         noticePanel.GetComponentInChildren<TextMeshProUGUI>().SetText(message);
         if(noticePanel.anchoredPosition.y != 12.75f) {
             noticePanel.DOAnchorPosY(12.75f, 0.25f);
-            yield return new WaitForSeconds(4);
-            noticePanel.DOAnchorPosY(-47.7f, 0.5f);
+            yield return new WaitForSeconds(duration);
+            noticePanel.DOAnchorPosY(-1000f, 0.5f);
         }
         else 
             yield break;

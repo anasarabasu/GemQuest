@@ -30,12 +30,12 @@ MonoBehaviour:
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: Combining this with an attack didn't help at all!
   levelFunction:
-    unlockedPriceRank: 0
+    unlockedPriceRank: 1
     priceRank: 0
     function: 0
     amount: 0
   combatFunction:
-    effectiveTo: 0
+    effectiveTo: 1
     uselessTo: 0
     asAnItem: 4
     asAnItemDuration: 1

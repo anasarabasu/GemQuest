@@ -17,39 +17,35 @@ public class AmbushRNG : MonoBehaviour{
         timer -= Time.deltaTime;
 
         if(timer <= 0) {
-            int randomInterval = Random.Range(1, 10);
-            timer = randomInterval;
+            int randomInterval = Random.Range(5, 15);
 
             int randomRoll = Random.Range(0, 101);
-            if(randomRoll <= frequency) 
-                AmbushOccurs();
+            timer = randomInterval;
+            if(randomRoll <= frequency) {
+                StartCoroutine(EnemyAmbush());
+            }
         }
     }
 
     public static AmbushRNG instance;
 
-    private void Awake() {
-        instance = this;
-    }
-
-    private void AmbushOccurs() {
-        DataManager.instance.WriteSaveFile();
-            combatScene = SceneManager.LoadSceneAsync("Combat");
-            combatScene.allowSceneActivation = false;
-            if(!combatScene.isDone) 
-                StartCoroutine(EnemyAmbush());
-
-
-            Debug.Log("Enemy Ambush!");
-    }
+    private void Awake() => instance = this;
 
     public static void SetFrequency(int amount) => frequency = amount;
 
     IEnumerator EnemyAmbush() {
-        //shadow dash ani towards party
+        DataManager.instance.WriteSaveFile();
+
+        combatScene = SceneManager.LoadSceneAsync("Combat");
+        combatScene.allowSceneActivation = false;
+
+        yield return new WaitUntil(() => !combatScene.isDone);
+        yield return new WaitForSeconds(0.5f);
+
         ambushImage.SetActive(true);
-        
-        yield return new WaitForSeconds(2);
         combatScene.allowSceneActivation = true;
+
+        
+        Debug.Log("Enemy Ambush!");
     }
 }

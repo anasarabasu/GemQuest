@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   currentXP: 0
-  nextLevelThreshold: 0
-  toolLevel: 0
-  currentToolXP: 0
+  nextLevelThreshold: 215
+  toolLevel: 5
+  currentToolXP: 172
   nextToolLevelThreshold: 10
-  health: 80
-  currentHealth: 80
+  health: 50
+  currentHealth: 50
   energy: 30
   currentEnergy: 30
   speed: 5

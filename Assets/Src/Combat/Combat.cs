@@ -8,6 +8,9 @@ using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class Combat : MonoBehaviour {
+    [SerializeField] AudioClip damage, powerYes, confused;
+    [SerializeField] AudioSource audioSource;
+    [Header("--------------------")]
     [SerializeField] GameObject shield;
     [SerializeField] GameObject electro;
     [SerializeField] GameObject heal;
@@ -28,7 +31,7 @@ public class Combat : MonoBehaviour {
     private void Awake() {
         if(tag == "Enemy") {
             combatData.speed = Random.Range(1, 11);
-            GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 2, 1f);
 
         }
         
@@ -62,15 +65,20 @@ public class Combat : MonoBehaviour {
     public void Fail() {
         stunDuration = 1;
         Stun();
-        StartCoroutine(NoticePanel.instance.ShowNotice("Ows... That didn't work...", 0.5f));
+        StartCoroutine(NoticePanel.instance.ShowNotice("Ows... That didn't work...", 2f));
     }
 
     public int IncreaseAttack(EntityStatData target, ItemData selectedItem) {
-        if(selectedItem.combatFunction.effectiveTo == ItemData.CombatFunction.Enemy.Shade && target.entityType == EntityStatData.EntityType.Shade)
-            return 5;
+        audioSource.PlayOneShot(powerYes);
+        StartCoroutine(NoticePanel.instance.ShowNotice($"{gameObject.name.Replace("(Clone)", "")} attack increased temporarily!", 2f));
+
+
+        if(selectedItem.combatFunction.effectiveTo == ItemData.CombatFunction.Enemy.Shade && target.entityType == EntityStatData.EntityType.Shade) {
+            return selectedItem.combatFunction.skillDamageIncreaseAmount;
+        }
         
         if(selectedItem.combatFunction.effectiveTo == ItemData.CombatFunction.Enemy.Golem && target.entityType == EntityStatData.EntityType.Golem)
-            return 5;
+            return selectedItem.combatFunction.skillDamageIncreaseAmount;
 
         return 1;
     }
@@ -91,10 +99,6 @@ public class Combat : MonoBehaviour {
     }
 
     private void AnimationAttackHit() {
-        hit.SetActive(true);
-        var effect = hit.GetComponent<ParticleSystem>();
-        effect.Play();
-
         StartCoroutine(target.IsAttacked(damageOfAttack));
         Debug.Log("Hit!");
     }
@@ -135,6 +139,11 @@ public class Combat : MonoBehaviour {
     public void Damage(int amount) => StartCoroutine(IsAttacked(amount));
     public void SetHeal(int amount) => StartCoroutine(IsHealed(amount));
     IEnumerator IsAttacked(int damageAmount) {
+        hit.SetActive(true);
+        var effect = hit.GetComponent<ParticleSystem>();
+        effect.Play();
+        audioSource.PlayOneShot(damage);
+
         if(shieldHitAmount > 0) {
             shield.transform.DOShakePosition(1);
             ShieldUsed = true;
@@ -178,6 +187,8 @@ public class Combat : MonoBehaviour {
     }
 
     IEnumerator IsHealed(int healAmount) {
+        audioSource.PlayOneShot(powerYes);
+
         heal.SetActive(true);
         var effect = heal.GetComponent<ParticleSystem>();
         effect.Play();
@@ -205,14 +216,17 @@ public class Combat : MonoBehaviour {
     public void SetEnergy(int amount, string selectedItem) => StartCoroutine(IsEnergised(amount, selectedItem));
 
     IEnumerator IsEnergised(int amount, string selectedItem) {
+
+        audioSource.PlayOneShot(powerYes);
+
         energise.SetActive(true);
         var effect = energise.GetComponent<ParticleSystem>();
         effect.Play();
 
         if(amount == 1)
-            StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem}!\n{gameObject.name.Replace("(Clone)", "")} was energised... with a rock?", 0.5f));
+            StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem}!\n{gameObject.name.Replace("(Clone)", "")} was energised... with a rock?", 2f));
         else 
-            StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem}!\n{gameObject.name.Replace("(Clone)", "")} was energised!", 0.5f));
+            StartCoroutine(NoticePanel.instance.ShowNotice($"Sold {selectedItem}!\n{gameObject.name.Replace("(Clone)", "")} was energised!", 2));
 
         combatData.currentEnergy += amount;
         if(combatData.currentEnergy >= combatData.energy)
@@ -235,9 +249,9 @@ public class Combat : MonoBehaviour {
         
         StartCoroutine(IsAttacked(amount));
         if(amount == 1)
-            StartCoroutine(NoticePanel.instance.ShowNotice(name + " was hit by a rock!", 0.5f));
+            StartCoroutine(NoticePanel.instance.ShowNotice(name + " was hit by a rock!", 2));
         else 
-            StartCoroutine(NoticePanel.instance.ShowNotice(name + " was dazed from the impact!", 0.5f));
+            StartCoroutine(NoticePanel.instance.ShowNotice(name + " was dazed from the impact!", 2));
     }
 
     public void Stun() {
@@ -245,6 +259,8 @@ public class Combat : MonoBehaviour {
         var effect = stun.GetComponent<ParticleSystem>();
         effect.Play();
         transform.DOShakePosition(1);
+
+        audioSource.PlayOneShot(confused);
     }
 
     public int electricDuration;
@@ -258,7 +274,7 @@ public class Combat : MonoBehaviour {
         if(combatData.entityType == EntityStatData.EntityType.Golem)
             electricDamage = 1;
 
-        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was electrocuted!", 0.5f));
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was electrocuted!", 2));
         Electrocuted();
     }
 
@@ -273,13 +289,15 @@ public class Combat : MonoBehaviour {
 
     public int shieldHitAmount;
     public void SetShield(int amount) {
+        audioSource.PlayOneShot(powerYes);
+
         shieldHitAmount = amount;
 
         shield.SetActive(true);
         var effect = shield.GetComponent<ParticleSystem>();
         effect.Play();
 
-        StartCoroutine(NoticePanel.instance.ShowNotice(name + " formed a shield!", 0.5f));
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " formed a shield!", 2));
     }
 
     public bool ShieldUsed;
@@ -311,7 +329,7 @@ public class Combat : MonoBehaviour {
         if(combatData.entityType == EntityStatData.EntityType.Shade)
             electricDamage = 1;
 
-        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was damaged by acid!", 0.5f));
+        StartCoroutine(NoticePanel.instance.ShowNotice(name + " was damaged by acid!", 2));
         Acid();
     }
 
@@ -331,6 +349,8 @@ public class Combat : MonoBehaviour {
     }
 
     public void Distracted() {
+        audioSource.PlayOneShot(confused);
+
         distract.SetActive(true);
         var effect = distract.GetComponent<ParticleSystem>();
         effect.Play();
@@ -346,7 +366,6 @@ public class Combat : MonoBehaviour {
                 reanimator.Set("State", 4); //dead
                 reanimator.Renderer.color = Color.white;
                 isAlive = false;
-                combatData.currentEnergy = 0;
             }
             else {
                 if(gameObject.name.Contains("Pik"))

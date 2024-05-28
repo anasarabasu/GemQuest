@@ -30,15 +30,15 @@ MonoBehaviour:
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: Makes for a ruthless increase in attack.
   levelFunction:
-    unlockedPriceRank: 0
+    unlockedPriceRank: 1
     priceRank: 2
     function: 2
     amount: 100
   combatFunction:
-    effectiveTo: 0
+    effectiveTo: 1
     uselessTo: 0
     asAnItem: 1
     asAnItemDuration: 4
     asAnItemAmount: 20
     withASkill: 1
-    skillDamageIncreaseAmount: 0
+    skillDamageIncreaseAmount: 12

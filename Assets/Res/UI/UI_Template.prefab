@@ -558,8 +558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 82.775024, y: -191.59998}
-  m_SizeDelta: {x: 165.55, y: 0}
+  m_AnchoredPosition: {x: 82.775024, y: -383.09998}
+  m_SizeDelta: {x: 165.55, y: -98.838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1472119426583731956
 GameObject:
@@ -1973,6 +1973,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
+        m_MethodName: _Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3862605290393809221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7067668635168881307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
+        m_MethodName: _Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4065786745840189145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,7 +2802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a73a08ec55ba2439451cc1a21bed6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 24
   ambushImage: {fileID: 2807257265679087619}
   frequencyForShow: 50
 --- !u!1 &4942811949257015038
@@ -3760,6 +3784,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
+        m_MethodName: _Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5815615585129334754}
         m_TargetAssemblyTypeName: ItemInfo, Assembly-CSharp
         m_MethodName: _UseItem
@@ -5652,6 +5688,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
+        m_MethodName: _Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5815615585129334754}
         m_TargetAssemblyTypeName: ItemInfo, Assembly-CSharp
         m_MethodName: _SellItem
@@ -6081,7 +6129,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5106474841877378758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
+        m_MethodName: _Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8937220665237498528
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,6 +6395,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -70.968994
       objectReference: {fileID: 0}
+    - target: {fileID: 3920711511132195823, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6882922619200855606, guid: 7dbd24c7a5c277546a7d23540eb1197c, type: 2}
     - target: {fileID: 5311199483174570961, guid: e8332e95183455140b5c8c689c8e03c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6575,11 +6639,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 188114375311146426, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_Value
-      value: 5e+13
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 188114375311146426, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_MaxValue
-      value: 5e+13
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 239707016348973005, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6691,19 +6755,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1874699784904791356, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: currentEnergy
-      value: 22
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 1874699784904791356, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: currentHealth
-      value: 5e+13
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 1941760689823760896, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_Value
-      value: 5e+13
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 1941760689823760896, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_MaxValue
-      value: 5e+13
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2093640876377226937, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6763,11 +6827,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2469603069224238374, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: currentEnergy
-      value: 13
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2469603069224238374, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: currentHealth
-      value: 5e+13
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 2835628003778459126, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6791,19 +6855,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2893015709043194071, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_Value
-      value: 22
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 2893015709043194071, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_MaxValue
-      value: 30
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 3316922482733935424, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_Value
-      value: 5e+13
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 3316922482733935424, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_MaxValue
-      value: 5e+13
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 3353427367184497849, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6895,11 +6959,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307946414807134375, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_Value
-      value: 13
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4307946414807134375, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_MaxValue
-      value: 32
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4431485829548960870, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7119,11 +7183,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374804298065771909, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_Value
-      value: 5e+13
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 8374804298065771909, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_MaxValue
-      value: 5e+13
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8423384396971163953, guid: 034ae096510b9784d8a31867659a8e29, type: 3}
       propertyPath: m_AnchorMax.x

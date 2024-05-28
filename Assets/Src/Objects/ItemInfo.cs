@@ -32,7 +32,7 @@ public class ItemInfo : MonoBehaviour {
     }
 
     private void ToggleInfoPanel() {
-        viewPort.DOAnchorPosY(-9.785f, 0.5f);
+        viewPort.DOAnchorPosY(-50.019f, 0.5f);
 
 
         infoPanel.Find("Name").GetComponent<TextMeshProUGUI>().SetText(selectedItem.name);

@@ -30,12 +30,12 @@ MonoBehaviour:
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: Super effective agaisnt Shades!
   levelFunction:
-    unlockedPriceRank: 0
+    unlockedPriceRank: 1
     priceRank: 2
     function: 1
     amount: 30
   combatFunction:
-    effectiveTo: 2
+    effectiveTo: 1
     uselessTo: 2
     asAnItem: 2
     asAnItemDuration: 2

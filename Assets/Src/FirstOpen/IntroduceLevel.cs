@@ -93,7 +93,6 @@ public class IntroduceLevelControls : MonoBehaviour, ISaveable {
         yield return new WaitForSeconds(5);
 
         tutorialPanelText.SetText("We don't know what these rocks are for.\nBut if you use it then you have a chance of finding out."); //change this kasi di makita ung text
-        tutorialPanel.DOAnchorPosY(-43.3f, moveSpeed);
         useItemFake.DOAnchorPosX(-20.98767f, moveSpeed);
         yield return new WaitForSeconds(5);
 

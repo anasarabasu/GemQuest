@@ -3,7 +3,14 @@ guid: 214c5e8a4de76164bbd4820e4f3883be
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - Flashlight: {fileID: 8300000, guid: 5f637183cf3b9e641bb12fd612e5fcec, type: 3}
+  - Tool: {fileID: 8300000, guid: 289e22651a4d2384fbc39163220f89dc, type: 3}
+  - Smell: {instanceID: 0}
+  - Fail: {fileID: 8300000, guid: a761a76d595370048866762e2e2ab660, type: 3}
+  - pik: {instanceID: 0}
+  - hels: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

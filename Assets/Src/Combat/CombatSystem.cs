@@ -102,9 +102,10 @@ public class CombatSystem : MonoBehaviour {
                 if(entity.CompareTag("Hero")) {
                     entity.CheckHealth();
                     string name = entity.name.Replace("(Clone)", "");
-                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} has fallen and can't get up!", 0.5f));
                     entity.stunDuration = 0;
-                    entity.combatData.currentEnergy++;
+                    entity.combatData.currentEnergy += Random.Range(0, 4);
+
+                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} has fallen and can't get up!", 0.5f));
                 }
                 yield return new WaitForSeconds(0.6f);
                 
@@ -116,6 +117,7 @@ public class CombatSystem : MonoBehaviour {
             if(entity.combatData.currentEnergy <= 0) {
                 entity.transform.DOShakePosition(1);
                 string name = entity.name.Replace("(Clone)", "");
+                entity.combatData.currentEnergy += Random.Range(0, 4);
                 yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is too tired to do anything...", 0.5f));
 
                 i++;
@@ -149,13 +151,13 @@ public class CombatSystem : MonoBehaviour {
 
                     i++;
                     if(i == turnOrder.Count) i = 0;
-                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is paralysed by the electricity!", 0.5f));
+                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is paralysed by the electricity!", 1f));
                     continue;
                 }
                 else {
                 yield return new WaitForSeconds(0.6f);
 
-                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is harmed by the electricity!", 0.5f));
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is harmed by the electricity!", 1f));
                 }
 
             }      
@@ -168,7 +170,7 @@ public class CombatSystem : MonoBehaviour {
             yield return new WaitForSeconds(0.6f);
 
 
-                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is burned by the acid!", 0.5f));
+                yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is burned by the acid!", 1f));
 
             }
 
@@ -185,12 +187,12 @@ public class CombatSystem : MonoBehaviour {
 
                     i++;
                     if(i == turnOrder.Count) i = 0;
-                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is distracted by the gem!", 0.5f));
+                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} is distracted by the gem!", 1f));
                     continue;
                 }
                 else {
                     yield return new WaitForSeconds(0.6f);
-                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} managed to turn their attention off the gem!", 0.5f));
+                    yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} managed to turn their attention off the gem!", 1f));
                 }
 
             }
@@ -202,7 +204,8 @@ public class CombatSystem : MonoBehaviour {
                     string name = entity.name.Replace("(Clone)", "");
                     yield return StartCoroutine(NoticePanel.instance.ShowNotice($"{name} has fallen and can't get up!", 0.5f));
                     entity.stunDuration = 0;
-                    entity.combatData.currentEnergy++;
+                    entity.combatData.currentEnergy += Random.Range(0, 4);
+
                 }
                 yield return new WaitForSeconds(0.6f);
                 

@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour, ISaveable {
     }
 
     public void _StartGame() {
-        SceneManager.LoadSceneAsync("Cutscene", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Single);
     }
 
     private bool settingsToggle = false;

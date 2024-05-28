@@ -17,6 +17,9 @@ public class EntityStatData : ScriptableObject {
 
             health += level * 4;
             energy += level * 2;
+            foreach(var move in movesets) {
+                move.damage += level * 2;
+            }
         }
     }
 

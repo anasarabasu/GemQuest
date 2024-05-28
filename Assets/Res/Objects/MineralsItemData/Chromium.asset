@@ -30,15 +30,15 @@ MonoBehaviour:
     unlockedCombatDescription_SKILL: 0
     Combat_SKILL: Increases the damage of attacks greatly
   levelFunction:
-    unlockedPriceRank: 0
+    unlockedPriceRank: 1
     priceRank: 1
     function: 2
     amount: 0
   combatFunction:
-    effectiveTo: 0
+    effectiveTo: 1
     uselessTo: 0
     asAnItem: 5
     asAnItemDuration: 0
     asAnItemAmount: 18
     withASkill: 1
-    skillDamageIncreaseAmount: 0
+    skillDamageIncreaseAmount: 8
